@@ -1,4 +1,7 @@
 <?php
+error_reporting(-1);
+ini_set('display_error', 'On');
+set_error_handler("var_dump");
 
 /*Function from: http://form.guide/email-form/php-form-to-email.html */
 /*function validateInput($str)
@@ -14,22 +17,22 @@
 	}
 }*/
 
-$sender = isset($_POST["sender"]);
-$email = isset($_POST["email"]);
-$msg = isset($_POST["msg"]);
-
-$retval = "";
+if(isset($_POST['submit'])){
+	$sender = $_POST['senderName'];
+	$senderEmail = $_POST['email'];
+	$msg = $_POST['msg'];
 
 /*if(validateInput($sender) | validateInput($email) | validateInput($msg)){
 	echo $retval;
 	exit;
 }*/
 
-$myEmail = 'stephaniekyyip@gmail.com';
-$subject = 'Emailing From Your Website';
+	$myEmail = "stephaniekyyip@gmail.com";
+	$subject = "Emailing From Your Website";
+	$header = "From:" . $sender . "<" . $senderEmail . ">";
 
-@mail($myEmail, $subject, $msg, "From: $sender <$email>");
+	mail($myEmail, $subject, $msg, $header
+	
+header("Location: contact.html");
 
-header('Location:contact.html', true, 301);
-exit();
 ?>

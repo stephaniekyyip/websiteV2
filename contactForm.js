@@ -35,7 +35,7 @@ function validateForm(){
 
 }
 
-function sendEmail(){
+function submitForm(){
 	var sender = document.forms["contactForm"]["senderName"].value;
 	var msg = document.forms["contactForm"]["msg"].value;
 	var email = document.forms["contactForm"]["email"].value;
@@ -51,7 +51,7 @@ function sendEmail(){
 		
 		};*/
 		
-		xhttp.open("POST", "sendEmail.php?sender=" + sender + "&email=" + email 
+		xhttp.open("POST", "/sendEmail.php?sender=" + sender + "&email=" + email 
 		+ "&msg=" + msg, true);
 		xhttp.send();
 		

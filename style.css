@@ -216,6 +216,28 @@ a:hover {
 }
 
 /**************** Forms ****************/
+.twoCol {
+	overflow: hidden; 
+}
+
+.twoCol .col1,
+.twoCol .col2
+{
+	width: 49%
+}
+
+.twoCol .col1 {
+	float: left;
+}
+
+.twoCol .col2 {
+	float: right;
+}
+
+.twoCol label {
+	display: block;
+}
+
 .formText{
 	font-size: 18px;
 	color: var(--medium);
@@ -225,14 +247,6 @@ a:hover {
 	
 }
 
-.inputSmall{
-	width: 48%;
-}
-
-.rightText {
-	margin-left: 43%;
-}
-
 input[type=text]{
 	color: var(--dark);
 	font-size: 14px;
@@ -240,6 +254,7 @@ input[type=text]{
 	padding: 5px;
 	display: inline-block;
 	outline: none;
+	width: 97%;
 
 	margin-top:5px;
 	margin-bottom:15px;
@@ -250,7 +265,7 @@ input[type=text]{
 	color: var(--dark);
 	font-size: 14px;
 	border: 1px solid var(--medium);
-	width: 98.5%;
+	width: 99%;
 	height: 50px;
 	
 	padding: 5px;

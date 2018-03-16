@@ -3,8 +3,8 @@
 	<head>
 		<title> Stephanie Yip | Contact </title>
 		<link href = "style.css" type="text/css" rel = "stylesheet" >
-		<script src="sendEmail.php"></script>
-
+		<script src = "contactForm.js"></script>
+		<?php include('sendEmail.php'); ?>
 	</head>
 	
 	<body>
@@ -28,26 +28,33 @@
 		<!--Contact-->
 		<div class = "mainContent">
 			<h3>Please Fill out this Form</h3>
-			<div class = "insideText"> The best way to get in touch with me is through e-mail 
-			using the form below. I’ll get back to you as soon as possible. </div>
+			<p class = "insideText"> The best way to get in touch with me is through e-mail 
+			using the form below. I’ll get back to you as soon as possible. </p>
 			
-			<form name= "contactForm"  class = "formText" method = "post" action = "sendEmail.php">
-				<span> Name</span>
-				<span class = "rightText">Your E-mail</span>
-				<br>
+			<!-- Contact Form -->
+			<form name= "contactForm" method = "post" action = "sendEmail.php">
+				<div class = "twoCol">
+					<div class = "col1">
+					<label for="senderName" class = "formText">Name</label>
+					<input type = "text" name = "senderName" required = "required">
+					</div>
+					
+					<div class = "col2">
+					<label for = "email" class = "formText">E-mail</label>
+					<span><input type = "text" name = "email" required = "required">
+					</div>
+				</div>
 				
-				<span> <input class = "inputSmall" type = "text" name = "senderName"></span>
-				<span><input class = "inputSmall" type = "text" name = "email"></span>
-				<br>
+				<div class = "formText">
+					<label>Message </label>
+					<br>	
+					<textarea class = "inputBig" type = "email" name = "msg" required = "required" ></textarea>
+					<br>
+				</div>
 				
-				<label>Message </label>
-				<br>
-				
-				<textarea class = "inputBig" type = "text" name = "msg"></textarea>
-				<br>
-				
-				<input type = "submit" value = "Submit"></span>
+				<input type = "submit" value = "Submit" name = "submit""></span>
 			</form>
+			<!-- End Contact Form -->
 			
 			<div class = "line"></div>
 		</div>
