@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
 	exit;
 }*/
 
-	$myEmail = "stephaniekyyip@gmail.com";
+	$myEmail = "stephaniekyyip@zoho.com";
 	$subject = "Emailing From Your Website";
 	$header = "From:" . $sender . "<" . $senderEmail . ">";
 
