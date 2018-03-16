@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
 	$subject = "Emailing From Your Website";
 	$header = "From:" . $sender . "<" . $senderEmail . ">";
 
-	mail($myEmail, $subject, $msg, $header
+	mail($myEmail, $subject, $msg, $header);
 	
 header("Location: contact.html");
 
