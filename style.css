@@ -40,7 +40,8 @@ h3 {
 	text-align: justify;
 	letter-spacing: 1px;
 	word-spacing: 2px;
-	margin-bottom: 18px;
+	margin-bottom: 5px;
+	font-weight: 500;
 }
 
 
@@ -67,7 +68,7 @@ h3 {
 	font-size: 18px;
 	color: var(--dark);
 	text-align: left;
-	line-height: 30px;
+	line-height: 35px;
 }
 
 
@@ -164,23 +165,102 @@ li.active a {
 	text-transform: uppercase;
 }
 
-/*************** About ****************/
+/*************** Main Content ****************/
 .mainContent {
-	margin-top: auto;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: auto;
+	margin: 0 auto;
+	
 	padding-left: 100px;
 	padding-right: 100px;
 	padding-top: 50px;
 	padding-bottom: 100px;
-	max-width: 800px;
+	max-width: 50%
 }
 
-/*************** Resume ****************/
+/** Link Style **/
+.insideText a {
+	color: var(--medium);
+	text-decoration: none;
+
+}
+
+.insideText a:hover {
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+/*************** About ****************/
+.bullets{
+	padding-bottom: 50px;
+
+	padding-left: 0;
+	padding-right: 0;
+	margin-right: -20px;
+	margin-left: -20;
+}
+
+#about .mainContent{
+	padding-top: 25px;
+
+}
 
 
-/*************** Projects ****************/
+#about .line{
+	margin-top: 30px;
+	text-align: center;
+	width: 88%;
+}
+
+#about h3{
+	text-align: center;
+	word-spacing: 2px;
+	letter-spacing: 3px;
+	line-height: 60px;
+}
+
+/** List Style **/
+#about .twoCol ul {
+	list-style-type: none;
+	margin-top: 5px;
+	margin-bottom: 30px;
+	font-size: 18px;
+	color: var(--dark);
+	text-align: left;
+	line-height: 40px;
+	padding-left: 0px;
+}
+
+#about .twoCol {
+	margin: 0 auto;
+	width: 100%;
+	padding-top:50px;
+}
+
+#about .twoCol .col1{
+	width: 45%;
+}
+
+#about .twoCol .col2{
+	width: 53%;
+}
+
+#about .twoCol .col2 li {
+	color: var(--dark);
+	font-size: 22px;
+	line-height: 60px;
+}
+
+#about .twoCol .col1 .labelText{
+	color: var(--medium);
+	padding-right: 5px;
+	text-transform: uppercase;
+	word-spacing: 2px;
+	letter-spacing: 3px;
+	float: right;
+	clear: both;
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 60px;
+}
 
 /*************** Photography ****************/
 
@@ -192,8 +272,7 @@ li.active a {
 /**************** Footer ****************/
 #footer {
 	background: var(--medium);
-	padding: 20px 20px 30px 20px;
-	position: fixed;
+	padding: 30px 20px 30px 20px;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -219,16 +298,6 @@ li.active a {
 	color: var(--dark);
 }
 
-.insideText a {
-	color: var(--medium);
-	text-decoration: none;
-
-}
-
-.insideText a:hover {
-	font-weight: bold;
-	letter-spacing: 1px;
-}
 
 /**************** Forms ****************/
 .twoCol {
@@ -263,6 +332,7 @@ li.active a {
 	
 }
 
+/*Form submit button*/
 .center {
 	display: block;
 	margin: 0 auto;
@@ -274,7 +344,7 @@ input[type=email]
 {
 	color: var(--dark);
 	font-size: 14px;
-	border: 1px solid var(--medium);	
+	border: 1px solid var(--dark);	
 	padding: 5px;
 	display: inline-block;
 	outline: none;
@@ -288,7 +358,7 @@ input[type=email]
 .inputBig{
 	color: var(--dark);
 	font-size: 14px;
-	border: 1px solid var(--medium);
+	border: 1px solid var(--dark);
 	width: 99%;
 	height: 50px;
 	
@@ -322,11 +392,6 @@ textarea {
 	resize: vertical;
 
 }
-
-
-
-
-
 
 
 
