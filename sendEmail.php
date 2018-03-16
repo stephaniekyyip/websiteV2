@@ -1,7 +1,7 @@
 <?php
-error_reporting(-1);
+/*error_reporting(-1);
 ini_set('display_error', 'On');
-set_error_handler("var_dump");
+set_error_handler("var_dump");*/
 
 /*Function from: http://form.guide/email-form/php-form-to-email.html */
 /*function validateInput($str)
