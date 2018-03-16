@@ -27,34 +27,40 @@
 		
 		<!--Contact-->
 		<div class = "mainContent">
-			<h3>Please Fill out this Form</h3>
-			<p class = "insideText"> The best way to get in touch with me is through e-mail 
-			using the form below. I’ll get back to you as soon as possible. </p>
+			<h3>Let's Talk</h3>
+			<p class = "insideText"> The best way to get in touch with me is through 
+			<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing From Your Website">e-mail</a>. 
+		    Alternatively, the form below can also be used to send me a message. I will get 
+			back to you as soon as possible. </p>
 			
 			<!-- Contact Form -->
+			<!--Alt form action= "https://formspree.io/stephaniekyyip@gmail.com" -->
+			<!-- mailto: mailto:stephaniekyyip@gmail.com
+			?subject=E-mailing From Your Website-->
 			<form name= "contactForm" method = "post" action = "https://formspree.io/stephaniekyyip@gmail.com">
 				<div class = "twoCol">
 					<div class = "col1">
 					<label for="senderName" class = "formText">Name</label>
-					<input type = "text" name = "senderName" required = "required">
+					<input type = "text" name = "name" required = "required">
 					</div>
 					
 					<div class = "col2">
 					<label for = "email" class = "formText">E-mail</label>
-					<span><input type = "text" name = "email" required = "required">
+					<span><input type = "email" name = "email" required = "required">
 					</div>
 				</div>
 				
 				<div class = "formText">
 					<label>Message </label>
 					<br>	
-					<textarea class = "inputBig" type = "email" name = "msg" required = "required" ></textarea>
+					<textarea class = "inputBig" type = "text" name = "message" required = "required" ></textarea>
 					<br>
 				</div>
 				
+				<!-- Extra input types to use with formspree
 				<input type="hidden" name="_subject" value = "Email from your website">
-				<input type="hidden" name="_replyto" value = "stephaniekyyip@gmail.com">
-				<input type = "submit" value = "Submit" name = "submit""></span>
+				<input type="hidden" name="_replyto" value = "stephaniekyyip@gmail.com">-->
+				<input type = "submit" value = "Submit" name = "submit" class = "center"></span>
 			</form>
 			<!-- End Contact Form -->
 			
