@@ -1,1 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Stephanie Yip | Contact </title>
+		<link href = "style.css" type="text/css" rel = "stylesheet" >
+		<script src="sendEmail.php"></script>
 
+	</head>
+	
+	<body>
+	
+		<!--Navigation Bar -->	
+		<div class = "nav outerLinks">
+			<ul>
+				<li><a href = "index.html" >Home</a></li>
+				<li><a href = "#resume">Résumé</a></li>
+				<li><a href = "#projects" >Projects</a></li>
+				<li><a href = "#photography">Photography</a></li>
+				<li class = "active><a href = "contact.html">Contact</a></li>
+			</ul>	
+		</div>
+	
+		<!--Header -->	
+		<div class = "header">
+			<h1>Contact Me</h1>
+		</div>
+		
+		<!--Contact-->
+		<div class = "mainContent">
+			<h3>Please Fill out this Form</h3>
+			<div class = "insideText"> The best way to get in touch with me is through e-mail 
+			using the form below. I’ll get back to you as soon as possible. </div>
+			
+			<form name= "contactForm"  class = "formText" method = "post" action = "sendEmail.php">
+				<span> Name</span>
+				<span class = "rightText">Your E-mail</span>
+				<br>
+				
+				<span> <input class = "inputSmall" type = "text" name = "senderName"></span>
+				<span><input class = "inputSmall" type = "text" name = "email"></span>
+				<br>
+				
+				<label>Message </label>
+				<br>
+				
+				<textarea class = "inputBig" type = "text" name = "msg"></textarea>
+				<br>
+				
+				<input type = "submit" value = "Submit"></span>
+			</form>
+			
+			<div class = "line"></div>
+		</div>
+		
+		
+		<!-- Footer -->
+		<div id = "footer">
+			<span class = "outerText">Designed by Stephanie Yip 2018</span>
+			
+			<span class = "contactLinks outerLinks">
+				<script language="Javascript">
+					var username = "stephaniekyyip";
+					var hostname = "gmail.com";
+					var subject = "E-mailing%20From%20Your%20Website";
+					document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname 
+					+ "?subject=" + subject + "'>" + "E-mail" + "</a> ");	
+				</script>
+				<a href = "https://www.linkedin.com/in/stephaniekyyip/">LinkedIn</a>
+				<a href = "https://github.com/stephaniekyyip">GitHub</a>
+			</span>
+		</div>
+	
+	</body>
+	
+</htmlL>

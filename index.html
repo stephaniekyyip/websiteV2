@@ -9,13 +9,13 @@
 	<body>
 	
 		<!--Navigation Bar -->	
-		<div class = "nav outerText">
+		<div class = "nav outerLinks">
 			<ul>
-				<li><a href = "index.html" >Home</a></li>
+				<li class = "active"><a href = "index.html" >Home</a></li>
 				<li><a href = "#resume">Résumé</a></li>
 				<li><a href = "#projects" >Projects</a></li>
 				<li><a href = "#photography">Photography</a></li>
-				<li><a href = "#contact">Contact</a></li>
+				<li><a href = "contact.html">Contact</a></li>
 			</ul>	
 		</div>
 	
@@ -26,15 +26,16 @@
 		</div>
 	
 		<!-- About -->
-		<div class = "about">
+		<div class = "mainContent">
 			<h3>Hello!</h3>
-			<p class = "insideText"> I’m Stephanie Yip, a recently graduate with a B.S. in 
+			<p class = "insideText"> I am Stephanie Yip, a recently graduate with a B.S. in 
 			Electrical and Computer Engineering. My areas of interest include aerospace, 
 			embedded devices, and internet of things. Namely, I like the integration of 
 			hardware and software. My goal is to work on something that more or less 
 			combines the two fields I studied in college– electrical engineering and 
 			computer science. I’m not entirely sure what that opportunity looks like, but in the 
 			meantime, I enjoy learning more about software. </p>
+			
 			<p class = "insideText">I decided to create a website as a side project, 
 			and this is the result. Here is my engineering portfolio that shows my 
 			experiences and projects. I have also included my photography for fun.</p>
@@ -45,12 +46,18 @@
 	
 		<!-- Footer -->
 		<div id = "footer">
-			<span>© 2018 Stephanie Yip</span>
+			<span class = "outerText" >Designed by Stephanie Yip 2018</span>
 			
-			<span class = "contactLinks outerText">
-			<a href = "mailto:stephaniekyyip@gmail.com">E-mail</a>
-			<a href = "https://www.linkedin.com/in/stephaniekyyip/">LinkedIn</a>
-			<a href = "https://github.com/stephaniekyyip">GitHub</a>
+			<span class = "contactLinks outerLinks">
+				<script language="Javascript">
+					var username = "stephaniekyyip";
+					var hostname = "gmail.com";
+					var subject = "E-mailing%20From%20Your%20Website";
+					document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname 
+					+ "?subject=" + subject + "'>" + "E-mail" + "</a> ");	
+				</script>
+				<a href = "https://www.linkedin.com/in/stephaniekyyip/">LinkedIn</a>
+				<a href = "https://github.com/stephaniekyyip">GitHub</a>
 			</span>
 		</div>
 	
