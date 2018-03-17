@@ -21,10 +21,10 @@ body {
 }
 
 .container{
+	box-sizing: border-box;
 	width: 100%;
 	margin: auto;
 	overflow: hidden;
-
 }
 
 /***** Column layout ******/
@@ -128,6 +128,11 @@ header nav li.active a {
 
 /***************** Page Title Block ******************/
 
+.pgTitleBlock .container {
+	overflow: visible;
+
+}
+
 /*Page title*/
 .pgTitleBlock {
 	margin-top: 50px;
@@ -142,7 +147,8 @@ header nav li.active a {
 .pgTitleBlock h1 {
 	color: white;
 	font-size: 70px;
-	letter-spacing: 15px;
+	letter-spacing: 20px;
+	word-spacing: 20px;
 	text-transform: uppercase;
 }
 
@@ -218,13 +224,11 @@ header nav li.active a {
 
 /*************** Main Content ****************/
 .mainContent {
-	margin: 0 auto;
-	
 	padding-left: 100px;
 	padding-right: 100px;
 	padding-top: 25px;
 	padding-bottom: 100px;
-	max-width: 50%
+
 }
 
 /** Link Style **/
@@ -270,54 +274,154 @@ footer {
 	
 }
 
-footer h1 {
+
+/**************** Responsive Design  ****************/
+
+
+@media(max-width:768px){
+	
+	header,header nav a, header nav li, header ul, header nav ul, nav
+	{
+		display: inline;
+		text-align: center;
+		float: none;
+		padding-bottom: 5px;
+		padding-top: 10px;
+	}
+
+	header h1, footer h1
+	{
+		text-align: center;
+		display: block;
+		float: none;
+	
+	}
+	
+	header h1{
+		padding-bottom: 10px;
+	
+	}
+	
+	footer h1{
+		padding-bottom: 5px;
+	}
+	
+	footer, footer a, footer li, footer ul
+	{
+		display: block-inline;
+		text-align: center;
+		float: none;
+		padding-bottom: 5px;
+	}
+	
+	footer{
+		padding-top: 10px;
+	}
+	
+	footer li, footer ul, footer a{
+		padding-bottom: 5px;
+	}
+	
+	.pgTitleBlock, .pgTitleBlock h1
+	{
+		text-align: center;
+		margin: auto;
+	}
+	
+	.pgTitleBlock{
+		padding-top: 200px;
+	
+	}
+
+	#about-writing{
+		padding-top: 0;
+		
+	}
+	
+	#about-writing p, #about-writing h1, .mainContent, .container .mainContent
+	{
+		display: block;
+		float: none;
+		width: 100%;
+		margin: 0;	
+	}
+	
+	#about-writing p{
+		 font-size: 16px;
+		 line-height: 35px;
+		 margin-bottom: 10px;
+		 padding-top: 0;
+	
+	}
+	
+	#about-writing h1{
+		font-size: 18px;
+		padding-bottom: 7px;
+	}
+	
+	
+	#about-writing .container
+	{
+		margin: 0 auto;
+	}
+
 }
 
-/***************** Text Formatting ******************/
+@media(max-width:1040px){
+		
+			#about-bullets .container .col1 {
+				width: 42%;
+			}
+	
+			#about-bullets .container .col2 {
+				width: 55%;
+			}
+	
+			#about-bullets .container .col1 li{
+				font-size: 20px;
+				line-height: 30px;
+	
+			}
+	
+			#about-bullets .container .col2 li{
+				font-size: 18px;
+				line-height: 30px;
+	
+			}		
 
-
-
-
-
-
-
-
-
-/*
-.diagContainer {
-	text-align: center;
-	display: inline;
 }
 
-.diagonal:before{
-	content: "";
-	position: absolute;
-	border-top: 1px solid #86ACB5;
-	width: 20px;
-	transform: rotate(45deg);
-	transform-origin: 0% 0%;
+@media(max-width: 780px){
+
+		#about-bullets .container .col1 {
+				width: 100%
+		}
+	
+			#about-bullets .container .col2 {
+				width: 100%;
+			}
+	
+			#about-bullets .container .col1 li{
+				font-size: 20px;
+				line-height: 30px;
+				display: inline-block;
+	
+			}
+	
+			#about-bullets .container .col2 li{
+				font-size: 18px;
+				line-height: 30px;
+				display: inline-block;
+	
+			}		
+
 }
-
-.diagonal:after{
-	content: "";
-	position: absolute;
-	border-top: 1px solid #86ACB5;
-	width: 20px;
-	transform: rotate(135deg);
-	transform-origin: 0% 0%;
-}*/
-
-
 
 
 /*************** Photography ****************/
 
 
 /*************** Contact ****************/
-
-
-
-
 
 
 /**************** Forms ****************/
@@ -414,6 +518,30 @@ textarea {
 
 }
 
+
+/*
+.diagContainer {
+	text-align: center;
+	display: inline;
+}
+
+.diagonal:before{
+	content: "";
+	position: absolute;
+	border-top: 1px solid #86ACB5;
+	width: 20px;
+	transform: rotate(45deg);
+	transform-origin: 0% 0%;
+}
+
+.diagonal:after{
+	content: "";
+	position: absolute;
+	border-top: 1px solid #86ACB5;
+	width: 20px;
+	transform: rotate(135deg);
+	transform-origin: 0% 0%;
+}*/
 
 
 
