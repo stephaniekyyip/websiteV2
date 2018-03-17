@@ -1,2 +1,2 @@
 # stephaniekyyip.github.io
-My personal portfolio website to showcase my engineering projects and resume.
+My forray into HTML and CSS through creating my own website, which acts as my engineering portfolio.
