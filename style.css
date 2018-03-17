@@ -1,40 +1,246 @@
 /*
 	CSS style sheet
 	Stephanie Yip
-
-
 */
 
-/**************** HEX color codes****************/
+
+/**************** HEX color codes ****************/
 :root {
 	--gray: #686F71;
 	--medium: #86ACB5;
 	--dark: #2C3D40;
 
 }
-
-/***************** HTML, Body ******************/
-
-html {
-	font-family: helvetica;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
+/***************** General ******************/
 
 body {
-	background-color: white;
-	width: 100%;
-	height: 100%;
+	font-family: Helvetica, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
+	background-color: white;
 }
 
-/***************** Text Formatting ******************/
+.container{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+
+}
+
+/***** Column layout ******/
+.container .col1, .container .col2{
+	padding: 5px;
+}
+
+.container .center{
+	float: none;
+	width: 100%;
+}
+
+/* Text formatting in nav bar + footer*/
+header h1, footer h1{
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 14px;
+	word-spacing: 3px;
+	
+	float:left;
+	display: inline-block;
+	
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+/* Line below the text inside body for decoration */
+.line{
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 1px solid var(--medium);
+	/*min-width: auto;*/
+	
+}
+
+/**************** Links ****************/
+
+header nav a,
+footer a 
+{
+	word-spacing: 8px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+nav a:hover ,
+footer a:hover
+{
+	color: var(--dark);
+	font-weight: 550;
+}
+
+
+/**************** Header ****************/
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: var(--medium);
+	min-height: 15px;
+	padding: 20px;
+}
+
+/*Title of site in the nav bar*/
+header h1 {
+}
+
+/**************** Navigation Bar ****************/
+header nav {
+}
+
+header nav ul, footer ul {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+/* page links in nav bar*/
+header nav li, footer li {
+	float:left;
+	display: inline;
+	padding-left: 20px;
+	margin: 0;
+}
+
+/* Highlight current page in nav */
+header nav li.active a {
+	color: var(--dark);
+	font-weight: 550;
+}
+
+/***************** Page Title Block ******************/
+
+/*Page title*/
+.pgTitleBlock {
+	margin-top: 50px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	display: block;
+	text-align: center;
+	background-color: var(--gray);
+	min-height: 112px;
+}
+
+.pgTitleBlock h1 {
+	color: white;
+	font-size: 70px;
+	letter-spacing: 15px;
+	text-transform: uppercase;
+}
+
+/*Page subtitle/ description*/
+.pgTitleBlock h2 {
+	font-size: 20px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+/*************** About: Bullets ****************/
+
+/*List style*/
+#about-bullets .container{
+	margin:0;
+	width: 100%;
+	padding-top:50px;
+}
+
+/*List formatting for left col*/
+#about-bullets .container .col1 li{
+	list-style-type: none;
+	color: var(--medium);
+	font-size: 18px;
+	text-transform: uppercase;
+	word-spacing: 2px;
+	letter-spacing: 3px;
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 60px;
+	text-align: right;
+	
+	/*padding-right: 5px;*/
+}
+
+/*List formatting for right col*/
+#about-bullets .container .col2 li {
+	list-style-type: none;
+	color: var(--dark);
+	font-size: 22px;
+	line-height: 60px;
+}
+
+#about-bullets .container .col1
+{
+	float: left;
+	width: 42%;
+}
+
+#about-bullets .container .col2{
+	float: right;
+	width: 56%;
+}
+
+/*Line divider between about-bullets and next section*/
+#about-bullets .line{
+	margin-top: 50px;
+	text-align: center;
+	width: 88%;
+}
+
+/***************** About: Writing ******************/
+#about-writing{
+	padding-top: 25px;
+}
+
+#about-writing h3{
+	text-align: center;
+	word-spacing: 2px;
+	letter-spacing: 3px;
+	line-height: 60px;
+}
+
+/*************** Main Content ****************/
+.mainContent {
+	margin: 0 auto;
+	
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 25px;
+	padding-bottom: 100px;
+	max-width: 50%
+}
+
+/** Link Style **/
+.mainContent a {
+	color: var(--medium);
+	text-decoration: none;
+
+}
+
+.mainContent a:hover {
+	font-weight: bold;
+	letter-spacing: 1px;
+}
 
 /* Titles of each individual section on the page*/
-h3 {
+.mainContent h1 {
 	font-size: 25px;
 	color: var(--medium);
 	text-align: justify;
@@ -44,25 +250,8 @@ h3 {
 	font-weight: 500;
 }
 
-
-/* Links in navigation bar + footer */
-.outerLinks{
-	word-spacing: 8px;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	font-size: 12px;
-}
-
-/* Non-links in nav bar + footer*/
-.outerText{
-	color: white;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	font-size: 12px;
-}
-
 /* Text inside body of page */
-.insideText {
+.mainContent p {
 	margin-top: 5px;
 	margin-bottom: 15px;
 	font-size: 18px;
@@ -71,16 +260,28 @@ h3 {
 	line-height: 35px;
 }
 
-
-/* Goes below the text inside body for decoration */
-.line{
-	margin-top: 35px;
-	margin-left: auto;
-	margin-right: auto;
-	border-top: 1px solid var(--medium);
-	/*min-width: auto;*/
+/**************** Footer ****************/
+footer {
+	padding: 20px 20px 30px 20px;
+	background: var(--medium);
+	left: 0;
+	right: 0;
+	bottom: 0;
 	
 }
+
+footer h1 {
+}
+
+/***************** Text Formatting ******************/
+
+
+
+
+
+
+
+
 
 /*
 .diagContainer {
@@ -107,160 +308,7 @@ h3 {
 }*/
 
 
-/**************** Navigation Bar ****************/
-.nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	background: var(--medium);
 
-}
-
-.nav ul {
-	list-style-type: none;
-	padding-right: 20px;
-	float: right;
-}
-
-.nav li {
-	display: inline;
-}
-
-li.active a {
-	color: var(--dark);
-	font-weight: 500px;
-}
-
-.nav .outerText{
-	padding-left: 20px;
-	margin-top: 12px;
-	float:left;
-}
-
-
-/**************** Header ****************/
-/*Includes title + description */
-
-.header {
-	padding-top: 100px;
-	padding-bottom: 100px;
-	display: block;
-	text-align: center;
-	background-color: var(--gray);
-	color: white;
-	height: 116px;
-}
-
-.header h1 {
-	font-size: 50px;
-	letter-spacing: 15px;
-	text-transform: uppercase;
-}
-
-.header h2 {
-	font-size: 20px;
-	letter-spacing: 5px;
-	text-transform: uppercase;
-}
-
-/*************** Main Content ****************/
-.mainContent {
-	margin: 0 auto;
-	
-	padding-left: 100px;
-	padding-right: 100px;
-	padding-top: 50px;
-	padding-bottom: 100px;
-	max-width: 50%
-}
-
-/** Link Style **/
-.insideText a {
-	color: var(--medium);
-	text-decoration: none;
-
-}
-
-.insideText a:hover {
-	font-weight: bold;
-	letter-spacing: 1px;
-}
-
-/*************** About ****************/
-.bullets{
-	padding-bottom: 50px;
-
-	padding-left: 0;
-	padding-right: 0;
-	margin-right: -20px;
-	margin-left: -20;
-}
-
-#about .mainContent{
-	padding-top: 25px;
-
-}
-
-
-#about .line{
-	margin-top: 30px;
-	text-align: center;
-	width: 88%;
-}
-
-#about h3{
-	text-align: center;
-	word-spacing: 2px;
-	letter-spacing: 3px;
-	line-height: 60px;
-}
-
-/** List Style **/
-#about .twoCol ul {
-	list-style-type: none;
-	margin-top: 5px;
-	margin-bottom: 30px;
-	font-size: 18px;
-	color: var(--dark);
-	text-align: left;
-	line-height: 40px;
-	padding-left: 0px;
-}
-
-#about .twoCol {
-	margin: 0 auto;
-	width: 100%;
-	padding-top:50px;
-}
-
-#about .twoCol .col1{
-	width: 45%;
-}
-
-#about .twoCol .col2{
-	width: 53%;
-}
-
-#about .twoCol .col2 li {
-	color: var(--dark);
-	font-size: 22px;
-	line-height: 60px;
-}
-
-#about .twoCol .col1 .labelText{
-	color: var(--medium);
-	padding-right: 5px;
-	text-transform: uppercase;
-	word-spacing: 2px;
-	letter-spacing: 3px;
-	float: right;
-	clear: both;
-	font-weight: 300;
-	font-size: 30px;
-	line-height: 60px;
-}
 
 /*************** Photography ****************/
 
@@ -269,34 +317,7 @@ li.active a {
 
 
 
-/**************** Footer ****************/
-#footer {
-	background: var(--medium);
-	padding: 30px 20px 30px 20px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	
-}
 
-.contactLinks {
-	display: inline;
-	float: right;
-}
-
-/**************** Links ****************/
-.nav a,
-.contactLinks a 
-{
-	color: white;
-	text-decoration: none;
-}
-
-.nav a:hover ,
-.contactLinks a:hover
-{
-	color: var(--dark);
-}
 
 
 /**************** Forms ****************/

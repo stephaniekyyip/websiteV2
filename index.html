@@ -2,94 +2,128 @@
 <html>
 
 	<head>
+		<meta charset = "utf-8">
+		<meta name = "viewpoint" content = "width=device-width">
+		
 		<title> Stephanie Yip | Computer Engineer </title>
 		<link href = "style.css" type="text/css" rel = "stylesheet" >
 	</head>
-	
+
+
+<!------------------------------------- Header -------------------------------------> 
 	<body>
-	
-		<!--Navigation Bar -->	
-		<div class = "nav outerLinks">
-			<span class = "outerText">Stephanie Yip</span>
-			<ul>
-				<li class = "active"><a href = "index.html" >Home</a></li>
-				<li><a href = "#resume">Résumé</a></li>
-				<li><a href = "#projects" >Projects</a></li>
-				<li><a href = "#photography">Photography</a></li>
-				<li><a href = "contact.html">Contact</a></li>
-			</ul>	
-		</div>
-	
-		<!--Header -->	
-		<div class = "header">
-			<h1>Welcome</h1>
-			<!--<h2>A Computer / Software Engineer Portfolio</h2>-->
-		</div>
-	
-		<!-- About -->
-		<div id = "about">
+	<header>
+		<div class = "container">
+			<h1>Stephanie Yip</h1>
 		
-			<!-- Bulletpoints-->
-			<div class = "twoCol">
+			<!------------ Navigation Bar ------------> 
+			<nav>		
 				<ul>
-				
-					<div class = "col1">
-						<li><span class = "labelText">I am</span></li>
-						<li><span class = "labelText">I studied</span></li>
-						<li><span  class = "labelText">I like</span></li>
-						<li><span class = "labelText">In Summary</span></li>
-					</div>
-				
-					<div class = "col2">
-						<li><span> Stephanie Yip</span></li>
-						<li><span> Electrical and Computer Engineering</span></li>
-						<li><span> Embedded Devices, Internet of Things, Aerospace</span></li>
-						<li><span> I am a recent college grad trying to learn new things</span></li>
-					</div>			
+					<li class = "active"><a href = "index.html">Home</a></li>
+					<li><a href = "#resume">Résumé</a></li>
+					<li><a href = "#projects" >Projects</a></li>
+					<li><a href = "#photography">Photography</a></li>
+					<li><a href = "contact.html">Contact</a></li>
 				</ul>
+			</nav>
+			
+		</div>
+	</header>
+<!----------------------------------- END HEADER -----------------------------------> 
+		
+<!------------ Page Title Block ------------> 
+	<section class = "pgTitleBlock">
+		<div class = "container center">
+			<h1>Hello</h1>		
+		</div>
+	</section>
+		
+<!------------------------------ About: Bulletpoints ---------------------------------> 
+	<section id = "about-bullets">
+		<div class = "container">
+			
+			<ul>
+			<div class = "col1">
+			
+			  <!------------ Left side ------------> 
+				
+					
+					<li>I am</li>
+					<li>I studied</li>
+					<li>I like</li>
+					<li>Long story short</li>
+				
 			</div>
 			
-			--<div class = "line"></div>
-		<div class = "mainContent">
+				<!------------ Right side ------------> 
+			<div class = "col2">
+				
+					<li>Stephanie Yip</li>
+					<li>Electrical and Computer Engineering</li>
+					<li>Embedded Devices, Internet of Things, Aerospace</li>
+					<li>I am a recent college grad trying to learn new things</li>
+				
+						
 			
-			<h3>My Interests</h3>
-			<p class = "insideText">The area that fascinates me the most is the 
+			</div>
+			</ul>
+	</div>
+	
+		<!------------ Line divider ------------> 
+		<div class = "line"></div>
+	</section>
+<!------------------------------ END ABOUT: BULLETPOINTS ------------------------------>
+	
+<!------------------------------ About: Writing --------------------------------------> 
+	<section id = "about-writing">
+		<div class = "container mainContent">
+			
+			<h1>My Interests</h1>
+			<p>The area that fascinates me the most is the 
 			integration of hardware and software. My goal is to work on something 
 			that more or less combines the two fields I studied in college– electrical 
 			engineering and computer science. I’m not entirely sure what that opportunity 
-			looks like, but in the meantime, I enjoy learning more about software.
-			</p>
-			<h3>About This Website</h3>
-			<p class = "insideText"> I have spent the past decade trying to learn HTML 
+			looks like, but in the meantime, I enjoy learning more about software.</p>
+			
+			
+			<h1>About This Website</h1>
+			<p>I have spent the past decade trying to learn HTML 
 			and CSS to create my own themes on various websites, starting with Neopets 
 			in elementary school. Now that I have more free time and experience in 
 			computer science, I decided to buckle down and finally understand how this 
 			all works. I acknowledge that I know practically nothing about web 
-			development, but I’m having fun trying anyway.
-			</p>
-			
-			
+			development, but I’m having fun trying anyway.</p>
+		
 		</div>
-	</div>
 	
-		<!-- Footer -->
-		<div id = "footer">
-			<span class = "outerText" >Designed by Stephanie Yip 2018</span>
+	</section>
+<!------------------------------ END: ABOUT WRITING ------------------------------------> 
+	
+<!----------------------------------- Footer -------------------------------------------> 
+	<footer>
+		<div class = "container">
+			<h1>Designed by Stephanie Yip 2018</h1>
+				<ul>
+				
+					<li><script language="Javascript">
+						var username = "stephaniekyyip";
+						var hostname = "gmail.com";
+						var subject = "E-mailing%20From%20Your%20Website";
+						document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname 
+						+ "?subject=" + subject + "'>" + "E-mail" + "</a> ");	
+					</script></li>
+				
+				<li><a href = "https://www.linkedin.com/in/stephaniekyyip/">LinkedIn</a></li>
+				
+				<li><a href = "https://github.com/stephaniekyyip">GitHub</a></li>
 			
-			<span class = "contactLinks outerLinks">
-				<script language="Javascript">
-					var username = "stephaniekyyip";
-					var hostname = "gmail.com";
-					var subject = "E-mailing%20From%20Your%20Website";
-					document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname 
-					+ "?subject=" + subject + "'>" + "E-mail" + "</a> ");	
-				</script>
-				<a href = "https://www.linkedin.com/in/stephaniekyyip/">LinkedIn</a>
-				<a href = "https://github.com/stephaniekyyip">GitHub</a>
-			</span>
-		</div>
+			</ul>
+	</div>
+	</footer>
+	
+<!----------------------------------- END FOOTER ---------------------------------------> 
 	
 	</body>
-</html>
-
+</html>	
+	
 
