@@ -161,6 +161,17 @@ header nav li.active a {
 
 /*************** About: Bullets ****************/
 
+
+/*.aboutContainer{
+	display: flex;
+
+}
+
+.bullet{
+
+
+}*/
+
 /*List style*/
 #about-bullets .container{
 	margin:0;
@@ -212,23 +223,27 @@ header nav li.active a {
 
 /***************** About: Writing ******************/
 #about-writing{
-	padding-top: 25px;
+	padding-top: 15px;
 }
 
-#about-writing h3{
-	text-align: center;
+#about-writing h1{
 	word-spacing: 2px;
 	letter-spacing: 3px;
-	line-height: 60px;
+	line-height: 30px;
+}
+
+#about-writing p {
+	margin: 0;
+	padding: 0;
 }
 
 /*************** Main Content ****************/
 .mainContent {
-	padding-left: 100px;
-	padding-right: 100px;
+	padding-left: auto;
+	padding-right: auto;
 	padding-top: 25px;
-	padding-bottom: 100px;
-
+	padding-bottom: 75px;
+	width: 50%;
 }
 
 /** Link Style **/
@@ -252,12 +267,14 @@ header nav li.active a {
 	word-spacing: 2px;
 	margin-bottom: 5px;
 	font-weight: 500;
+	padding-top: 10px;
 }
 
 /* Text inside body of page */
 .mainContent p {
 	margin-top: 5px;
-	margin-bottom: 15px;
+	margin-bottom: 5px;
+	padding-bottom: 15px;
 	font-size: 18px;
 	color: var(--dark);
 	text-align: left;
@@ -278,7 +295,7 @@ footer {
 /**************** Responsive Design  ****************/
 
 
-@media(max-width:768px){
+@media only screen and (max-width:768px){
 	
 	header,header nav a, header nav li, header ul, header nav ul, nav
 	{
@@ -298,12 +315,14 @@ footer {
 	}
 	
 	header h1{
+		font-size: 20px;
 		padding-bottom: 10px;
 	
 	}
 	
 	footer h1{
-		padding-bottom: 5px;
+		font-size: 10px;
+		padding-bottom: 7px;
 	}
 	
 	footer, footer a, footer li, footer ul
@@ -332,6 +351,13 @@ footer {
 		padding-top: 200px;
 	
 	}
+	
+	.mainContent{
+		width: 100%;
+		padding-bottom: 25px;
+		margin-left: 25px;
+		margin--right: 25px;
+	}
 
 	#about-writing{
 		padding-top: 0;
@@ -347,16 +373,14 @@ footer {
 	}
 	
 	#about-writing p{
-		 font-size: 16px;
-		 line-height: 35px;
-		 margin-bottom: 10px;
-		 padding-top: 0;
-	
+		font-size: 16px;
+		line-height: 35px;
 	}
 	
 	#about-writing h1{
 		font-size: 18px;
-		padding-bottom: 7px;
+		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 	
 	
@@ -367,55 +391,59 @@ footer {
 
 }
 
-@media(max-width:1040px){
+@media only screen and (max-width:1040px){
 		
-			#about-bullets .container .col1 {
-				width: 42%;
-			}
+	#about-bullets .container .col1 {
+		width: 42%;
+	}
 	
-			#about-bullets .container .col2 {
-				width: 55%;
-			}
+	#about-bullets .container .col2 {
+		width: 55%;
+	}
 	
-			#about-bullets .container .col1 li{
-				font-size: 20px;
-				line-height: 30px;
+	#about-bullets .container .col1 li{
+		font-size: 20px;
+		line-height: 30px;
+	}
 	
-			}
+	#about-bullets .container .col2 li{
+		font-size: 18px;
+		line-height: 30px;
+	}		
 	
-			#about-bullets .container .col2 li{
-				font-size: 18px;
-				line-height: 30px;
+	#about-bullets .line {
 	
-			}		
+	}
+			
+	.mainContent{
+		width: 100%;
+	}
+	
+	#about-writing h1{
+		font-size: 20px;
+		line-height: 20px;
+		margin-bottom: 5px;
+	}
+	
+	#about-writing p{
+		font-size: 18px;
+		line-height: 30px;
+		padding-top: 2px;
+		padding-bottom: 20px;
+	}
+
 
 }
 
-@media(max-width: 780px){
-
-		#about-bullets .container .col1 {
-				width: 100%
-		}
+@media only screen and (max-width: 1500px){
 	
-			#about-bullets .container .col2 {
-				width: 100%;
-			}
-	
-			#about-bullets .container .col1 li{
-				font-size: 20px;
-				line-height: 30px;
-				display: inline-block;
-	
-			}
-	
-			#about-bullets .container .col2 li{
-				font-size: 18px;
-				line-height: 30px;
-				display: inline-block;
-	
-			}		
+	.mainContent{
+		width: 80%;
+	}
+				
 
 }
+
 
 
 /*************** Photography ****************/
