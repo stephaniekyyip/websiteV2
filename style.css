@@ -162,15 +162,75 @@ header nav li.active a {
 /*************** About: Bullets ****************/
 
 
-/*.aboutContainer{
+.bulletContainer{
+	padding-top:50px;
+	padding-left: 25px;
+	padding-right: 25px;
 	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
 
 }
 
-.bullet{
+.leftContainer{
+	display: flex;
+	flex-direction: column;
+	margin-right: 20px;
+}
+
+.leftText{
+	color: var(--medium);
+	font-size: 18px;
+	text-transform: uppercase;
+	word-spacing: 2px;
+	letter-spacing: 3px;
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 55px;
+	text-align: right;
+}
+
+.rightContainer{
+	display: flex;
+	flex-direction: column;
+}
+
+.rightText{
+	color: var(--dark);
+	font-size: 22px;
+	line-height: 55px;
+}
 
 
-}*/
+.responsiveContainer{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#responsiveBullets{
+	width: 100%;
+	padding-top: 50px;
+}
+
+#responsiveBullets .leftText
+{
+	text-align: center;
+	line-height: 20px;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+
+#responsiveBullets .rightText
+{
+	line-height: 18px;
+	padding-bottom: 30px;
+	font-size: 18px;
+}
+
+#responsiveBullets .line{
+	width: 80%;
+}
 
 /*List style*/
 #about-bullets .container{
@@ -181,7 +241,6 @@ header nav li.active a {
 
 /*List formatting for left col*/
 #about-bullets .container .col1 li{
-	list-style-type: none;
 	color: var(--medium);
 	font-size: 18px;
 	text-transform: uppercase;
@@ -227,8 +286,8 @@ header nav li.active a {
 }
 
 #about-writing h1{
-	word-spacing: 2px;
-	letter-spacing: 3px;
+	/*word-spacing: 2px;
+	letter-spacing: 3px;*/
 	line-height: 30px;
 }
 
@@ -263,8 +322,8 @@ header nav li.active a {
 	font-size: 25px;
 	color: var(--medium);
 	text-align: justify;
-	letter-spacing: 1px;
-	word-spacing: 2px;
+	/*letter-spacing: 1px;
+	word-spacing: 2px;*/
 	margin-bottom: 5px;
 	font-weight: 500;
 	padding-top: 10px;
@@ -295,7 +354,11 @@ footer {
 /**************** Responsive Design  ****************/
 
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:850px){
+	
+	#about-bullets{
+			display: none;
+	}
 	
 	header,header nav a, header nav li, header ul, header nav ul, nav
 	{
@@ -353,10 +416,10 @@ footer {
 	}
 	
 	.mainContent{
-		width: 100%;
+		width: 70%;
 		padding-bottom: 25px;
 		margin-left: 25px;
-		margin--right: 25px;
+		margin-right: 25px;
 	}
 
 	#about-writing{
@@ -393,30 +456,11 @@ footer {
 
 @media only screen and (max-width:1040px){
 		
-	#about-bullets .container .col1 {
-		width: 42%;
-	}
-	
-	#about-bullets .container .col2 {
-		width: 55%;
-	}
-	
-	#about-bullets .container .col1 li{
+		.bulletContainer .leftContainer,
+		.bulletContainer .rightContainer
+	{
 		font-size: 20px;
 		line-height: 30px;
-	}
-	
-	#about-bullets .container .col2 li{
-		font-size: 18px;
-		line-height: 30px;
-	}		
-	
-	#about-bullets .line {
-	
-	}
-			
-	.mainContent{
-		width: 100%;
 	}
 	
 	#about-writing h1{
@@ -432,15 +476,17 @@ footer {
 		padding-bottom: 20px;
 	}
 
-
-}
-
-@media only screen and (max-width: 1500px){
-	
 	.mainContent{
 		width: 80%;
 	}
-				
+
+}
+
+	
+@media only screen and (min-width:850px){
+		#responsiveBullets {
+			display: none;
+		}
 
 }
 
