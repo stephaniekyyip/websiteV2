@@ -1,2 +1,2 @@
 # stephaniekyyip.github.io
-My forray into HTML and CSS through creating my own website, which acts as my engineering portfolio.
+This is my first project using HTML and CSS to create my own portfolio website.
