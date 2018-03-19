@@ -305,7 +305,7 @@ footer {
 
 #responsiveBullets .rightText
 {
-	line-height: 18px;
+	line-height: 22px;
 	padding-bottom: 30px;
 	font-size: 18px;
 }
@@ -436,7 +436,7 @@ footer h1 a{
 		
 	}
 	
-	#about-writing p, #about-writing h1, .mainContent, .container .mainContent
+	#about-writing p, #about-writing h1
 	{
 		display: block;
 		float: none;
