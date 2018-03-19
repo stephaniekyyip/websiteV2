@@ -9,14 +9,16 @@
 	--gray: #686F71;
 	--medium: #86ACB5;
 	--dark: #2C3D40;
-
 }
 /***************** General ******************/
 
-body {
+html, body {
 	font-family: Helvetica, Arial, sans-serif;
 	margin: 0;
 	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
 	background-color: white;
 }
 
@@ -81,7 +83,7 @@ nav a:hover ,
 footer a:hover
 {
 	color: var(--dark);
-	font-weight: 550;
+	font-weight: 500;
 }
 
 
@@ -123,7 +125,7 @@ header nav li, footer li {
 /* Highlight current page in nav */
 header nav li.active a {
 	color: var(--dark);
-	font-weight: 550;
+	font-weight: 500;
 }
 
 /***************** Page Title Block ******************/
@@ -141,7 +143,7 @@ header nav li.active a {
 	display: block;
 	text-align: center;
 	background-color: var(--gray);
-	min-height: 112px;
+	/*min-height: 112px;*/
 }
 
 .pgTitleBlock h1 {
@@ -202,15 +204,15 @@ header nav li.active a {
 	line-height: 55px;
 }
 
-
 .responsiveContainer{
-	margin: 0 auto;
 	text-align: center;
+	margin: 0 auto;
 }
 
 #responsiveBullets{
-	width: 100%;
 	padding-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #responsiveBullets .leftText
@@ -298,8 +300,6 @@ header nav li.active a {
 
 /*************** Main Content ****************/
 .mainContent {
-	padding-left: auto;
-	padding-right: auto;
 	padding-top: 25px;
 	padding-bottom: 75px;
 	width: 50%;
@@ -325,7 +325,7 @@ header nav li.active a {
 	/*letter-spacing: 1px;
 	word-spacing: 2px;*/
 	margin-bottom: 5px;
-	font-weight: 500;
+	font-weight: 300;
 	padding-top: 10px;
 }
 
@@ -353,8 +353,12 @@ footer {
 
 /**************** Responsive Design  ****************/
 
-
-@media only screen and (max-width:850px){
+@media all and (max-width:950px) { /*850*/
+	
+	body{
+		width: 100%;
+		height: 100%;
+	}
 	
 	#about-bullets{
 			display: none;
@@ -385,34 +389,39 @@ footer {
 	
 	footer h1{
 		font-size: 10px;
-		padding-bottom: 7px;
+		padding-bottom: 10px;
+		text-align: center;
 	}
 	
 	footer, footer a, footer li, footer ul
 	{
-		display: block-inline;
 		text-align: center;
 		float: none;
 		padding-bottom: 5px;
 	}
 	
-	footer{
-		padding-top: 10px;
-	}
-	
-	footer li, footer ul, footer a{
+	footer li, footer ul{
+		display: inline;
 		padding-bottom: 5px;
 	}
 	
-	.pgTitleBlock, .pgTitleBlock h1
+	footer{
+		display: block;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	
+	.pgTitleBlock h1
 	{
 		text-align: center;
-		margin: auto;
+		font-size: 40px;
 	}
 	
 	.pgTitleBlock{
-		padding-top: 200px;
-	
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 50px;
 	}
 	
 	.mainContent{
@@ -446,16 +455,11 @@ footer {
 		padding-bottom: 0;
 	}
 	
-	
 	#about-writing .container
 	{
 		margin: 0 auto;
 	}
-
-}
-
-@media only screen and (max-width:1040px){
-		
+	
 		.bulletContainer .leftContainer,
 		.bulletContainer .rightContainer
 	{
@@ -482,8 +486,33 @@ footer {
 
 }
 
+@media all and (min-width: 850px) and (max-width:1050px) {
+		
+		.bulletContainer .leftContainer,
+		.bulletContainer .rightContainer
+	{
+		font-size: 20px;
+		line-height: 30px;
+	}
 	
-@media only screen and (min-width:850px){
+	#about-writing h1{
+		font-size: 20px;
+		line-height: 20px;
+		margin-bottom: 5px;
+	}
+	
+	#about-writing p{
+		font-size: 18px;
+		line-height: 30px;
+		padding-top: 2px;
+		padding-bottom: 20px;
+	}
+
+
+}
+
+	
+@media all and (min-width:950px){
 		#responsiveBullets {
 			display: none;
 		}
