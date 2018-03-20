@@ -7,8 +7,13 @@
 /**************** HEX color codes ****************/
 :root {
 	--gray: #686F71;
-	--medium: #86ACB5;
-	--dark: #2C3D40;
+	--medium: #7D9AB0; /*#6086a3; #93afc6; #86ACB5;*/
+	--dark: #253542; /*#041d44; #2C3D40;*/
+	--light: #c0cee5;
+	--title: #00447c;
+	
+	--medRed: #b41916;
+	--darkRed: #681313;
 }
 /***************** General ******************/
 
@@ -89,6 +94,8 @@ footer a:hover
 /**************** Header ****************/
 header {
 	position: fixed;
+	z-index:2;
+
 	top: 0;
 	left: 0;
 	right: 0;
@@ -129,20 +136,63 @@ header nav li.active a {
 
 /***************** Page Title Block ******************/
 
-.pgTitleBlock .container {
-	overflow: visible;
+#home .pgTitleBlock {
+	background-image: url('../img/homeJumbotron.jpg'); 
+}
 
+.container .pgTitleBlock {
+	overflow: visible;
+	position: relative;
+	
 }
 
 /*Page title*/
 .pgTitleBlock {
-	margin-top: 50px;
+	margin-top: 58px;
 	padding-top: 80px;
 	padding-bottom: 80px;
 	display: block;
 	text-align: center;
-	background-color: var(--gray);
+	/*background-color: var(--gray);*/
 	/*min-height: 112px;*/
+	
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0 -350px;
+	position: relative;
+	
+	/*Full overlay*/
+}
+
+
+.darkenOverlay{
+
+	/*
+	background: linear-gradient(to bottom, #6086a3, #6086a3);
+	opacity: 0.5;	*/
+
+	/*
+	content:'';
+	position: absolute;
+	top: 58px;
+	right: 0;
+	left: 0;
+	bottom: 968px;
+	display: block;
+	*/
+	
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 0;
+	width: 100%;
+	height: 100%;
+	background: black; /*rgb(96, 134, 163*/
+	opacity: 0.5;
+	position: absolute;
+	/*background-color: rgba(96, 134, 163, 0.5);*/
+	
+
 }
 
 .pgTitleBlock h1 {
@@ -151,6 +201,10 @@ header nav li.active a {
 	letter-spacing: 20px;
 	word-spacing: 20px;
 	text-transform: uppercase;
+	text-shadow: 3px 3px var(--medium); /*6086a3*/
+	
+	position: relative;
+	z-index: 1;
 }
 
 /*Page subtitle/ description*/
@@ -159,6 +213,8 @@ header nav li.active a {
 	letter-spacing: 5px;
 	text-transform: uppercase;
 }
+
+
 
 /*************** About: Bullets ****************/
 
@@ -185,7 +241,7 @@ header nav li.active a {
 	text-transform: uppercase;
 	word-spacing: 2px;
 	letter-spacing: 3px;
-	font-weight: 300;
+	font-weight: 500;
 	font-size: 30px;
 	line-height: 55px;
 	text-align: right;
@@ -211,7 +267,7 @@ header nav li.active a {
 
 /***************** About: Writing ******************/
 #about-writing{
-	padding-top: 15px;
+	padding-top: 25px;
 }
 
 #about-writing h1{
@@ -223,6 +279,10 @@ header nav li.active a {
 #about-writing p {
 	margin: 0;
 	padding: 0;
+}
+
+#about-writing .mainContent{
+	padding-top: 10px;
 }
 
 /*************** Main Content ****************/
@@ -251,8 +311,9 @@ header nav li.active a {
 	text-align: justify;
 	/*letter-spacing: 1px;
 	word-spacing: 2px;*/
+	margin-top: 5px;
 	margin-bottom: 5px;
-	font-weight: 300;
+	font-weight: 400;
 	padding-top: 10px;
 }
 
@@ -277,11 +338,6 @@ footer {
 	
 }
 
-/*
-	CSS for Responsive Design
-	Stephanie Yip
-
-*/
 
 /**************** Responsive Home: About Bullets  ****************/
 .responsiveContainer{
@@ -312,6 +368,8 @@ footer {
 
 #responsiveBullets .line{
 	width: 80%;
+	padding-top: 0;
+	margin-top: 20px;
 }
 
 /**************** Responsive Footer: Social Media Icons ****************/
@@ -349,11 +407,11 @@ footer h1 a{
 @media all and (max-width:950px) {
 	
 	#about-bullets{
-			display: none;
+		display: none;
 	}
 	
 	.socialLinks{
-			display: none;
+		display: none;
 	}
 	
 	body{
@@ -416,12 +474,15 @@ footer h1 a{
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-bottom: 50px;
+		background-position: center;
 	}
 	
 	.pgTitleBlock h1
 	{
 		text-align: center;
 		font-size: 40px;
+		text-shadow: 2px 2px var(--medium); 
+		
 	}
 	
 	.mainContent{
@@ -478,6 +539,7 @@ footer h1 a{
 		padding-top: 2px;
 		padding-bottom: 20px;
 	}
+	
 			
 }
 
@@ -501,6 +563,19 @@ footer h1 a{
 		padding-top: 2px;
 		padding-bottom: 20px;
 	}
+	
+	.pgTitleBlock{
+		background-position: 0 -100px;
+	}
+
+
+}
+
+@media all and (min-width: 1050px) and (max-width:1360px) {
+	.pgTitleBlock{
+		background-position: 0 -150px;
+	}
+
 
 }
 
