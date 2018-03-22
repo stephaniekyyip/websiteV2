@@ -9,9 +9,9 @@
 	--gray: #686F71;
 	--medium: #7D9AB0; /*#6086a3; #93afc6; #86ACB5;*/
 	--dark: #253542; /*#041d44; #2C3D40;*/
-	--light: #c0cee5;
+	--light: #88a2b6; /*#c0cee5;*/
 	--title: #00447c;
-	
+
 	--medRed: #b41916;
 	--darkRed: #681313;
 }
@@ -25,6 +25,7 @@ html, body {
 	height: 100%;
 	overflow-x: hidden;
 	background-color: white;
+	box-sizing: border-box;
 }
 
 .container{
@@ -51,13 +52,17 @@ header h1, footer h1{
 	letter-spacing: 5px;
 	font-size: 14px;
 	word-spacing: 3px;
-	
+
 	float:left;
 	display: inline-block;
-	
+
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
+}
+
+header h1{
+	font-weight: 700;
 }
 
 /* Line below the text inside body for decoration */
@@ -67,13 +72,11 @@ header h1, footer h1{
 	margin-right: auto;
 	border-top: 1px solid var(--medium);
 	/*min-width: auto;*/
-	
+
 }
 
 /**************** Links ****************/
-
-header nav a,
-footer a 
+footer a
 {
 	word-spacing: 8px;
 	text-transform: uppercase;
@@ -84,11 +87,10 @@ footer a
 	font-weight: normal;
 }
 
-nav a:hover ,
-footer a:hover
+.menu a:hover, footer a:hover
 {
 	color: var(--dark);
-	font-weight: 500;
+	font-weight: 600;
 }
 
 /**************** Header ****************/
@@ -104,108 +106,96 @@ header {
 	padding: 20px;
 }
 
-/*Title of site in the nav bar*/
-header h1 {
-}
-
 /**************** Navigation Bar ****************/
-header nav {
+/* Highlight current page in nav */
+nav li.active a {
+	color: var(--dark);
+	font-weight: 600;
 }
 
-header nav ul, footer ul {
+.menu ul{
+	line-height: 14px;
 	display: inline-block;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
 	float: right;
 }
 
-/* page links in nav bar*/
-header nav li, footer li {
-	float:left;
-	display: inline;
-	padding-left: 20px;
-	margin: 0;
+.menu li{
+	float: left;
 }
 
-/* Highlight current page in nav */
-header nav li.active a {
-	color: var(--dark);
-	font-weight: 500;
+.menu a{
+	word-spacing: 8px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+	margin: 0 10px;
+	line-height: 14px;
+	padding-bottom: 10px;
+}
+
+.menu .active, .menu li{
+	list-style-type: none;
+}
+
+.menu ul{
+	margin: 0;
 }
 
 /***************** Page Title Block ******************/
 
 #home .pgTitleBlock {
-	background-image: url('../img/homeJumbotron.jpg'); 
+	background-image: url('../img/homeJumbotron.jpg');
 }
 
 .container .pgTitleBlock {
 	overflow: visible;
 	position: relative;
-	
 }
 
 /*Page title*/
 .pgTitleBlock {
-	margin-top: 58px;
-	padding-top: 80px;
-	padding-bottom: 80px;
+	margin-top: 56px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 	display: block;
 	text-align: center;
 	/*background-color: var(--gray);*/
-	/*min-height: 112px;*/
-	
+
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 0 -350px;
 	position: relative;
-	
-	/*Full overlay*/
 }
 
-
 .darkenOverlay{
-
-	/*
-	background: linear-gradient(to bottom, #6086a3, #6086a3);
-	opacity: 0.5;	*/
-
-	/*
-	content:'';
-	position: absolute;
-	top: 58px;
-	right: 0;
-	left: 0;
-	bottom: 968px;
-	display: block;
-	*/
-	
 	top: 0;
 	left: 0;
 	right: 0;
 	padding-top: 0;
 	width: 100%;
 	height: 100%;
-	background: black; /*rgb(96, 134, 163*/
+	background: black;
 	opacity: 0.5;
 	position: absolute;
-	/*background-color: rgba(96, 134, 163, 0.5);*/
-	
-
 }
 
 .pgTitleBlock h1 {
+	text-align: center;
 	color: white;
 	font-size: 70px;
 	letter-spacing: 20px;
 	word-spacing: 20px;
 	text-transform: uppercase;
 	text-shadow: 3px 3px var(--medium); /*6086a3*/
-	
+	margin: 0;
+
 	position: relative;
 	z-index: 1;
 }
+
 
 /*Page subtitle/ description*/
 .pgTitleBlock h2 {
@@ -213,8 +203,6 @@ header nav li.active a {
 	letter-spacing: 5px;
 	text-transform: uppercase;
 }
-
-
 
 /*************** About: Bullets ****************/
 
@@ -335,9 +323,22 @@ footer {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	
 }
 
+footer ul {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+footer li {
+	float:left;
+	display: inline;
+	padding-left: 20px;
+	margin: 0;
+}
 
 /**************** Responsive Home: About Bullets  ****************/
 .responsiveContainer{
@@ -346,7 +347,7 @@ footer {
 }
 
 #responsiveBullets{
-	padding-top: 50px;
+	padding-top: 40px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -355,14 +356,14 @@ footer {
 {
 	text-align: center;
 	line-height: 20px;
-	padding-bottom: 10px;
 	font-size: 20px;
+	padding-bottom: 5px;
 }
 
 #responsiveBullets .rightText
 {
-	line-height: 22px;
-	padding-bottom: 30px;
+	line-height: 30px;
+	padding-bottom: 25px;
 	font-size: 18px;
 }
 
@@ -370,6 +371,7 @@ footer {
 	width: 80%;
 	padding-top: 0;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 /**************** Responsive Footer: Social Media Icons ****************/
@@ -403,169 +405,289 @@ footer h1 a{
 	font-weight: normal;
 }
 
+/**************** Responsive Design: Menu ****************/
+label{
+	text-align: right;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: normal;
+	display: none;
+
+	line-height: 12px;
+	font-size: 16px;
+
+	/*
+	For text MENU label:
+	line-height: 14px;
+	font-size: 14px;
+	*/
+
+}
+
+label:hover{
+	/*color: var(--dark);*/
+	cursor: pointer;
+}
+
+#responsiveMenu {
+	display: none;
+	margin: 0;
+}
+
+.menuDivider{
+	border-bottom: 1px solid white;
+	padding-top: 20px;
+}
+
 /**************** Media Queries ****************/
 @media all and (max-width:950px) {
-	
+
 	#about-bullets{
 		display: none;
 	}
-	
+
 	.socialLinks{
 		display: none;
 	}
-	
+
 	body{
 		width: 100%;
 		height: 100%;
 	}
-	
-	header,header nav a, header nav li, header ul, header nav ul, nav
-	{
-		display: inline;
-		text-align: center;
-		float: none;
-		padding-bottom: 5px;
-		padding-top: 10px;
-	}
-	
-	header nav li{
-		line-height: 20px;
-		padding-left: 15px;
-	}
 
-	header h1, footer h1
-	{
+header{
+	position: absolute;
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+header h1{
+	float: left;
+	word-spacing: 0px;
+	font-size: 12px;
+}
+
+
+/*
+.menu ul, .menu .active ul{
+	display: none;
+	position: absolute;
+	background: var(--medium);
+	opacity: 0.9;
+	top: 35px;
+	right: 0;
+	width: 50%;
+}
+
+.menu:hover ul {
+	display: block;
+}
+
+.menu li, .menu .active li{
+	text-align: center;
+	padding:5px 0;
+	width: 100%;
+	margin: 0;
+}
+
+.menu li:first-of-type{
+	padding-top: 10px;
+}
+
+.menu li:last-of-type{
+	padding-bottom: 10px;
+}
+
+*/
+/*nav{
+	padding-bottom: 10px;
+	border-bottom: 1px solid white;
+}*/
+
+label{
+	display: block;
+	cursor: pointer;
+	width: 30px;
+	float: right;
+}
+
+.menu{
+	text-align: center;
+	display: none;
+}
+
+.menu a{
+	clear: right;
+	display: block;
+	margin: 0 0;
+	font-size: 12px;
+	padding-bottom: 0;
+}
+
+.menu ul{
+	line-height: 12px;
+	display: block;
+	margin-top: 25px;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-bottom: 10px;
+	padding-right: 15px;
+
+	background: var(--light);
+	opacity: 0.9;
+	position: absolute;
+	float: right;
+	right: 0;
+;}
+
+.menu li{
+	float: none;
+	padding-bottom: 10px;
+}
+
+.menu li:last-of-type{
+	padding-bottom: 0;
+}
+
+#responsiveMenu:checked + .menu{
+	display: block;
+}
+
+footer{
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+footer h1 {
 		text-align: center;
 		display: block;
 		float: none;
-	}
-	
-	header h1{
-		font-size: 20px;
-		padding-bottom: 10px;
-	}
-	
-	footer h1{
 		font-size: 10px;
 		padding-bottom: 10px;
-		text-align: center;
 		line-height: 16px;
 	}
-	
+
 	footer, footer a, footer li, footer ul
 	{
 		text-align: center;
 		float: none;
 		padding-bottom: 5px;
 	}
-	
+
 	footer li, footer ul{
 		display: inline;
 		padding-bottom: 5px;
 	}
-	
-	footer{
-		display: block;
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-	
+
+
 	.pgTitleBlock{
+		margin-top: 35px;
+		background-position: center;
+
+		padding-top: 70px;
+		padding-bottom: 70px;
 		padding-left: 20px;
 		padding-right: 20px;
-		padding-bottom: 50px;
-		background-position: center;
 	}
-	
+
 	.pgTitleBlock h1
 	{
 		text-align: center;
 		font-size: 40px;
-		text-shadow: 2px 2px var(--medium); 
-		
+		text-shadow: 2px 2px var(--medium);
 	}
-	
+
 	.mainContent{
 		width: 80%;
 		padding-bottom: 25px;
 		margin-left: 25px;
 		margin-right: 25px;
 	}
-	
+
 	#about-writing{
 		padding-top: 0;
-		
 	}
-	
+
 	#about-writing p, #about-writing h1
 	{
 		display: block;
 		float: none;
 		width: 100%;
-		margin: 0;	
+		margin: 0;
 	}
-	
+
 	#about-writing p{
 		font-size: 16px;
 		line-height: 35px;
 	}
-	
+
 	#about-writing h1{
 		font-size: 18px;
 		margin-bottom: 0;
 		padding-bottom: 0;
 	}
-	
+
 	#about-writing .container
 	{
 		margin: 0 auto;
 	}
-	
+
 	.bulletContainer .leftContainer, .bulletContainer .rightContainer
 	{
 		font-size: 20px;
 		line-height: 30px;
 	}
-	
+
 	#about-writing h1{
 		font-size: 20px;
 		line-height: 20px;
 		margin-bottom: 5px;
 	}
-	
+
 	#about-writing p{
 		font-size: 18px;
 		line-height: 30px;
 		padding-top: 2px;
 		padding-bottom: 20px;
 	}
-	
-			
+
+
 }
 
 @media all and (min-width: 850px) and (max-width:1050px) {
-		
+
 	.bulletContainer .leftContainer, .bulletContainer .rightContainer
 	{
 		font-size: 20px;
 		line-height: 30px;
 	}
-	
+
 	#about-writing h1{
 		font-size: 20px;
 		line-height: 20px;
 		margin-bottom: 5px;
 	}
-	
+
 	#about-writing p{
 		font-size: 18px;
 		line-height: 30px;
 		padding-top: 2px;
 		padding-bottom: 20px;
 	}
-	
+
 	.pgTitleBlock{
+		margin-top:35px;
 		background-position: 0 -100px;
+	}
+
+	header{
+		font-size: 14px;
+		padding: 10px;
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 
 
@@ -575,20 +697,22 @@ footer h1 a{
 	.pgTitleBlock{
 		background-position: 0 -150px;
 	}
-
-
 }
 
 @media all and (min-width:950px){
-	
+
 	#responsiveBullets {
 		display: none;
 	}
-		
+
 	.socialMediaIcons{
 		display: none;
 	}
-		
+
+	.responsiveMenu{
+		display: none;
+	}
+
 }
 
 /*************** Photography ****************/
@@ -599,7 +723,7 @@ footer h1 a{
 
 /**************** Forms ****************/
 .twoCol {
-	overflow: hidden; 
+	overflow: hidden;
 }
 
 .twoCol .col1,
@@ -627,7 +751,7 @@ footer h1 a{
 	word-spacing: 1px;
 	display: inline;
 	padding-top: 15px;
-	
+
 }
 
 /*Form submit button*/
@@ -642,7 +766,7 @@ input[type=email]
 {
 	color: var(--dark);
 	font-size: 14px;
-	border: 1px solid var(--dark);	
+	border: 1px solid var(--dark);
 	padding: 5px;
 	display: inline-block;
 	outline: none;
@@ -659,7 +783,7 @@ input[type=email]
 	border: 1px solid var(--dark);
 	width: 99%;
 	height: 50px;
-	
+
 	padding: 5px;
 	outline: none;
 	margin-top:5px;
@@ -715,8 +839,3 @@ textarea {
 	transform: rotate(135deg);
 	transform-origin: 0% 0%;
 }*/
-
-
-
-
-

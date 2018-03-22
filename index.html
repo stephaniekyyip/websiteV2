@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--
 	Website by Stephanie Yip, 2018
-	
-	Icons from Socicon, http://socicon.com 
+
+	Icons from Socicon, http://socicon.com
 	Contact form powered by Formspree, https://formspree.io/
 
 -->
@@ -11,156 +11,158 @@
 	<head>
 		<meta charset = "UTF-8">
 		<meta name="viewport" content="width=device-width initial-scale=1.0" />
-		
+
 		<title> Stephanie Yip | Computer Engineer | Home </title>
-		
+
 		<link rel= "stylesheet" href="css/style.css"/>
-		
+
 		<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">
+		<script src="js/dropdownMenu.js"></script>
 	</head>
 
 
-<!-- Header --> 
+<!-- Header -->
 	<body>
 	<header>
 		<div class = "container">
 			<h1>Stephanie Yip</h1>
-		
-			<!-- Navigation Bar --> 
-			<nav>		
-				<ul>
-					<li class = "active"><a href = "index.html">Home</a></li>
-					<li><a href = "#resume">Résumé</a></li>
-					<li><a href = "#projects" >Projects</a></li>
-					<li><a href = "#photography">Photography</a></li>
-					<li><a href = "contact.html">Contact</a></li>
-				</ul>
+
+			<!-- Navigation Bar -->
+			<nav>
+					<label for = "responsiveMenu">&#9776</label>
+					<input type = "checkbox" id="responsiveMenu"/>
+					<div class = "menu">
+					<!-- <div class = "menuDivider"></div> -->
+					<ul>
+						<li class = "active"><a href = "index.html">Home</a></li>
+						<li><a href = "#">Résumé</a></li>
+						<li><a href = "#" >Projects</a></li>
+						<li><a href = "#">Photography</a></li>
+						<li><a href = "contact.html">Contact</a></li>
+					</ul>
+				</div>
+
 			</nav>
-			
 		</div>
 	</header>
-		
+
 <!-- Page Title Block -->
-	<div id = "home"> 
-		
+	<section id = "home">
+
 		<div class = "container">
-			
 			<section class = "pgTitleBlock">
 			<div class = "darkenOverlay"></div>
-				<h1>Hello</h1>	
+				<h1>Hello</h1>
 			</section>
 		</div>
-		
-	</div>
-		
-<!-- About: Bulletpoints --> 
+
+	</section>
+
+<!-- About: Bulletpoints -->
 	<section id = "about-bullets">
-		
+
 		<div class = "bulletContainer">
 			<div class = "leftContainer leftText">
 				<div class = "left1">I am</div>
 				<div class = "left2">I studied</div>
 				<div class = "left3">I like</div>
-				<div class = "left4">Long story short</div>	
+				<div class = "left4">Long story short</div>
 			</div>
-			
+
 			<div class = "rightContainer rightText">
 				<div class = "right1">Stephanie Yip</div>
 				<div class = "right2">Electrical and Computer Engineering</div>
 				<div class = "right3">Embedded Devices, Internet of Things, Aerospace</div>
 				<div class = "right4">I am a recent college grad trying to learn new things.</div>
 			</div>
-			
-		</div>	
-			
-			
-		<!-- Line divider --> 
+
+		</div>
+
+
+		<!-- Line divider -->
 		<div class = "line"></div>
 	</section>
 
-	
-	<!-- Responsive Design for About Bullets  --> 
+
+	<!-- Responsive Design for About Bullets  -->
 	<section id = "responsiveBullets">
-	
-	
+
+
 	<div class = "responsiveContainer">
 		<div class = "leftText">I am</div>
 		<div class = "rightText">Stephanie Yip</div>
-	
+
 		<div class = "leftText">I studied</div>
 		<div class = "rightText">Electrical and Computer Engineering</div>
-	
+
 		<div class = "leftText">I like</div>
 		<div class = "rightText">Embedded Devices, Internet of Things, Aerospace</div>
-	
+
 		<div class = "leftText">Long story short</div>
 		<div class = "rightText">I am a recent college grad trying to learn new things.</div>
 
-		<!-- Line divider --> 
+		<!-- Line divider -->
 		<div class = "line"></div>
-	</div>	
+	</div>
 	</section>
-	<!-- END Responsive Design for About Bullets  --> 
-	
-<!-- About: Writing --> 
+
+
+<!-- About: Writing -->
 	<article id = "about-writing">
 		<div class = "container mainContent">
-			
+
 			<h1>My Interests</h1>
-			<p>The area that fascinates me the most is the 
-			integration of hardware and software. I hope to have the pleasure of working on 
-			something that combines the two fields I studied in college– electrical 
-			engineering and computer science. I’m not entirely sure what that opportunity 
-			looks like, but in the meantime, I enjoy learning more about software.</p>
-			
-			
+			<p>The area that fascinates me the most is the integration of hardware and software.
+			I enjoy working on projects that more or less combine the two fields I studied in
+			college– electrical engineering and computer science. Although, lately, I have also been having fun
+			learning more about software. </p>
+
+
 			<h1>About This Website</h1>
-			<p>I have spent the past decade trying to learn HTML 
-			and CSS to create my own themes on various websites, starting with Neopets 
-			in elementary school. Now that I have more free time and experience in 
-			computer science, I decided to buckle down and finally understand how this 
-			all works. I acknowledge that I know practically nothing about web 
-			development, but I’m having fun trying anyway.</p>
-		
+			<p>I have spent the past decade trying to learn HTML
+			and CSS to create my own themes on various websites, starting with Neopets
+			in elementary school. Now that I have more free time and experience in
+			computer science, I decided to buckle down and finally understand how this
+			all works. I acknowledge that I know practically nothing about web
+			development, but I am enjoying the process of learning. </p>
+
 		</div>
-	
+
 	</article>
 
-	
-<!-- Footer --> 
+
+<!-- Footer -->
 	<footer>
 		<div class = "container">
 
 				<div class = "socialMediaIcons">
-					<h1>Designed by Stephanie Yip 2018. Icons from <a href="http://socicon.com">Socicon</a>.</h1>
+					<h1>Designed by Stephanie Yip. Icons from <a href="http://socicon.com">Socicon</a>.</h1>
 					<!-- Icons from http://socicon.com-->
 					<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website"><span class = "socicon-mail"></span></a>
 					<a href = "https://www.linkedin.com/in/stephaniekyyip/"><span class = "socicon-linkedin"></span></a>
 					<a href = "https://github.com/stephaniekyyip"><span class = "socicon-github"></span></a>
 				</div>
-				
+
 				<div class = "socialLinks">
-					<h1>Designed by Stephanie Yip 2018</h1>
+					<h1>Design by Stephanie Yip</h1>
 					<ul>
 						<li><script language="Javascript">
 							var username = "stephaniekyyip";
 							var hostname = "gmail.com";
 							var subject = "E-mailing%20From%20Your%20Website";
-							document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname 
-							+ "?subject=" + subject + "'>" + "E-mail" + "</a> ");	
+							document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname
+							+ "?subject=" + subject + "'>" + "E-mail" + "</a> ");
 						</script></li>
-				
+
 					<li><a href = "https://www.linkedin.com/in/stephaniekyyip/">LinkedIn</a></li>
-				
+
 					<li><a href = "https://github.com/stephaniekyyip">GitHub</a></li>
-			
+
 				</ul>
 			</div>
 	</div>
 	</footer>
-	
-	
-	</body>
-</html>	
-	
 
+
+	</body>
+</html>
