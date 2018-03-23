@@ -4,18 +4,20 @@
 */
 
 
-/**************** HEX color codes ****************/
+/******************************* HEX color codes *****************************/
 :root {
 	--gray: #686F71;
 	--medium: #7D9AB0; /*#6086a3; #93afc6; #86ACB5;*/
 	--dark: #253542; /*#041d44; #2C3D40;*/
 	--light: #88a2b6; /*#c0cee5;*/
 	--title: #00447c;
+	--lightGray: #858585;
 
 	--medRed: #b41916;
 	--darkRed: #681313;
 }
-/***************** General ******************/
+
+/*********************************** General *********************************/
 
 html, body {
 	font-family: Helvetica, Arial, sans-serif;
@@ -40,11 +42,6 @@ html, body {
 	padding: 5px;
 }
 
-.container .center{
-	float: none;
-	width: 100%;
-}
-
 /* Text formatting in nav bar + footer*/
 header h1, footer h1{
 	color: white;
@@ -61,36 +58,18 @@ header h1, footer h1{
 	font-weight: normal;
 }
 
-header h1{
-	font-weight: 700;
-}
-
-/* Line below the text inside body for decoration */
-.line{
-	margin-top: 35px;
-	margin-left: auto;
-	margin-right: auto;
-	border-top: 1px solid var(--medium);
-	/*min-width: auto;*/
-
-}
-
-/**************** Links ****************/
-footer a
-{
-	word-spacing: 8px;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	font-size: 14px;
-	color: white;
-	text-decoration: none;
-	font-weight: normal;
-}
-
 .menu a:hover, footer a:hover
 {
 	color: var(--dark);
 	font-weight: 600;
+}
+
+/* Divider line */
+.line{
+	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 1px solid var(--lightGray);
 }
 
 /**************** Header ****************/
@@ -106,15 +85,18 @@ header {
 	padding: 20px;
 }
 
+header h1{
+	font-weight: 700;
+}
+
 /**************** Navigation Bar ****************/
 /* Highlight current page in nav */
-nav li.active a {
+.menu li.active a{
 	color: var(--dark);
 	font-weight: 600;
 }
 
 .menu ul{
-	line-height: 14px;
 	display: inline-block;
 	float: right;
 }
@@ -132,7 +114,6 @@ nav li.active a {
 	text-decoration: none;
 	font-weight: normal;
 	margin: 0 10px;
-	line-height: 14px;
 	padding-bottom: 10px;
 }
 
@@ -145,7 +126,6 @@ nav li.active a {
 }
 
 /***************** Page Title Block ******************/
-
 #home .pgTitleBlock {
 	background-image: url('../img/homeJumbotron.jpg');
 }
@@ -204,87 +184,18 @@ nav li.active a {
 	text-transform: uppercase;
 }
 
-/*************** About: Bullets ****************/
-
-.bulletContainer{
-	padding-top:50px;
-	padding-left: 25px;
-	padding-right: 25px;
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	align-items: center;
-
-}
-
-.leftContainer{
-	display: flex;
-	flex-direction: column;
-	margin-right: 20px;
-}
-
-.leftText{
-	color: var(--medium);
-	font-size: 18px;
-	text-transform: uppercase;
-	word-spacing: 2px;
-	letter-spacing: 3px;
-	font-weight: 500;
-	font-size: 30px;
-	line-height: 55px;
-	text-align: right;
-}
-
-.rightContainer{
-	display: flex;
-	flex-direction: column;
-}
-
-.rightText{
-	color: var(--dark);
-	font-size: 22px;
-	line-height: 55px;
-}
-
-/*Line divider between about-bullets and next section*/
-#about-bullets .line{
-	margin-top: 50px;
-	text-align: center;
-	width: 88%;
-}
-
-/***************** About: Writing ******************/
-#about-writing{
-	padding-top: 25px;
-}
-
-#about-writing h1{
-	/*word-spacing: 2px;
-	letter-spacing: 3px;*/
-	line-height: 30px;
-}
-
-#about-writing p {
-	margin: 0;
-	padding: 0;
-}
-
-#about-writing .mainContent{
-	padding-top: 10px;
-}
-
 /*************** Main Content ****************/
 .mainContent {
+	margin: auto;
 	padding-top: 25px;
 	padding-bottom: 75px;
-	width: 50%;
+	width: 40%;
 }
 
 /** Link Style **/
 .mainContent a {
 	color: var(--medium);
 	text-decoration: none;
-
 }
 
 .mainContent a:hover {
@@ -299,17 +210,17 @@ nav li.active a {
 	text-align: justify;
 	/*letter-spacing: 1px;
 	word-spacing: 2px;*/
-	margin-top: 5px;
-	margin-bottom: 5px;
+	margin-top: 20px;
+	margin-bottom: 0px;
 	font-weight: 400;
 	padding-top: 10px;
 }
 
 /* Text inside body of page */
 .mainContent p {
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-bottom: 5px;
-	padding-bottom: 15px;
+	padding-bottom: 0;
 	font-size: 18px;
 	color: var(--dark);
 	text-align: left;
@@ -340,385 +251,66 @@ footer li {
 	margin: 0;
 }
 
-/**************** Responsive Home: About Bullets  ****************/
-.responsiveContainer{
+footer a
+{
+	word-spacing: 8px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 14px;
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+/*************** About: Bullets ****************/
+#about-bullets{
+	padding-top: 25px;
+}
+
+.bulletContainer{
 	text-align: center;
 	margin: 0 auto;
 }
 
-#responsiveBullets{
-	padding-top: 40px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-#responsiveBullets .leftText
-{
-	text-align: center;
+.titleText{
+	color: var(--medium);
+	text-transform: uppercase;
+	word-spacing: 2px;
+	letter-spacing: 3px;
+	font-weight: 500;
+	font-size: 30px;
 	line-height: 20px;
-	font-size: 20px;
-	padding-bottom: 5px;
-}
 
-#responsiveBullets .rightText
-{
-	line-height: 30px;
-	padding-bottom: 25px;
-	font-size: 18px;
-}
-
-#responsiveBullets .line{
-	width: 80%;
-	padding-top: 0;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-/**************** Responsive Footer: Social Media Icons ****************/
-.socicon-mail, .socicon-linkedin, .socicon-github{
-	color: white;
-	padding-right: 30px;
-	padding-left: 30px;
-	padding-bottom: 10px;
-	padding-top: 15px;
-	font-size: 20px;
-}
-
-.socicon-mail{
-	position: relative;
-	top: 2px;
-}
-
-.socialMediaIcons{
-	text-align: center;
-}
-
-.socicon-mail:hover, .socicon-linkedin:hover, .socicon-github:hover {
-	color: var(--dark);
-}
-
-footer h1 a{
-	letter-spacing: 5px;
-	word-spacing:3px;
-	font-size: 10px;
-	text-transform: uppercase;
-	font-weight: normal;
-}
-
-/**************** Responsive Design: Menu ****************/
-label{
-	text-align: right;
-	color: white;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	font-weight: normal;
-	display: none;
-
-	line-height: 12px;
-	font-size: 16px;
-
-	/*
-	For text MENU label:
-	line-height: 14px;
-	font-size: 14px;
-	*/
-
-}
-
-label:hover{
-	/*color: var(--dark);*/
-	cursor: pointer;
-}
-
-#responsiveMenu {
-	display: none;
-	margin: 0;
-}
-
-.menuDivider{
-	border-bottom: 1px solid white;
-	padding-top: 20px;
-}
-
-/**************** Media Queries ****************/
-@media all and (max-width:950px) {
-
-	#about-bullets{
-		display: none;
-	}
-
-	.socialLinks{
-		display: none;
-	}
-
-	body{
-		width: 100%;
-		height: 100%;
-	}
-
-header{
-	position: absolute;
-	padding: 10px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-header h1{
-	float: left;
-	word-spacing: 0px;
-	font-size: 12px;
-}
-
-
-/*
-.menu ul, .menu .active ul{
-	display: none;
-	position: absolute;
-	background: var(--medium);
-	opacity: 0.9;
-	top: 35px;
-	right: 0;
-	width: 50%;
-}
-
-.menu:hover ul {
-	display: block;
-}
-
-.menu li, .menu .active li{
-	text-align: center;
-	padding:5px 0;
-	width: 100%;
-	margin: 0;
-}
-
-.menu li:first-of-type{
-	padding-top: 10px;
-}
-
-.menu li:last-of-type{
-	padding-bottom: 10px;
-}
-
-*/
-/*nav{
-	padding-bottom: 10px;
-	border-bottom: 1px solid white;
-}*/
-
-label{
-	display: block;
-	cursor: pointer;
-	width: 30px;
-	float: right;
-}
-
-.menu{
-	text-align: center;
-	display: none;
-}
-
-.menu a{
-	clear: right;
-	display: block;
-	margin: 0 0;
-	font-size: 12px;
-	padding-bottom: 0;
-}
-
-.menu ul{
-	line-height: 12px;
-	display: block;
 	margin-top: 25px;
+}
+
+.subtitleText{
+	color: var(--dark);
+	font-size: 22px;
+	line-height: 55px;
+}
+
+/*Line divider between about-bullets and next section*/
+#about-bullets .line{
+	margin-top: 50px;
+	text-align: center;
+	width: 88%;
+}
+
+/***************** About: Writing ******************/
+#about-writing{
+	padding-top: 5px;
+}
+
+#about-writing h1{
+	/*word-spacing: 2px;
+	letter-spacing: 3px;*/
+	line-height: 30px;
+}
+
+#about-writing .mainContent{
 	padding-top: 10px;
-	padding-left: 15px;
-	padding-bottom: 10px;
-	padding-right: 15px;
-
-	background: var(--light);
-	opacity: 0.9;
-	position: absolute;
-	float: right;
-	right: 0;
-;}
-
-.menu li{
-	float: none;
-	padding-bottom: 10px;
 }
-
-.menu li:last-of-type{
-	padding-bottom: 0;
-}
-
-#responsiveMenu:checked + .menu{
-	display: block;
-}
-
-footer{
-	display: block;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-footer h1 {
-		text-align: center;
-		display: block;
-		float: none;
-		font-size: 10px;
-		padding-bottom: 10px;
-		line-height: 16px;
-	}
-
-	footer, footer a, footer li, footer ul
-	{
-		text-align: center;
-		float: none;
-		padding-bottom: 5px;
-	}
-
-	footer li, footer ul{
-		display: inline;
-		padding-bottom: 5px;
-	}
-
-
-	.pgTitleBlock{
-		margin-top: 35px;
-		background-position: center;
-
-		padding-top: 70px;
-		padding-bottom: 70px;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-
-	.pgTitleBlock h1
-	{
-		text-align: center;
-		font-size: 40px;
-		text-shadow: 2px 2px var(--medium);
-	}
-
-	.mainContent{
-		width: 80%;
-		padding-bottom: 25px;
-		margin-left: 25px;
-		margin-right: 25px;
-	}
-
-	#about-writing{
-		padding-top: 0;
-	}
-
-	#about-writing p, #about-writing h1
-	{
-		display: block;
-		float: none;
-		width: 100%;
-		margin: 0;
-	}
-
-	#about-writing p{
-		font-size: 16px;
-		line-height: 35px;
-	}
-
-	#about-writing h1{
-		font-size: 18px;
-		margin-bottom: 0;
-		padding-bottom: 0;
-	}
-
-	#about-writing .container
-	{
-		margin: 0 auto;
-	}
-
-	.bulletContainer .leftContainer, .bulletContainer .rightContainer
-	{
-		font-size: 20px;
-		line-height: 30px;
-	}
-
-	#about-writing h1{
-		font-size: 20px;
-		line-height: 20px;
-		margin-bottom: 5px;
-	}
-
-	#about-writing p{
-		font-size: 18px;
-		line-height: 30px;
-		padding-top: 2px;
-		padding-bottom: 20px;
-	}
-
-
-}
-
-@media all and (min-width: 850px) and (max-width:1050px) {
-
-	.bulletContainer .leftContainer, .bulletContainer .rightContainer
-	{
-		font-size: 20px;
-		line-height: 30px;
-	}
-
-	#about-writing h1{
-		font-size: 20px;
-		line-height: 20px;
-		margin-bottom: 5px;
-	}
-
-	#about-writing p{
-		font-size: 18px;
-		line-height: 30px;
-		padding-top: 2px;
-		padding-bottom: 20px;
-	}
-
-	.pgTitleBlock{
-		margin-top:35px;
-		background-position: 0 -100px;
-	}
-
-	header{
-		font-size: 14px;
-		padding: 10px;
-		padding-left: 25px;
-		padding-right: 25px;
-	}
-
-
-}
-
-@media all and (min-width: 1050px) and (max-width:1360px) {
-	.pgTitleBlock{
-		background-position: 0 -150px;
-	}
-}
-
-@media all and (min-width:950px){
-
-	#responsiveBullets {
-		display: none;
-	}
-
-	.socialMediaIcons{
-		display: none;
-	}
-
-	.responsiveMenu{
-		display: none;
-	}
-
-}
-
-/*************** Photography ****************/
-
-
-/*************** Contact ****************/
 
 
 /**************** Forms ****************/
@@ -816,26 +408,346 @@ textarea {
 }
 
 
-/*
-.diagContainer {
+/**************** Responsive Footer: Social Media Icons ****************/
+.socicon-mail, .socicon-linkedin, .socicon-github{
+	color: white;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-size: 16px;
+}
+
+.socicon-mail{
+	position: relative;
+	top: 2px;
+}
+
+.socialMediaIcons{
 	text-align: center;
-	display: inline;
+	margin-top: 5px;
 }
 
-.diagonal:before{
-	content: "";
-	position: absolute;
-	border-top: 1px solid #86ACB5;
-	width: 20px;
-	transform: rotate(45deg);
-	transform-origin: 0% 0%;
+.socialMediaIcons h1{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 18px;
 }
 
-.diagonal:after{
-	content: "";
+.socicon-mail:hover, .socicon-linkedin:hover, .socicon-github:hover {
+	color: var(--dark);
+}
+
+.fa-envelope:hover, .fa-linkedin:hover, .fa-github:hover{
+	color: var(--dark);
+}
+
+footer h1 a{
+	letter-spacing: 5px;
+	word-spacing:3px;
+	font-size: 10px;
+	text-transform: uppercase;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+/**************** Responsive Design: Menu ****************/
+label{
+	text-align: right;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: normal;
+	display: none;
+
+	line-height: 12px;
+	font-size: 16px;
+
+	/*
+	For text MENU label:
+	line-height: 14px;
+	font-size: 14px;
+	*/
+
+}
+
+label:active{
+	cursor: pointer;
+	color: var(--dark);
+}
+
+#responsiveMenu {
+	display: none;
+	margin: 0;
+}
+
+.menuDivider{
+	border-bottom: 1px solid white;
+	padding-top: 20px;
+}
+
+/**************** Media Queries ****************/
+
+/*** Tablet + Phone ***/
+@media all and (max-width:950px) {
+
+	.socialLinks{
+		display: none;
+	}
+
+	body{
+		width: 100%;
+		height: 100%;
+	}
+
+/*Header*/
+header{
 	position: absolute;
-	border-top: 1px solid #86ACB5;
-	width: 20px;
-	transform: rotate(135deg);
-	transform-origin: 0% 0%;
-}*/
+	padding: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+header h1{
+	float: left;
+	word-spacing: 0px;
+	font-size: 12px;
+}
+
+label{
+	display: block;
+	cursor: pointer;
+	width: 30px;
+	float: right;
+}
+
+/*Menu*/
+.menu{
+	text-align: center;
+	display: none;
+}
+
+.menu a{
+	clear: right;
+	display: block;
+	margin: 0 0;
+	font-size: 12px;
+	padding-bottom: 0;
+	/*text-shadow: 1px 1px var(--dark);*/
+}
+
+.menu a:hover{
+	color: var(--dark);
+	font-weight: 600;
+	cursor: pointer;
+	text-shadow: none;
+}
+
+.menu li.active a{
+	color: var(--dark);
+	font-weight: 600;
+	text-shadow: none;
+}
+
+.menu ul{
+	line-height: 12px;
+	display: block;
+	margin-top: 25px;
+	padding-top: 15px;
+	padding-left: 30px;
+	padding-bottom: 20px;
+	padding-right: 30px;
+
+	background-color: rgba(125,154,176, 0.9);
+	position: absolute;
+	right: 0;
+;}
+
+.menu li{
+	float: none;
+	padding-bottom: 15px;
+}
+
+.menu li:last-of-type{
+	padding-bottom: 0;
+}
+
+#responsiveMenu:checked + .menu{
+	display: block;
+}
+
+#responsiveMenu:checked + header{
+	padding-bottom: 0;
+}
+
+
+/*Footer*/
+footer{
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+footer h1 {
+		text-align: center;
+		display: block;
+		float: none;
+		font-size: 10px;
+		padding-bottom: 10px;
+		line-height: 16px;
+	}
+
+	footer, footer a, footer li, footer ul
+	{
+		text-align: center;
+		float: none;
+		padding-bottom: 5px;
+	}
+
+	footer li, footer ul{
+		display: inline;
+		padding-bottom: 5px;
+	}
+
+/*Jumbotron*/
+	.pgTitleBlock{
+		margin-top: 35px;
+		background-position: center;
+
+		padding-top: 70px;
+		padding-bottom: 70px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.pgTitleBlock h1
+	{
+		text-align: center;
+		font-size: 40px;
+		text-shadow: 2px 2px var(--medium);
+	}
+
+/*About: Bullets */
+#about-bullets{
+	padding-top: 45px;
+	width: 80%;
+	margin: auto;
+}
+
+.titleText
+{
+	text-align: center;
+	line-height: 20px;
+	font-size: 20px;
+	padding-bottom: 5px;
+	margin-top: 0;
+}
+
+.subtitleText
+{
+	line-height: 25px;
+	padding-bottom: 25px;
+	font-size: 18px;
+}
+
+#about-bullets .line{
+	width: 90%;
+	padding-top: 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/*Main Content*/
+	.mainContent{
+		width: 80%;
+		padding-bottom: 25px;
+	}
+
+/*About: Writing*/
+	#about-writing{
+		padding-top: 0;
+	}
+
+	#about-writing p, #about-writing h1
+	{
+		display: block;
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+
+	#about-writing p{
+		font-size: 16px;
+		line-height: 25px;
+		padding-bottom: 10px;
+	}
+
+	#about-writing h1{
+		font-size: 18px;
+		padding-bottom: 5px;
+		line-height: 20px;
+	}
+
+	#about-writing .container
+	{
+		margin: 0 auto;
+	}
+
+}
+
+/* Update text and padding size */
+@media all and (min-width: 850px) and (max-width:1160px) {
+
+	.bulletContainer .leftContainer, .bulletContainer .rightContainer
+	{
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	#about-writing h1{
+		font-size: 20px;
+		line-height: 20px;
+		margin-bottom: 5px;
+	}
+
+	#about-writing p{
+		font-size: 18px;
+		line-height: 30px;
+		padding-top: 2px;
+		padding-bottom: 20px;
+	}
+
+	.pgTitleBlock{
+		margin-top:35px;
+		background-position: 0 -100px;
+	}
+
+	header{
+		font-size: 14px;
+		padding: 10px;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	.mainContent{
+		width: 60%;
+	}
+
+}
+
+@media all and (min-width: 1050px) and (max-width:1360px) {
+	.pgTitleBlock{
+		background-position: 0 -150px;
+	}
+}
+
+@media all and (min-width:950px){
+
+	.socialMediaIcons{
+		display: none;
+	}
+
+	.responsiveMenu{
+		display: none;
+	}
+
+}

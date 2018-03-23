@@ -2,7 +2,7 @@
 <!--
 	Website by Stephanie Yip, 2018
 
-	Icons from Socicon, http://socicon.com
+	Icons from Font Awesome, https://fontawesome.com
 	Contact form powered by Formspree, https://formspree.io/
 
 -->
@@ -16,8 +16,8 @@
 
 		<link rel= "stylesheet" href="css/style.css"/>
 
-		<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">
-		<script src="js/dropdownMenu.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+		<!--<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">-->
 	</head>
 
 
@@ -29,10 +29,10 @@
 
 			<!-- Navigation Bar -->
 			<nav>
-					<label for = "responsiveMenu">&#9776</label>
+					<label for = "responsiveMenu"">&#9776</label>
 					<input type = "checkbox" id="responsiveMenu"/>
 					<div class = "menu">
-					<!-- <div class = "menuDivider"></div> -->
+					 <!--<div class = "menuDivider"></div>-->
 					<ul>
 						<li class = "active"><a href = "index.html">Home</a></li>
 						<li><a href = "#">Résumé</a></li>
@@ -51,6 +51,7 @@
 
 		<div class = "container">
 			<section class = "pgTitleBlock">
+
 			<div class = "darkenOverlay"></div>
 				<h1>Hello</h1>
 			</section>
@@ -61,6 +62,7 @@
 <!-- About: Bulletpoints -->
 	<section id = "about-bullets">
 
+<!--
 		<div class = "bulletContainer">
 			<div class = "leftContainer leftText">
 				<div class = "left1">I am</div>
@@ -72,9 +74,23 @@
 			<div class = "rightContainer rightText">
 				<div class = "right1">Stephanie Yip</div>
 				<div class = "right2">Electrical and Computer Engineering</div>
-				<div class = "right3">Embedded Devices, Internet of Things, Aerospace</div>
+				<div class = "right3">Embedded Devices, Internet of Things, Integrating Hardware and Software</div>
 				<div class = "right4">I am a recent college grad trying to learn new things.</div>
 			</div>
+-->
+		<div class = "bulletContainer">
+			<div class = "titleText">I am</div>
+			<div class = "subtitleText">Stephanie Yip</div>
+
+			<div class = "titleText">I studied</div>
+			<div class = "subtitleText">Electrical and Computer Engineering</div>
+
+			<div class = "titleText">I like</div>
+			<div class = "subtitleText">Embedded devices, Internet of things, Integrating
+				hardware and software</div>
+
+			<div class = "titleText">Long story short</div>
+			<div class = "subtitleText">I am a recent college grad trying to learn new things.</div>
 
 		</div>
 
@@ -83,49 +99,30 @@
 		<div class = "line"></div>
 	</section>
 
-
-	<!-- Responsive Design for About Bullets  -->
-	<section id = "responsiveBullets">
-
-
-	<div class = "responsiveContainer">
-		<div class = "leftText">I am</div>
-		<div class = "rightText">Stephanie Yip</div>
-
-		<div class = "leftText">I studied</div>
-		<div class = "rightText">Electrical and Computer Engineering</div>
-
-		<div class = "leftText">I like</div>
-		<div class = "rightText">Embedded Devices, Internet of Things, Aerospace</div>
-
-		<div class = "leftText">Long story short</div>
-		<div class = "rightText">I am a recent college grad trying to learn new things.</div>
-
-		<!-- Line divider -->
-		<div class = "line"></div>
-	</div>
-	</section>
-
-
 <!-- About: Writing -->
 	<article id = "about-writing">
-		<div class = "container mainContent">
+		<div class = "container">
+			<div class = "mainContent">
+				<h1>About Me</h1>
+				<p>I graduated from Seattle University in 2017 with a B.S. in Electrical
+					and Computer Engineering. The area that fascinates me the most is the
+					integration of hardware and software. I enjoy working on projects that
+					more or less combine the two fields I studied in college– electrical
+					engineering and computer science. Lately, I have also been interested
+					in learning more about software and technology further up the stack.
+				 </p>
 
-			<h1>My Interests</h1>
-			<p>The area that fascinates me the most is the integration of hardware and software.
-			I enjoy working on projects that more or less combine the two fields I studied in
-			college– electrical engineering and computer science. Although, lately, I have also been having fun
-			learning more about software. </p>
+				<h1>About This Website</h1>
+				<p>I have spent the past decade trying to learn HTML
+			 and CSS to create my own themes on various websites, starting with Neopets
+			 in elementary school. Now that I have more free time and experience in
+			 computer science, I decided to buckle down and finally understand how this
+			 all works. </p>
 
-
-			<h1>About This Website</h1>
-			<p>I have spent the past decade trying to learn HTML
-			and CSS to create my own themes on various websites, starting with Neopets
-			in elementary school. Now that I have more free time and experience in
-			computer science, I decided to buckle down and finally understand how this
-			all works. I acknowledge that I know practically nothing about web
-			development, but I am enjoying the process of learning. </p>
-
+				<p>This website serves as a portfolio of my engineering projects and
+					experiences. In my free time, I dabble in photography and have
+					included that here as well.</p>
+			</div>
 		</div>
 
 	</article>
@@ -136,15 +133,35 @@
 		<div class = "container">
 
 				<div class = "socialMediaIcons">
-					<h1>Designed by Stephanie Yip. Icons from <a href="http://socicon.com">Socicon</a>.</h1>
-					<!-- Icons from http://socicon.com-->
+					<!--
 					<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website"><span class = "socicon-mail"></span></a>
 					<a href = "https://www.linkedin.com/in/stephaniekyyip/"><span class = "socicon-linkedin"></span></a>
 					<a href = "https://github.com/stephaniekyyip"><span class = "socicon-github"></span></a>
+				-->
+				<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website">
+					<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="envelope">
+						<span class="fas fa-envelope"></span>
+				  </div>
+				</a>
+
+				<a href = "https://www.linkedin.com/in/stephaniekyyip/">
+					<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="linkedin logo">
+						<span class="fab fa-linkedin"></span>
+					</div>
+				</a>
+
+				<a href = "https://github.com/stephaniekyyip">
+					<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="github logo">
+						<span class="fab fa-github"></span>
+					</div>
+				</a>
+
+					<!--<h1>Design by Stephanie Yip. Icons from <a href="http://socicon.com">Socicon</a>.</h1>-->
+					<h1>Website by Stephanie Yip 2018</h1>
 				</div>
 
 				<div class = "socialLinks">
-					<h1>Design by Stephanie Yip</h1>
+					<h1>Website by Stephanie Yip 2018</h1>
 					<ul>
 						<li><script language="Javascript">
 							var username = "stephaniekyyip";
