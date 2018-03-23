@@ -33,12 +33,13 @@ html, body {
 .container{
 	box-sizing: border-box;
 	width: 100%;
+	height: 100%;
 	margin: auto;
 	overflow: hidden;
 }
 
 /***** Column layout ******/
-.container .col1, .container .col2{
+.container .col{
 	padding: 5px;
 }
 
@@ -199,8 +200,7 @@ header h1{
 }
 
 .mainContent a:hover {
-	font-weight: bold;
-	letter-spacing: 1px;
+	font-weight: 600;
 }
 
 /* Titles of each individual section on the page*/
@@ -234,6 +234,7 @@ footer {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	margin: auto;
 }
 
 footer ul {
@@ -313,98 +314,111 @@ footer a
 }
 
 
-/**************** Forms ****************/
-.twoCol {
-	overflow: hidden;
+/**************** Desktop Contact Form ****************/
+.contactText{
+	padding-top: 50px;
 }
 
-.twoCol .col1,
-.twoCol .col2
-{
-	width: 49%
+.formCredit{
+	margin-top: 30px;
+	font-size: 12px;
 }
 
-.twoCol .col1 {
-	float: left;
+.formContainer{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
 }
 
-.twoCol .col2 {
-	float: right;
+.desktopForm .colLeft{
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	margin-right: 15px;
+	width: 50%;
 }
 
-.twoCol label {
-	display: block;
+.desktopForm .colRight{
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	margin-right: 0;
+	width: 50%;
 }
 
-.formText{
-	font-size: 18px;
+form{
+	padding-top: 20px;
 	color: var(--medium);
-	letter-spacing: 1px;
-	word-spacing: 1px;
-	display: inline;
-	padding-top: 15px;
+	font-size: 16px;
 
-}
-
-/*Form submit button*/
-.center {
-	display: block;
-	margin: 0 auto;
-	width: 20%
+	word-spacing: 8px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: normal;
+	box-sizing: border-box;
 }
 
 input[type=text],
 input[type=email]
 {
+	box-sizing: border-box;
 	color: var(--dark);
 	font-size: 14px;
-	border: 1px solid var(--dark);
-	padding: 5px;
-	display: inline-block;
-	outline: none;
-	width: 97%;
-
-	margin-top:5px;
-	margin-bottom:15px;
-}
-
-
-.inputBig{
-	color: var(--dark);
-	font-size: 14px;
-	border: 1px solid var(--dark);
-	width: 99%;
-	height: 50px;
-
+	border: 1px solid var(--gray);
 	padding: 5px;
 	outline: none;
+
 	margin-top:5px;
-	margin-bottom:10px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-bottom:20px;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 input[type=submit]{
 	color: white;
 	font-size: 16px;
+	word-spacing: 8px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: normal;
+
 	background-color: var(--medium);
-	margin-top:1px;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 5px;
 	box-shadow: none;
-
+	border: none;
 }
 
 input[type=submit]:hover{
+	box-sizing: border-box;
 	background-color: var(--dark);
-
 }
 
 textarea {
-	resize: vertical;
+	box-sizing: border-box;
+	color: var(--dark);
+	font-size: 14px;
+	border: 1px solid var(--gray);
+	width: 100%;
+	height: 100px;
 
+	padding: 5px;
+	margin-top:5px;
+	margin-bottom:10px;
+	margin-left: auto;
+	margin-right: auto;
+	resize: vertical;
+}
+
+input:focus, textarea:focus{
+	outline: none !important;
+	border: 1px solid var(--medium);
+	box-shadow: 0 0 5px var(--medium);
 }
 
 
@@ -485,12 +499,17 @@ label:active{
 	padding-top: 20px;
 }
 
+
 /**************** Media Queries ****************/
 
 /*** Tablet + Phone ***/
 @media all and (max-width:950px) {
 
 	.socialLinks{
+		display: none;
+	}
+
+	.desktopForm{
 		display: none;
 	}
 
@@ -579,7 +598,6 @@ label{
 	padding-bottom: 0;
 }
 
-
 /*Footer*/
 footer{
 	display: block;
@@ -662,6 +680,18 @@ footer h1 {
 		padding-bottom: 25px;
 	}
 
+	.mainContent p{
+		font-size: 16px;
+		line-height: 25px;
+		padding-bottom: 10px;
+	}
+
+	.mainContent h1{
+		font-size: 18px;
+		padding-bottom: 5px;
+		line-height: 20px;
+	}
+
 /*About: Writing*/
 	#about-writing{
 		padding-top: 0;
@@ -675,21 +705,42 @@ footer h1 {
 		margin: 0;
 	}
 
-	#about-writing p{
-		font-size: 16px;
-		line-height: 25px;
-		padding-bottom: 10px;
-	}
-
-	#about-writing h1{
-		font-size: 18px;
-		padding-bottom: 5px;
-		line-height: 20px;
-	}
-
 	#about-writing .container
 	{
 		margin: 0 auto;
+	}
+
+	/* Contact Form*/
+	input[type=text],
+	input[type=email]
+	{
+		box-sizing: border-box;
+		color: var(--dark);
+		font-size: 14px;
+		border: 1px solid var(--gray);
+		padding: 5px;
+		display: inline-block;
+		outline: none;
+		width: 100%;
+
+		margin-top:5px;
+		margin-bottom:15px;
+	}
+
+	textarea {
+		box-sizing: border-box;
+		color: var(--dark);
+		font-size: 14px;
+		border: 1px solid var(--gray);
+		height: 50px;
+		width: 100%;
+
+		padding: 5px;
+		margin-top:5px;
+		margin-bottom:10px;
+		margin-left: auto;
+		margin-right: auto;
+		resize: vertical;
 	}
 
 }
@@ -733,7 +784,6 @@ footer h1 {
 	}
 
 }
-
 @media all and (min-width: 1050px) and (max-width:1360px) {
 	.pgTitleBlock{
 		background-position: 0 -150px;
@@ -747,6 +797,10 @@ footer h1 {
 	}
 
 	.responsiveMenu{
+		display: none;
+	}
+
+	.responsiveForm{
 		display: none;
 	}
 
