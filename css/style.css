@@ -33,7 +33,7 @@ html, body {
 .container{
 	box-sizing: border-box;
 	width: 100%;
-	height: 100%;
+	min-height: 100%;
 	margin: auto;
 	overflow: hidden;
 }
@@ -189,7 +189,7 @@ header h1{
 .mainContent {
 	margin: auto;
 	padding-top: 25px;
-	padding-bottom: 75px;
+	padding-bottom: 60px;
 	width: 40%;
 }
 
@@ -315,8 +315,14 @@ footer a
 
 
 /**************** Desktop Contact Form ****************/
+
 .contactText{
 	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.contactFooter{
+	position: absolute;
 }
 
 .formCredit{
@@ -503,7 +509,7 @@ label:active{
 /**************** Media Queries ****************/
 
 /*** Tablet + Phone ***/
-@media all and (max-width:950px) {
+@media all and (max-width:900px){
 
 	.socialLinks{
 		display: none;
@@ -612,7 +618,7 @@ footer h1 {
 		font-size: 10px;
 		padding-bottom: 10px;
 		line-height: 16px;
-	}
+}
 
 	footer, footer a, footer li, footer ul
 	{
@@ -711,6 +717,15 @@ footer h1 {
 	}
 
 	/* Contact Form*/
+	.contactText{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+.contactFooter{
+		position: relative;
+	}
+
 	input[type=text],
 	input[type=email]
 	{
@@ -732,7 +747,7 @@ footer h1 {
 		color: var(--dark);
 		font-size: 14px;
 		border: 1px solid var(--gray);
-		height: 50px;
+		height: 80px;
 		width: 100%;
 
 		padding: 5px;
@@ -745,8 +760,19 @@ footer h1 {
 
 }
 
+/* Fix footer on Contact page and nav bar*/
+@media all and (max-width:900px) and (min-height: 1000px){
+	.contactFooter{
+		position: absolute;
+	}
+
+	.menu ul{
+		margin-top: 22px;
+	}
+}
+
 /* Update text and padding size */
-@media all and (min-width: 850px) and (max-width:1160px) {
+@media all and (min-width: 900px) and (max-width:1160px) {
 
 	.bulletContainer .leftContainer, .bulletContainer .rightContainer
 	{
@@ -783,15 +809,16 @@ footer h1 {
 		width: 60%;
 	}
 
+
 }
+
 @media all and (min-width: 1050px) and (max-width:1360px) {
 	.pgTitleBlock{
 		background-position: 0 -150px;
 	}
 }
 
-@media all and (min-width:950px){
-
+@media all and (min-width:900px){
 	.socialMediaIcons{
 		display: none;
 	}

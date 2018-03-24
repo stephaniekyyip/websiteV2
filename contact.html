@@ -17,22 +17,23 @@
 		<link rel= "stylesheet" href="css/style.css"/>
 
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-
+		<script src = "js/contactForm.js"></script>
 	</head>
 
 
 <!-- Header -->
 	<body>
+
 	<header>
 		<div class = "container">
 			<h1>Stephanie Yip</h1>
 
 			<!-- Navigation Bar -->
 			<nav>
-					<label for = "responsiveMenu"">&#9776</label>
+					<label for = "responsiveMenu">&#9776</label>
 					<input type = "checkbox" id="responsiveMenu"/>
 					<div class = "menu">
-					 <!--<div class = "menuDivider"></div>-->
+					 <!-- <div class = "menuDivider"></div> -->
 					<ul>
 						<li><a href = "index.html">Home</a></li>
 						<li><a href = "#">Résumé</a></li>
@@ -69,28 +70,27 @@
 				var hostname = "gmail.com";
 				var subject = "E-mailing%20From%20Your%20Website";
 				document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname
-				+ "?subject=" + subject + "'>" + "stephaniekyyip@gmail.com" + "</a>.");
-			</script>
+				+ "?subject=" + subject + "'>" + "stephaniekyyip@gmail.com" + "</a>."); </script>
 			Alternatively, you can fill out the form below. I will get back to you as soon as possible.
 		</p>
 
 	<!-- Contact Form -->
 	<div class = "desktopForm">
-		<form method = "POST" action = "https://formspree.io/stephaniekyyip@gmail.com">
+		<form name = "contactForm" method = "POST" action = "https://formspree.io/stephaniekyyip@gmail.com">
 			<div class = "formContainer">
 				<div class = "colLeft">
 					Name
-					<input type ="text" name = "Name">
+					<input type ="text" id = "name" name = "Name" required>
 				</div>
 
 				<div class = "colRight">
 					Your E-mail
-					<input type ="email"  name = "email">
+					<input type ="email" id = "email" name = "email" required>
 				</div>
 			</div>
 			Message
-			<textarea name= "Message"></textarea>
-			<center><input type ="submit"></center>
+			<textarea name= "Message" id = "msg" required></textarea>
+			<center><input type ="submit" onclick="validateForm()"></center>
 
 				<input type="hidden" name="_subject" value = "Email from your website">
 				<input type="hidden" name="_format" value="plain" />
@@ -101,17 +101,16 @@
 
 	<!-- Responsive Contact Form -->
 		<div class = "responsiveForm">
-			<form method = "POST" action = "https://formspree.io/stephaniekyyip@gmail.com">
+			<form name = "contactForm" method = "POST" action = "https://formspree.io/stephaniekyyip@gmail.com">
 				Name
-				<input type ="text" id="name" name = "Name">
+				<input type ="text" id="name" name = "Name" required>
 				Your E-mail
-				<input type ="email" id="email" name = "E-mail">
+				<input type ="email" id="email" name = "email" required>
 				Message
-				<textarea name= "Message" id="msg"></textarea>
-				<center><input type ="submit"></center>
+				<textarea name= "Message" id="msg" required></textarea>
+				<center><input type ="submit" onclick="validateForm()"></center>
 
 				<input type="hidden" name="_subject" value = "Email from your website">
-				<input type="hidden" name="_replyto" value = "stephaniekyyip@gmail.com">
 				<input type="hidden" name="_format" value="plain" />
 				<input type="text" name="_gotcha" style="display:none" />
 			</form>
@@ -123,9 +122,8 @@
 </section>
 
 <!-- Footer -->
-	<footer>
+	<footer class = "contactFooter">
 		<div class = "container">
-
 				<div class = "socialMediaIcons">
 					<!--
 					<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website"><span class = "socicon-mail"></span></a>
@@ -170,9 +168,8 @@
 
 				</ul>
 			</div>
-	</div>
+		</div>
 	</footer>
-
 
 	</body>
 </html>
