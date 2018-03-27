@@ -135,6 +135,18 @@ header h1{
 	background-image: url('../img/homeJumbotron.jpg');
 }
 
+/*
+#contact .pgTitleBlock{
+		background-image: url('../img/homeJumbotron.jpg');
+}
+*/
+
+/*
+#resume .pgTitleBlock{
+		background-image: url('../img/homeJumbotron.jpg');
+}
+*/
+
 .container .pgTitleBlock {
 	overflow: visible;
 	position: relative;
@@ -317,6 +329,88 @@ footer a
 
 #about-writing .mainContent{
 	padding-top: 10px;
+}
+
+/***************** Resume ******************/
+#resume ul{
+	padding-left: 20px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+#resume li{
+	color: var(--dark);
+	padding-bottom: 10px;
+	font-size: 18px;
+}
+
+#resume h2 {
+	font-size: 20px;
+	color: var(--medium);
+	font-weight: 500;
+	margin-bottom:5px;
+	margin-top: 20px;
+}
+
+#resume a{
+	color: var(--dark);
+	text-decoration: underline;
+}
+
+#resume a:hover{
+	text-decoration: none;
+}
+
+#resume h1{
+	color: var(--medium);
+
+	word-spacing: 8px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	text-align: center;
+	margin-bottom: 20px;
+
+}
+
+.resumeHeading{
+	color: var(--dark);
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.resumeRight{
+	float: right;
+}
+
+.resumeContent{
+	font-size: 18px;
+	color: var(--dark);
+	font-weight: normal;
+	line-height: 30px;
+}
+
+.downloadButton{
+	color: white;
+	font-size: 16px;
+	word-spacing: 2px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: normal;
+
+	background-color: var(--medium);
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 20px;
+
+	box-sizing: border-box;
+	box-shadow: none;
+	border: none;
+}
+
+.downloadButton:hover{
+	background-color: var(--dark);
 }
 
 
