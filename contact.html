@@ -24,152 +24,155 @@
 <!-- Header -->
 	<body>
 
-	<header>
-		<div class = "container">
-			<h1>Stephanie Yip</h1>
+		<header>
+			<div class = "container">
+				<h1>Stephanie Yip</h1>
 
-			<!-- Navigation Bar -->
-			<nav>
-					<label for = "responsiveMenu">&#9776</label>
-					<input type = "checkbox" id="responsiveMenu"/>
-					<div class = "menu">
-					 <!-- <div class = "menuDivider"></div> -->
-					<ul>
-						<li><a href = "index.html">Home</a></li>
-						<li><a href = "#">Résumé</a></li>
-						<li><a href = "#" >Projects</a></li>
-						<li><a href = "#">Photography</a></li>
-						<li class = "active"><a href = "contact.html">Contact</a></li>
-					</ul>
-				</div>
+				<!-- Navigation Bar -->
+				<nav>
+						<label for = "responsiveMenu">&#9776</label>
+						<input type = "checkbox" id="responsiveMenu"/>
+						<div class = "menu">
+						 <!-- <div class = "menuDivider"></div> -->
+						<ul>
+							<li><a href = "index.html">Home</a></li>
+							<li><a href = "#">Résumé</a></li>
+							<li><a href = "#" >Projects</a></li>
+							<li><a href = "#">Photography</a></li>
+							<li class = "active"><a href = "contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
 
-			</nav>
-		</div>
-	</header>
-
-<!-- Page Title Block -->
-	<section id = "contact">
-
-		<div class = "container">
-			<section class = "pgTitleBlock">
-
-			<div class = "darkenOverlay"></div>
-				<h1>Contact</h1>
-			</section>
-		</div>
-
-	</section>
-
-<!--Main Content -->
-<section class = "container">
-
-	<div class = "mainContent contactText">
-		<p> The best way to get in touch with me is through e-mail at
-			<script language="Javascript">
-				var username = "stephaniekyyip";
-				var hostname = "gmail.com";
-				var subject = "E-mailing%20From%20Your%20Website";
-				document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname
-				+ "?subject=" + subject + "'>" + "stephaniekyyip@gmail.com" + "</a>."); </script>
-			Alternatively, you can fill out the form below. I will get back to you as soon as possible.
-		</p>
-
-	<!-- Contact Form -->
-	<div class = "desktopForm">
-		<form name = "contactForm" method = "POST" action = "https://formspree.io/stephaniekyyip@gmail.com">
-			<div class = "formContainer">
-				<div class = "colLeft">
-					Name
-					<input type ="text" id = "name" name = "Name" required/>
-				</div>
-
-				<div class = "colRight">
-					Your E-mail
-					<input type ="email" id = "email" name = "email" required/>
-				</div>
 			</div>
-			Message
-			<textarea name= "Message" id = "msg" required/></textarea>
-			<center><input type ="submit"></center>
+		</header>
 
-				<input type="hidden" name="_subject" value = "Email from your website">
-				<input type="hidden" name="_format" value="plain" />
-				<input type="text" name="_gotcha" style="display:none" />
-		</form>
-	</div>
+	<!-- Page Title Block -->
+		<section id = "contact">
 
+			<div class = "container">
+				<section class = "pgTitleBlock">
 
-	<!-- Responsive Contact Form -->
-		<div class = "responsiveForm">
+				<div class = "darkenOverlay"></div>
+					<h1>Contact</h1>
+				</section>
+			</div>
+
+		</section>
+
+	<!--Main Content -->
+	<div class = "wrapper">
+	<section class = "mainContent contactText">
+
+	<!--	<div class = "container"> -->
+			<p> The best way to get in touch with me is through e-mail at
+				<script language="Javascript">
+					var username = "stephaniekyyip";
+					var hostname = "gmail.com";
+					var subject = "E-mailing%20From%20Your%20Website";
+					document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname
+					+ "?subject=" + subject + "'>" + "stephaniekyyip@gmail.com" + "</a>."); </script>
+				Alternatively, you can fill out the form below. I will get back to you as soon as possible.
+			</p>
+
+		<!-- Contact Form -->
+		<div class = "desktopForm">
 			<form name = "contactForm" method = "POST" action = "https://formspree.io/stephaniekyyip@gmail.com">
-				Name
-				<input type ="text" id="name" name = "Name" required/>
-				Your E-mail
-				<input type ="email" id="email" name = "email" required/>
+				<div class = "formContainer">
+					<div class = "colLeft">
+						Name
+						<input type ="text" id = "name" name = "Name" required/>
+					</div>
+
+					<div class = "colRight">
+						Your E-mail
+						<input type ="email" id = "email" name = "E-mail" required/>
+					</div>
+				</div>
 				Message
-				<textarea name= "Message" id="msg" required></textarea>
+				<textarea name= "Message" id = "msg" required/></textarea>
 				<center><input type ="submit"></center>
 
-				<input type="hidden" name="_subject" value = "Email from your website">
-				<input type="hidden" name="_format" value="plain" />
-				<input type="text" name="_gotcha" style="display:none" />
+					<input type="hidden" name="_subject" value = "Email from your website">
+					<input type="hidden" name="_format" value="plain" />
+					<input type="text" name="_gotcha" style="display:none" />
 			</form>
 		</div>
 
-		<!-- Credit -->
-		<div class = "formCredit">Form powered by <a href = "https://formspree.io/">Formspree</a></div>
-	</div>
-</section>
 
-<!-- Footer -->
-	<footer class = "contactFooter">
-		<div class = "container">
-				<div class = "socialMediaIcons">
-					<!--
-					<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website"><span class = "socicon-mail"></span></a>
-					<a href = "https://www.linkedin.com/in/stephaniekyyip/"><span class = "socicon-linkedin"></span></a>
-					<a href = "https://github.com/stephaniekyyip"><span class = "socicon-github"></span></a>
-				-->
-				<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website">
-					<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="envelope">
-						<span class="fas fa-envelope"></span>
-				  </div>
-				</a>
+		<!-- Responsive Contact Form -->
+			<div class = "responsiveForm">
 
-				<a href = "https://www.linkedin.com/in/stephaniekyyip/">
-					<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="linkedin logo">
-						<span class="fab fa-linkedin"></span>
-					</div>
-				</a>
+				<form name = "contactForm" method = "POST" action = "https://formspree.io/stephaniekyyip@gmail.com">
+					Name
+					<input type ="text" id="name" name = "Name" required/>
+					Your E-mail
+					<input type ="email" id="email" name = "E-mail" required/>
+					Message
+					<textarea name= "Message" id="msg" required></textarea>
+					<center><input type ="submit"></center>
 
-				<a href = "https://github.com/stephaniekyyip">
-					<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="github logo">
-						<span class="fab fa-github"></span>
-					</div>
-				</a>
+					<input type="hidden" name="_subject" value = "Email from your website">
+					<input type="hidden" name="_format" value="plain" />
+					<input type="text" name="_gotcha" style="display:none" />
+				</form>
 
-					<h1>Website by Stephanie Yip 2018</h1>
-				</div>
-
-				<div class = "socialLinks">
-					<h1>Website by Stephanie Yip 2018</h1>
-					<ul>
-						<li><script>
-							var username = "stephaniekyyip";
-							var hostname = "gmail.com";
-							var subject = "E-mailing%20From%20Your%20Website";
-							document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname
-							+ "?subject=" + subject + "'>" + "E-mail" + "</a> ");
-						</script></li>
-
-					<li><a href = "https://www.linkedin.com/in/stephaniekyyip/">LinkedIn</a></li>
-
-					<li><a href = "https://github.com/stephaniekyyip">GitHub</a></li>
-
-				</ul>
 			</div>
-		</div>
-	</footer>
 
+			<!-- Credit -->
+			<div class = "formCredit">Form powered by <a href = "https://formspree.io/">Formspree</a></div>
+	<!--	</div> .container div-->
+	</section>
+</div>
+
+	<!-- Footer -->
+		<footer>
+			<div class = "container">
+					<div class = "socialMediaIcons">
+						<!--
+						<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website"><span class = "socicon-mail"></span></a>
+						<a href = "https://www.linkedin.com/in/stephaniekyyip/"><span class = "socicon-linkedin"></span></a>
+						<a href = "https://github.com/stephaniekyyip"><span class = "socicon-github"></span></a>
+					-->
+					<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website">
+						<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="envelope">
+							<span class="fas fa-envelope"></span>
+					  </div>
+					</a>
+
+					<a href = "https://www.linkedin.com/in/stephaniekyyip/">
+						<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="linkedin logo">
+							<span class="fab fa-linkedin"></span>
+						</div>
+					</a>
+
+					<a href = "https://github.com/stephaniekyyip">
+						<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="github logo">
+							<span class="fab fa-github"></span>
+						</div>
+					</a>
+
+						<h1>Website by Stephanie Yip 2018</h1>
+					</div>
+
+					<div class = "socialLinks">
+						<h1>Website by Stephanie Yip 2018</h1>
+						<ul>
+							<li><script>
+								var username = "stephaniekyyip";
+								var hostname = "gmail.com";
+								var subject = "E-mailing%20From%20Your%20Website";
+								document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname
+								+ "?subject=" + subject + "'>" + "E-mail" + "</a> ");
+							</script></li>
+
+						<li><a href = "https://www.linkedin.com/in/stephaniekyyip/">LinkedIn</a></li>
+
+						<li><a href = "https://github.com/stephaniekyyip">GitHub</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

@@ -35,7 +35,11 @@ html, body {
 	width: 100%;
 	min-height: 100%;
 	margin: auto;
-	overflow: hidden;
+	overflow: auto;
+}
+
+.wrapper{
+	min-height: 100%;
 }
 
 /***** Column layout ******/
@@ -87,7 +91,7 @@ header {
 }
 
 header h1{
-	font-weight: 700;
+	font-weight: 500;
 }
 
 /**************** Navigation Bar ****************/
@@ -113,7 +117,7 @@ header h1{
 	font-size: 14px;
 	color: white;
 	text-decoration: none;
-	font-weight: normal;
+	font-weight: 500;
 	margin: 0 10px;
 	padding-bottom: 10px;
 }
@@ -139,8 +143,8 @@ header h1{
 /*Page title*/
 .pgTitleBlock {
 	margin-top: 56px;
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: 150px;
+	padding-bottom: 150px;
 	display: block;
 	text-align: center;
 	/*background-color: var(--gray);*/
@@ -191,6 +195,8 @@ header h1{
 	padding-top: 25px;
 	padding-bottom: 60px;
 	width: 40%;
+	overflow: auto;
+	box-sizing: border-box;
 }
 
 /** Link Style **/
@@ -220,7 +226,7 @@ header h1{
 .mainContent p {
 	margin-top: 10px;
 	margin-bottom: 5px;
-	padding-bottom: 0;
+	padding-bottom: 0px;
 	font-size: 18px;
 	color: var(--dark);
 	text-align: left;
@@ -232,9 +238,9 @@ footer {
 	padding: 20px 20px 30px 20px;
 	background: var(--medium);
 	left: 0;
-	right: 0;
 	bottom: 0;
-	margin: auto;
+	right: 0;
+	clear: both;
 }
 
 footer ul {
@@ -315,14 +321,9 @@ footer a
 
 
 /**************** Desktop Contact Form ****************/
-
 .contactText{
 	padding-top: 50px;
 	padding-bottom: 50px;
-}
-
-.contactFooter{
-	position: absolute;
 }
 
 .formCredit{
@@ -342,8 +343,8 @@ footer a
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	margin-right: 15px;
-	width: 50%;
+	margin-right: 10px;
+	width: 49%;
 }
 
 .desktopForm .colRight{
@@ -351,7 +352,7 @@ footer a
 	display: flex;
 	flex-direction: column;
 	margin-right: 0;
-	width: 50%;
+	width: 49%;
 }
 
 form{
@@ -378,8 +379,6 @@ input[type=email]
 
 	margin-top:5px;
 	margin-bottom:20px;
-	margin-right: 0;
-	margin-left: 0;
 }
 
 input[type=submit]{
@@ -410,21 +409,21 @@ textarea {
 	color: var(--dark);
 	font-size: 14px;
 	border: 1px solid var(--gray);
-	width: 100%;
+	width: 99%;
 	height: 100px;
 
 	padding: 5px;
 	margin-top:5px;
 	margin-bottom:10px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 3px;
+	margin-right: 3px;
 	resize: vertical;
 }
 
 input:focus, textarea:focus{
 	outline: none !important;
 	border: 1px solid var(--medium);
-	box-shadow: 0 0 5px var(--medium);
+	box-shadow: 0 0 10px var(--medium);
 }
 
 
@@ -722,10 +721,6 @@ footer h1 {
 		padding-bottom: 40px;
 	}
 
-.contactFooter{
-		position: relative;
-	}
-
 	input[type=text],
 	input[type=email]
 	{
@@ -736,10 +731,11 @@ footer h1 {
 		padding: 5px;
 		display: inline-block;
 		outline: none;
-		width: 100%;
+		width: 99%;
 
 		margin-top:5px;
-		margin-bottom:15px;
+		margin-bottom:25px;
+		margin-left: 3px;
 	}
 
 	textarea {
@@ -748,13 +744,12 @@ footer h1 {
 		font-size: 14px;
 		border: 1px solid var(--gray);
 		height: 80px;
-		width: 100%;
+		width: 99%;
 
 		padding: 5px;
 		margin-top:5px;
 		margin-bottom:10px;
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: 3px;
 		resize: vertical;
 	}
 
@@ -762,10 +757,6 @@ footer h1 {
 
 /* Fix footer on Contact page and nav bar*/
 @media all and (max-width:900px) and (min-height: 1000px){
-	.contactFooter{
-		position: absolute;
-	}
-
 	.menu ul{
 		margin-top: 22px;
 	}
