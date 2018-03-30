@@ -13,7 +13,7 @@
 		<meta charset = "UTF-8">
 		<meta name="viewport" content="width=device-width initial-scale=1.0" />
 
-		<title> Stephanie Yip | Computer Engineer | Home </title>
+		<title> Stephanie Yip | Resume </title>
 
 		<link rel= "stylesheet" href="css/style.css"/>
 
@@ -31,7 +31,7 @@
 
 				<!-- Navigation Bar -->
 				<nav>
-						<label for = "responsiveMenu"> &#9776 </label>
+						<label for = "responsiveMenu"> &#9776;</label>
 						<input type = "checkbox" id="responsiveMenu">
 						<div class = "menu">
 						 <!--<div class = "menuDivider"></div>-->
@@ -61,11 +61,23 @@
 
 		</section>
 
+	<!--Sidebar -->
+	<aside id = "resumeSidebar">
+
+		<ul>
+			<li>Education</li>
+			<li>Skills</li>
+			<li>Work Experience</li>
+			<li>Leadership Experience</li>
+			<li>Featured Projects</li>
+		</ul>
+	</aside>
+
 	<!-- Main Content: Resume-->
   <section id = "resume">
   	<div class = "container">
   	   <div class = "mainContent">
-				 <button class = "downloadButton">See Resume in PDF</button>
+				 <center><button class = "downloadButton">View PDF Version</button></center>
 
 				   <div class = "line"></div>
           <!-- Education -->
@@ -73,10 +85,12 @@
             <h1>Education</h1>
 
 						<div class = "resumeContent"><span class = "resumeHeading">Seattle University</span>
-							Seattle, WA
+							<div class = "resumeLocation">Seattle, WA</div>
             <span class = "resumeRight">Sept. 2013 - Jun. 2017</span>
-						<br>B.S. in Electrical Engineering, Computer Engineering Specialization
-						<span class = "resumeRight">GPA: 3.6</span>
+
+						<ul>
+							<li>B.S. in Electrical Engineering, Computer Engineering Specialization</li>
+						</ul>
 					</div>
 
             <!-- Honors -->
@@ -84,8 +98,8 @@
               <h2>Academic Honors</h2>
 							<ul>
 								<li>Graduated <i>cum laude</i></li>
-								<li><a href = "https://www.tbp.org/home.cfm">Tau Beta Pi - Washington Gamma Chapter</a></li>
-								<li><a href = "https://hkn.ieee.org/">IEEE Eta Kappa Nu - Mu Iota Chapter</a></li>
+								<li><a href = "https://www.tbp.org/home.cfm">Tau Beta Pi</a> (Top fifth of class among all engineering majors)</li>
+								<li><a href = "https://hkn.ieee.org/">IEEE Eta Kappa Nu</a> (Top third of electrical and computer engineering class)</li>
 							</ul>
             </section>
 
@@ -108,29 +122,122 @@
 
           <!-- Technical Skills  -->
 					<section id = "techSkills">
-						<h1>Technical Skills</h1>
+						<h1>Skills</h1>
 
-						<span class = "resumeHeading">Programming Languages</span>
+						<h2>Programming Languages</h2>
+						<div class = "resumeContent">C++, C, HTML, CSS, Python,
+							Javascript, PHP, MATLAB, VHDL
+						</div>
 
-						<br>
+						<h2>Lab Experience</h2>
+						<div class = "resumeContent">
+							Soldering, reading schematics, prototyping circuits, digital multimeters,
+							oscilloscopes, Altera FPGA board, Raspberry Pi, Arduino, ESP8266
+						</div>
 
-						<span class = "resumeHeading">Lab Experience</span>
+						<h2>Software</h2>
+						<div class = "resumeContent">
+							Visual Studio, Git, Adobe Photoshop
+						</div>
 
-						<br>
-
-						<span class = "resumeHeading">Tools</span>
-
+						<h2>Languages</h2>
+						<div class = "resumeContent">
+							Chinese - Cantonese (conversational), Mandarin (limited)
+						</div>
 
 					</section>
 
 					<div class = "line"></div>
 
           <!-- Work Experience  -->
+					<section id = "workExperience">
+						<h1>Work Experience</h1>
+
+						<div class = "resumeContent"><span class = "resumeHeading">The Boeing Company</span>
+							<div class = "resumeLocation">St. Louis, MO</div>
+            	<span class = "resumeRight">Aug. 2017 - Present</span>
+							<ul>
+								<li>Debugged and ran regression tests for Windows, Linux, and VxWorks platforms</li>
+								<li>Experience with Agile/ Scrum development methodology</li>
+								<li>Used WindRiver Workbench and Visual Studio for software development and debugging</li>
+							</ul>
+						</div>
+
+						<div class = "resumeContent"><span class = "resumeHeading">Crane Aerospace and Electronics</span>
+							<div class = "resumeLocation">Lynnwood, WA</div>
+            	<span class = "resumeRight">Jun. 2016 - Sept. 2016</span>
+
+							<ul>
+								<li>Contributed to the development of a proximity sensor using an ARM microcontroller</li>
+								<li>Used MATLAB and an oscilloscope for signal processing testing and verification</li>
+								<li>Modified and debugged embedded software code in C to operate the analog-to-digital converter (ADC) and digital-to-analog converter (DAC) on the microcontroller</li>
+							</ul>
+						</div>
+
+					</section>
+
+					<div class = "line"></div>
+
+					<!-- Student Organizations -->
+					<section id = "studentOrg">
+						<h1>Leadership Experience</h1>
+
+						<h2>Society of Women Engineers (SWE)</h2>
+
+
+						<div class = "resumeContent"><span class = "resumeHeading">Treasurer</span>
+							<div class = "resumeLocation">Seattle University</div>
+							<span class = "resumeRight">Sept. 2016 - Jun. 2017</span>
+							<ul>
+								<li>Manage club finances and budget, organize events, and mentor new officers</li>
+							</ul>
+						</div>
+
+						<div class = "resumeContent"><span class = "resumeHeading">Regional Collegiate Communications Editor (RCCE)</span>
+							<span class = "resumeRight">Sept. 2016 - Jun. 2017</span>
+							<ul>
+								<li>Update the regional SWE blog with helpful academic and career information for regional members</li>
+								<li>Communicate and connect with other regional leaders and members through e-mail regularly</li>
+							</ul>
+						</div>
+
+						<div class = "resumeContent"><span class = "resumeHeading">Public Relations Officer</span>
+							<div class = "resumeLocation">Seattle University</div>
+							<span class = "resumeRight">Sept. 2015 - Jun. 2016</span>
+							<ul>
+								<li>Organized resume review event with about 12 engineering professionals and 40 students attending</li>
+								<li>Regularly updated school website and collaborated with other officers</li>
+							</ul>
+						</div>
+
+
+					</section>
+
+					<div class = "line"></div>
 
           <!-- Projects  -->
+					<section id = "projects">
+						<h1>Featured Projects</h1>
 
-          <!-- Student Organization -->
+						<div class = "projectContainer">
+							<a href = "#" class = "projectBox" id = "sensors">
 
+								<h2>Electronic Rain Gauge</h2>
+
+							</a>
+
+							<a href = "#" class = "projectBox" id = "smartLight">
+								<h2>Smart Light System</h2>
+								<div class = "resumeContent"></div>
+							</a>
+
+							<a href = "#" class = "projectBox" id = "puppet">
+								<h2>Automated Dancing Puppet</h2>
+							</a>
+						</div>
+
+
+					</section>
 
   	    </div>
   	</div>

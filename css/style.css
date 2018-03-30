@@ -132,7 +132,18 @@ header h1{
 
 /***************** Page Title Block ******************/
 #home .pgTitleBlock {
-	background-image: url('../img/homeJumbotron.jpg');
+	background-image: url('../img/jumbotron/homeJumbotron.jpg');
+	background-position: 0 -350px;
+}
+
+#resumeTitle .pgTitleBlock {
+		background-image: url('../img/jumbotron/resumeJumbotron.jpg');
+		background-position: 0 -300px;
+}
+
+#contact .pgTitleBlock {
+		background-image: url('../img/jumbotron/contactJumbotron.jpg');
+		background-position: 0 -300px;
 }
 
 /*
@@ -141,11 +152,6 @@ header h1{
 }
 */
 
-/*
-#resume .pgTitleBlock{
-		background-image: url('../img/homeJumbotron.jpg');
-}
-*/
 
 .container .pgTitleBlock {
 	overflow: visible;
@@ -161,9 +167,8 @@ header h1{
 	text-align: center;
 	/*background-color: var(--gray);*/
 
-	background-size: cover;
+	background-size: 100% auto; /*cover*/
 	background-repeat: no-repeat;
-	background-position: 0 -350px;
 	position: relative;
 }
 
@@ -332,10 +337,15 @@ footer a
 }
 
 /***************** Resume ******************/
+
 #resume ul{
 	padding-left: 20px;
 	margin-bottom: 0;
 	margin-top: 0;
+}
+
+#resume li.last-of-type{
+	padding-bottom: 0;
 }
 
 #resume li{
@@ -345,11 +355,14 @@ footer a
 }
 
 #resume h2 {
-	font-size: 20px;
+	font-size: 18px;
 	color: var(--medium);
 	font-weight: 500;
 	margin-bottom:5px;
 	margin-top: 20px;
+	/*
+	text-transform: uppercase;
+	letter-spacing: 1px;*/
 }
 
 #resume a{
@@ -369,6 +382,7 @@ footer a
 	letter-spacing: 3px;
 	text-align: center;
 	margin-bottom: 20px;
+	font-weight: 600;
 
 }
 
@@ -376,10 +390,16 @@ footer a
 	color: var(--dark);
 	font-size: 18px;
 	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.resumeLocation{
+	display: inline;
 }
 
 .resumeRight{
 	float: right;
+	font-weight: 600;
 }
 
 .resumeContent{
@@ -411,6 +431,103 @@ footer a
 
 .downloadButton:hover{
 	background-color: var(--dark);
+}
+
+#workExperience ul, #studentOrg ul{
+	margin-bottom: 20px;
+}
+
+.projectContainer {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	box-sizing: border-box;
+}
+
+.projectBox{
+	text-align: center;
+	box-sizing: border-box;
+	/*background-color: var(--gray);*/
+	padding-bottom: 8%;
+	padding-top: 8%;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: absolute;
+	border: 3px solid var(--medium);
+	flex-wrap: wrap;
+	width: 30%;
+	box-shadow: 2px 3px var(--gray);
+}
+
+#projects h2{
+	position: relative;
+	z-index: 1;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 18px;
+	line-height: 25px;
+	word-spacing: 3px;
+}
+
+#projects a{
+	text-decoration: none;
+}
+
+.projectBox:hover{
+	opacity: 0.8;
+	box-shadow: 0px 0px;
+}
+
+#sensors, #smartLight, #puppet{
+	position: relative;
+}
+
+#puppet{
+	background: linear-gradient(
+										 rgba(20,20,20, .6),
+										 rgba(20,20,20, .6)),
+										 url('../img/projects/puppet/PuppetProjectFinalPresentation.jpg');
+
+	background-position: 500px  -30px;
+}
+
+#sensors{
+	background: linear-gradient(
+										 rgba(20,20,20, .6),
+										 rgba(20,20,20, .6)),
+										 url('../img/projects/rainGauge/rainGauge.jpg')
+										 no-repeat;
+	background-position: center center;
+	background-size: 100% auto;
+}
+
+#smartLight{
+	background: linear-gradient(
+										 rgba(20,20,20, .6),
+										 rgba(20,20,20, .6)),
+										 url('../img/projects/smartLight/smartLightSetup.jpg')
+										 no-repeat;
+	background-position: center center;
+	background-size: contain;
+	background-size: auto 100%;
+
+}
+
+#resumeSidebar{
+		position: fixed;
+		top: 50%;
+		right: 2%;
+		width: 15%;
+		display: inline;
+}
+
+#resumeSidebar ul{
+	display: inline;
+	margin: 0;
+	list-style-type: none;
+	line-height: 35px;
+	font-size: 18px;
 }
 
 
@@ -743,6 +860,10 @@ footer h1 {
 		text-shadow: 2px 2px var(--medium);
 	}
 
+	#home .pgTitleBlock, #resumeTitle .pgTitleBlock, #contact .pgTitleBlock{
+		background-position: center;
+	}
+
 /*About: Bullets */
 #about-bullets{
 	padding-top: 45px;
@@ -847,6 +968,27 @@ footer h1 {
 		resize: vertical;
 	}
 
+	/*Resume*/
+	.resumeLocation{
+		display: block;
+	}
+
+	#studentOrg h2{
+		padding-bottom: 10px;
+	}
+
+	#resume ul{
+		margin-bottom: 10px;
+	}
+
+	#puppet{
+		background-position: 500px -75px;
+	}
+
+	#sensors{
+		background-position: 0px 0px;
+	}
+
 }
 
 /* Fix footer on Contact page and nav bar*/
@@ -878,9 +1020,9 @@ footer h1 {
 		padding-bottom: 20px;
 	}
 
-	.pgTitleBlock{
+	#home .pgTitleBlock, #resumeTitle .pgTitleBlock, #contact .pgTitleBlock{
 		margin-top:35px;
-		background-position: 0 -100px;
+		background-position: center;
 	}
 
 	header{
@@ -897,9 +1039,64 @@ footer h1 {
 
 }
 
+/*Update position of background image on Home*/
 @media all and (min-width: 1050px) and (max-width:1360px) {
-	.pgTitleBlock{
+
+	#resumeTitle .pgTitleBlock, #home .pgTitleBlock, #contact .pgTitleBlock{
 		background-position: 0 -150px;
+	}
+}
+
+/*Change Projects section of Resume to column*/
+@media all and (max-width:600px) {
+	.projectContainer{
+		flex-direction: column;
+		align-items: center;
+		align-content: space-between;
+		justify-content: center;
+	}
+
+	.projectBox{
+		width: 100%;
+		margin-bottom: 20px;
+		align-content: center;
+		padding-top: 20%;
+		padding-bottom: 20%;
+	}
+
+	#projects h2{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	#smartLight{
+		background-size: 100% auto;
+		background-position: 0px -30px;
+	}
+
+	#sensors{
+	background-position: 0px -350px;
+	}
+
+	.projectBox #puppet{
+		padding-top: 10%;
+		padding-bottom: 10%;
+	}
+
+}/*End media query*/
+
+/*Update position of rain gauge photo in Resume: Projects*/
+@media all and (max-width:510px){
+	#sensors{
+	background-position: 0px -180px;
+	}
+}
+
+/*Update formatting of Resume*/
+@media all and (max-width:1800px){
+	.resumeRight{
+		float: none;
+		display: block;
 	}
 }
 
