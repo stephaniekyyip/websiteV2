@@ -456,7 +456,7 @@ footer a
 	border: 3px solid var(--medium);
 	flex-wrap: wrap;
 	width: 30%;
-	box-shadow: 2px 3px var(--gray);
+	/*box-shadow: 2px 3px var(--gray);*/
 }
 
 #projects h2{
@@ -476,7 +476,7 @@ footer a
 
 .projectBox:hover{
 	opacity: 0.8;
-	box-shadow: 0px 0px;
+	/*box-shadow: 0px 0px;*/
 }
 
 #sensors, #smartLight, #puppet{
@@ -515,19 +515,71 @@ footer a
 }
 
 #resumeSidebar{
-		position: fixed;
-		top: 50%;
-		right: 2%;
-		width: 15%;
-		display: inline;
+	text-align: right;
+	position: fixed;
+	/*top: 50%;*/
+	right: 2%;
+	margin-top: 5px;
+	width: 15%;
+	padding-left: 1%;
+	padding-right: 1%;
+	display: inline;
+	/*background-color: rgb(104,111,113, 0.7);*/
+}
+
+#resumeSidebar a{
+	color: var(--gray);
+	text-decoration: none;
+}
+
+#resumeSidebar a:hover{
+	text-decoration: underline;
+}
+
+#resumeSidebar li{
+	opacity: 0.5;
+}
+
+#resumeSidebar a li:hover{
+	opacity: 1;
 }
 
 #resumeSidebar ul{
 	display: inline;
 	margin: 0;
 	list-style-type: none;
-	line-height: 35px;
 	font-size: 18px;
+	color: var(--gray);
+}
+
+/*So the fixed header doesn't cut off the sections when jumping to them*/
+section:target{
+	padding-top: 36px;
+	margin-top: -36px;
+}
+
+/**************** Responsive Resume Sidebar ****************/
+.circle{
+	width: 7px;
+	height: 7px;
+	border-radius: 7px;
+	background: var(--gray);
+	opacity: 0.4;
+	margin-bottom: 100%;
+}
+
+.circle:hover, a circle:active, a circle:target{
+	opacity: 1;
+}
+
+#responsiveSidebar{
+	text-align: right;
+	position: fixed;
+	/*top: 50%;*/
+	right: 1px;
+	margin-top: 20px;
+	width: 5%;
+	display: inline;
 }
 
 
@@ -989,6 +1041,10 @@ footer h1 {
 		background-position: 0px 0px;
 	}
 
+	#resumeSidebar{
+		display: none;
+	}
+
 }
 
 /* Fix footer on Contact page and nav bar*/
@@ -1110,6 +1166,10 @@ footer h1 {
 	}
 
 	.responsiveForm{
+		display: none;
+	}
+
+	#responsiveSidebar{
 		display: none;
 	}
 
