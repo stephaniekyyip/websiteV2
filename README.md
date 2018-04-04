@@ -1,2 +1,2 @@
 # stephaniekyyip.github.io
-This is my first project using HTML and CSS. The goal is to create my own engineering portfolio website.
+My engineering portfolio website and my first project using HTML, CSS, and JavaScript.
