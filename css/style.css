@@ -35,7 +35,7 @@ html, body {
 	width: 100%;
 	min-height: 100%;
 	margin: auto;
-	overflow: auto;
+	overflow: none;
 }
 
 .wrapper{
@@ -354,6 +354,11 @@ footer a
 	font-size: 18px;
 }
 
+#studentOrg ul > ul {
+	padding-bottom: 0px;
+	margin-bottom: 0;
+}
+
 #resume h2 {
 	font-size: 18px;
 	color: var(--medium);
@@ -367,7 +372,7 @@ footer a
 
 #resume a{
 	color: var(--dark);
-	text-decoration: underline;
+	border-bottom: 1px solid var(--dark);
 }
 
 #resume a:hover{
@@ -456,6 +461,7 @@ footer a
 	border: 3px solid var(--medium);
 	flex-wrap: wrap;
 	width: 30%;
+	margin-bottom: 30px;
 	/*box-shadow: 2px 3px var(--gray);*/
 }
 
@@ -464,10 +470,10 @@ footer a
 	z-index: 1;
 	color: white;
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	font-size: 18px;
 	line-height: 25px;
-	word-spacing: 3px;
+	word-spacing: 2px;
 }
 
 #projects a{
@@ -560,12 +566,12 @@ section:target{
 
 /**************** Responsive Resume Sidebar ****************/
 .circle{
-	width: 7px;
-	height: 7px;
-	border-radius: 7px;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
 	background: var(--gray);
 	opacity: 0.4;
-	margin-bottom: 100%;
+	margin-bottom: 150%;
 }
 
 .circle:hover, a circle:active, a circle:target{
@@ -1043,6 +1049,22 @@ footer h1 {
 
 	#resumeSidebar{
 		display: none;
+	}
+
+	#resume h1 {
+		font-size: 18px;
+	}
+
+	.resumeContent, #resume ul, #resume li, .resumeLocation, .resumeRight{
+		font-size: 16px;
+	}
+
+	#resume #workExperience li, #resume #studentOrg li{
+		padding-bottom: 0;
+	}
+
+	#resume #techSkills h2{
+		margin-top: 10px;
 	}
 
 }
