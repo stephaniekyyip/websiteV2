@@ -30,12 +30,19 @@ html, body {
 	box-sizing: border-box;
 }
 
+body{
+	display: flex;
+	min-height: 100%;
+	flex-direction: column;
+}
+
 .container{
 	box-sizing: border-box;
 	width: 100%;
 	min-height: 100%;
 	margin: auto;
 	overflow: none;
+
 }
 
 .wrapper{
@@ -257,7 +264,7 @@ footer {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	clear: both;
+	/*clear: both;*/
 }
 
 footer ul {
@@ -523,7 +530,7 @@ footer a
 #resumeSidebar{
 	text-align: right;
 	position: fixed;
-	/*top: 50%;*/
+	top: 35%;
 	right: 2%;
 	margin-top: 5px;
 	width: 15%;
@@ -571,7 +578,7 @@ section:target{
 	border-radius: 10px;
 	background: var(--gray);
 	opacity: 0.4;
-	margin-bottom: 150%;
+	margin-bottom: 50px;
 }
 
 .circle:hover, a circle:active, a circle:target{
@@ -581,18 +588,16 @@ section:target{
 #responsiveSidebar{
 	text-align: right;
 	position: fixed;
-	/*top: 50%;*/
-	right: 1px;
+	top: 20%;
+	right: 5%;
 	margin-top: 20px;
-	width: 5%;
 	display: inline;
 }
 
 
 /**************** Desktop Contact Form ****************/
 .contactText{
-	padding-top: 50px;
-	padding-bottom: 50px;
+	margin: 25px auto auto auto;
 }
 
 .formCredit{
@@ -1069,7 +1074,7 @@ footer h1 {
 
 }
 
-/* Fix footer on Contact page and nav bar*/
+
 @media all and (max-width:900px) and (min-height: 1000px){
 	.menu ul{
 		margin-top: 22px;
