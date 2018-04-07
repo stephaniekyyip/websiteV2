@@ -74,7 +74,70 @@
   <section id = "projects">
   	<div class = "container">
   	   <div class = "mainContent">
-         
+
+         <section id = "rainGauge">
+           <h1>Electronic Rain Gauge</h1>
+           <h2>Senior design project sponsored by
+             <a href = "http://www.glacierpeakinstitute.org/">Glacier Peak Institute</a></h2>
+           <a href = "https://github.com/stephaniekyyip/electronicRainGauge" >
+             <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
+             </button></a>
+           <br>
+           <img src = "img/projects/rainGauge/rainGauge.jpg" alt = "Rain Gauge" width= 80% style = "margin-left: auto; margin-right:auto; display: block"></img>
+           <br>
+           <img src = "img/projects/rainGauge/rainGaugeElectronics.jpg" alt = "Rain Gauge Electronics" width = 100% style = "margin-left: auto; margin-right:auto; display: block"></img>
+
+           <h3>Overview</h3>
+           <p>As a part of my year-long senior project, I worked in an
+             interdisciplinary team comprised of environmental science
+             and electrical/ computer engineering students. Our sponsor,
+             Glacier Peak Institute, tasked us with creating
+             an environmental sensor curriculum for middle school students in Darrington, WA.
+             The requirements were that the curriculum had to be low-cost,
+             fun and interesting for the kids, and involve the
+             outdoors. We decided to create an electronic rain gauge curriculum
+             due to the high levels of rainfall in Darrington and our faculty
+             advisor's prior experience in constructing a rain gauge.
+           </p>
+
+           <h3>How the Rain Gauge Works</h3>
+           <p>The physical design of the rain gauge involved a funnel attached to a PVC pipe
+             that allowed water to be collected in the PVC. At the bottom of the
+             PVC pipe was a pressure sensor used to find the pressure of the
+             rainwater, which was encased in a waterproofed container. Wires
+             from the pressure sensor were threaded through a waterproof box
+             to connect to the breadboard inside that contains the rest of the
+             electronic components. The second pressure sensor on the breadboard
+             is used to find the atmospheric pressure.</p>
+            <p>The two pressure sensors are used to find a differential pressure,
+              which can be used to to find the depth of rainwater collected in a
+              PVC tube after calibration. This pressure measurement, along with
+              the current time measured by the Real Time Clock (RTC), was logged
+              onto a micro SD card at a set interval of 15 minutes. The idea is
+              that the rain gauge can be set outside to automatically collect
+              rain data with minimal maintenance, which includes retrieving the
+              SD card to collect the data and changing the batteries.</p>
+
+           <h3>My role within the Project</h3>
+           <p>I interfaced various electronic components with the
+             microcontroller by wiring the connections on a breadboard and
+             writing Arduino code to control the components.
+             I worked on the construction of the rain gauge and  designed the
+             waterproof housing for the pressure sensors. Additionally, I played a
+             leadership role in the project by organizing meetings and
+             communicating with the facuty advisors and project sponsor.</p>
+         </section> <!--END rain gauge section -->
+
+         <div class = "line"></div>
+
+         <section id = "smartLightProj">
+           <h1>Smart Light System</h1>
+           <h2>Final project in my Internet of Things class</h2>
+           <a href = "https://github.com/stephaniekyyip/smartLight" >
+             <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
+             </button></a>
+
+         </section>
 
   	    </div>
   	</div>
