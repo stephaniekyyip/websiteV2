@@ -461,8 +461,6 @@ footer a
 	/*background-color: var(--gray);*/
 	padding-bottom: 8%;
 	padding-top: 8%;
-	padding-left: 10px;
-	padding-right: 10px;
 	position: absolute;
 	border: 3px solid var(--medium);
 	flex-wrap: wrap;
@@ -480,6 +478,8 @@ footer a
 	font-size: 18px;
 	line-height: 25px;
 	word-spacing: 2px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #projectsSection a{
@@ -601,6 +601,27 @@ section:target{
   margin-left: auto;
 	margin-right: auto;
 	display: block;
+}
+
+#projects .fa-github:hover{
+	color: white;
+}
+
+#projects figure{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#projects figure img{
+	margin-left: auto;
+	margin-right:auto;
+	display: block
+}
+
+#projects figcaption{
+	text-align: center;
+	margin-top: 10px;
+	color: var(--dark);
 }
 
 /**************** Responsive Resume Sidebar ****************/
@@ -1114,7 +1135,7 @@ footer h1 {
 }
 
 /* Update text and padding size */
-@media all and (min-width: 900px) and (max-width:1160px) {
+@media all and (min-width: 900px) and (max-width:1280px) {
 
 	.bulletContainer .leftContainer, .bulletContainer .rightContainer
 	{
@@ -1164,7 +1185,7 @@ footer h1 {
 }
 
 /*Change Projects section of Resume to column*/
-@media all and (max-width:600px) {
+@media all and (max-width:650px) {
 	.projectContainer{
 		flex-direction: column;
 		align-items: center;
