@@ -400,7 +400,7 @@ footer a
 #resume h1, #projects h1{
 	color: var(--medium);
 
-	word-spacing: 8px;
+	word-spacing: 3px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	text-align: center;
@@ -994,7 +994,7 @@ footer h1 {
 	}
 
 	#home .pgTitleBlock, #resumeTitle .pgTitleBlock, #contact .pgTitleBlock,
-	#projectsTitle .pgTitleBlock{
+	#projectsTitle .pgTitleBlock, #photographyTitle .pgTitleBlock{
 		background-position: center;
 	}
 
@@ -1185,7 +1185,7 @@ footer h1 {
 	}
 
 	#home .pgTitleBlock, #resumeTitle .pgTitleBlock, #contact .pgTitleBlock,
-	#projectsTitle .pgTitleBlock{
+	#projectsTitle .pgTitleBlock, #photographyTitle .pgTitleBlock{
 		margin-top:35px;
 		background-position: center;
 	}
@@ -1208,7 +1208,7 @@ footer h1 {
 @media all and (min-width: 1050px) and (max-width:1360px) {
 
 	#resumeTitle .pgTitleBlock, #home .pgTitleBlock, #contact .pgTitleBlock,
-	#projectsTitle .pgTitleBlock{
+	#projectsTitle .pgTitleBlock, #photographyTitle .pgTitleBlock{
 		background-position: 0 -150px;
 	}
 }
