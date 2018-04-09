@@ -1,2 +1,5 @@
-# stephaniekyyip.github.io
-My engineering portfolio website and my first project using HTML, CSS, and JavaScript.
+# Engineering Portfolio Website
+
+My first project using HTML, CSS, and JavaScript.
+
+Visit the website [here](stephaniekyyip.github.io).
