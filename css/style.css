@@ -637,6 +637,25 @@ section:target{
 	color: var(--dark);
 }
 
+/**************** Photography  ****************/
+.photoBox{
+	margin-top: 30px;
+	width: 30%;
+	height: 200px;
+	background-color: var(--gray);
+
+}
+
+.photoContainer{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
 
 /**************** Responsive Resume Sidebar ****************/
 .circle{
@@ -1213,8 +1232,9 @@ footer h1 {
 	}
 }
 
-/*Change Projects section of Resume to column*/
-@media all and (max-width:650px) {
+/*Change Projects section of Resume to column + Photography section to column*/
+@media all and (max-width:700px) {
+	/*Resume: projects*/
 	.projectContainer{
 		flex-direction: column;
 		align-items: center;
@@ -1249,13 +1269,35 @@ footer h1 {
 		padding-bottom: 10%;
 	}
 
+	/*Photography*/
+
+	.photoContainer{
+		flex-direction: column;
+		align-items: center;
+		align-content: space-between;
+		justify-content: center;
+	}
+
+	.photoBox{
+		width: 100%;
+		align-content: center;
+	}
+
 }/*End media query*/
 
-/*Update position of rain gauge photo in Resume: Projects*/
-@media all and (max-width:510px){
+/*Update position of rain gauge photo in Resume: Projects + decrease size of
+h1 in Photography jumbotron*/
+@media all and (max-width:500px){
 	#sensors{
 	background-position: 0px -180px;
 	}
+
+	#photographyTitle .pgTitleBlock h1{
+		font-size: 30px;
+		letter-spacing: 10px;
+	}
+
+
 }
 
 /*Update formatting of Resume*/
