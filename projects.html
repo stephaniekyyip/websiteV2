@@ -17,6 +17,9 @@
 
 		<link rel= "stylesheet" href="css/style.css"/>
 
+    <!-- To show/hide Projects sections on click-->
+    <script src = "js/projReveal.js"></script>
+
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 		<!--<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">-->
 	</head>
@@ -62,183 +65,206 @@
 		</section>
 
 	<!-- Main Content: Projects -->
-  <section id = "projects">
-  	<div class = "container">
-  	   <div class = "mainContent">
+  <section id = "projects" class = "mainContent">
+   <!-- Personal Website -->
+   <section id = "website">
+     <h1>Personal Website <a href = "https://github.com/stephaniekyyip/stephaniekyyip.github.io" ><span class="fab fa-github"></span></a></h1>
+     <h2>This engineering portfolio website</h2>
 
-         <!-- Website -->
-         <section id = "website">
-           <h1>Personal Website</h1>
-           <h2>This engineering portfolio website</h2>
-           <a href = "https://github.com/stephaniekyyip/stephaniekyyip.github.io" >
-             <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
-             </button></a>
+     <button id = "websiteRevealBtn" class = "projRevealBtn" onclick = "revealSection('websiteContent', 'websiteRevealBtn')" >More <i class="fas fa-caret-down"></i></button>
 
-           <h3>Overview</h3>
-           <p>I learned HTML5, CSS3, and JavaScript to create this website as my engineering
-           portfolio. Currently, it is a static website hosted on GitHub.</p>
-         </section>
+     <div id = "websiteContent" style = "display: none;">
+      <!--Github button -->
+      <!--<a href = "https://github.com/stephaniekyyip/stephaniekyyip.github.io" >
+         <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
+         </button></a>-->
 
-         <div class = "line"></div>
+       <h3>Overview</h3>
+       <p>I learned HTML5, CSS3, and JavaScript to create this website as my engineering
+       portfolio. Currently, it is a static website hosted on GitHub.</p>
 
-         <!--Rain Gauge -->
-         <section id = "rainGauge">
-           <h1>Electronic Rain Gauge</h1>
-           <h2>Senior design project sponsored by
-             <a href = "http://www.glacierpeakinstitute.org/">Glacier Peak Institute</a></h2>
-           <a href = "https://github.com/stephaniekyyip/electronicRainGauge" >
-             <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
-             </button></a>
+       <button class = "projRevealBtn" onclick = "revealSection('websiteContent', 'websiteRevealBtn')">Less <i class='fas fa-caret-up'></i></button>
 
+     </div>
+   </section>
 
-           <figure>
-             <img src = "img/projects/rainGauge/rainGauge.jpg" alt = "Rain Gauge" width= 70%></img>
-             <figcaption>Rain gauge setup, including the PVC pipe where the rainwater
-               is held and a waterproof box to hold the electronics.</figcaption>
-           </figure>
+   <div class = "line"></div>
 
+   <!--Rain Gauge -->
+   <section id = "rainGauge">
+     <h1>Electronic Rain Gauge  <a href = "https://github.com/stephaniekyyip/electronicRainGauge" ><span class="fab fa-github"></span></a></h1>
+     <h2>Senior design project sponsored by
+       <a href = "http://www.glacierpeakinstitute.org/">Glacier Peak Institute</a></h2>
+     <button id = "rainGaugeRevealBtn" class = "projRevealBtn" onclick = "revealSection('rainGaugeContent', 'rainGaugeRevealBtn')">More <i class="fas fa-caret-down"></i></button>
 
-           <figure>
-             <img src = "img/projects/rainGauge/rainGaugeElectronics.jpg" alt = "Rain Gauge Electronics" width = 100%></img>
-             <figcaption>Interior of the waterproof box showing the electronics.</figcaption>
-           </figure>
+     <div id = "rainGaugeContent" style = "display: none;">
 
-           <h3>Overview</h3>
-           <p>As a part of my year-long senior project, I worked in an
-             interdisciplinary team comprised of environmental science
-             and electrical/ computer engineering students. Our sponsor,
-             Glacier Peak Institute, tasked us with creating
-             an environmental sensor curriculum for middle school students in Darrington, WA.
-             The requirements were that the curriculum had to be low-cost,
-             fun and interesting for the kids, and involve the
-             outdoors. We decided to create an electronic rain gauge curriculum
-             due to the high levels of rainfall in Darrington and our faculty
-             advisor's prior experience in constructing a rain gauge.
-           </p>
+       <!--Github button -->
+      <!-- <a href = "https://github.com/stephaniekyyip/electronicRainGauge" >
+         <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
+         </button></a>-->
 
-           <h3>How the Rain Gauge Works</h3>
-           <p>The physical design of the rain gauge involved a funnel attached to a PVC pipe
-             that allowed water to be collected in the PVC. At the bottom of the
-             PVC pipe was a pressure sensor used to find the pressure of the
-             rainwater, which was encased in a waterproofed container. Wires
-             from the pressure sensor were threaded through a waterproof box
-             to connect to the breadboard inside that contains the rest of the
-             electronic components. The second pressure sensor on the breadboard
-             is used to find the atmospheric pressure.</p>
-            <p>The two pressure sensors are used to find a differential pressure,
-              which can be used to to find the depth of rainwater collected in a
-              PVC tube after calibration. This pressure measurement, along with
-              the current time measured by the Real Time Clock (RTC), was logged
-              onto a micro SD card at a set interval of 15 minutes. The idea is
-              that the rain gauge can be set outside to automatically collect
-              rain data with minimal maintenance, which includes retrieving the
-              SD card to collect the data and changing the batteries.</p>
-
-           <h3>My Role within the Project</h3>
-           <p>I interfaced various electronic components with the
-             microcontroller using SPI and I2C and
-             wrote Arduino code to control the components.
-             I worked on the construction of the rain gauge and designed the
-             waterproof housing for the pressure sensors. Additionally, I played a
-             leadership role in the project by organizing meetings and
-             communicating with the facuty advisors and project sponsor on behalf of the team.</p>
-         </section> <!--END rain gauge section -->
-
-         <div class = "line"></div>
-
-         <!-- Smart Light -->
-         <section id = "smartLightProj">
-           <h1>Smart Light System</h1>
-           <h2>Final project in my Internet of Things class</h2>
-           <a href = "https://github.com/stephaniekyyip/smartLight" >
-             <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
-             </button></a>
+       <figure>
+         <img src = "img/projects/rainGauge/rainGauge.jpg" alt = "Rain Gauge" width= 70%></img>
+         <figcaption>Rain gauge setup, including the PVC pipe where the rainwater
+           is held and a waterproof box to hold the electronics.</figcaption>
+       </figure>
 
 
-           <figure>
-             <img src = "img/projects/smartLight/smartLightSetup.jpg"  alt = "Smart Light Setup" width= 100%></img>
-             <figcaption>Smart light setup with the LED bulb in a lamp, the electronics contained in a cardboard box,
-             and a portable charger to power the Raspberry Pi.</figcaption>
-           </figure>
+       <figure>
+         <img src = "img/projects/rainGauge/rainGaugeElectronics.jpg" alt = "Rain Gauge Electronics" width = 100%></img>
+         <figcaption>Interior of the waterproof box showing the electronics.</figcaption>
+       </figure>
+
+       <h3>Overview</h3>
+       <p>As a part of my year-long senior project, I worked in an
+         interdisciplinary team comprised of environmental science
+         and electrical/ computer engineering students. Our sponsor,
+         Glacier Peak Institute, tasked us with creating
+         an environmental sensor curriculum for middle school students in Darrington, WA.
+         The requirements were that the curriculum had to be low-cost,
+         fun and interesting for the kids, and involve the
+         outdoors. We decided to create an electronic rain gauge curriculum
+         due to the high levels of rainfall in Darrington and our faculty
+         advisor's prior experience in constructing a rain gauge.
+       </p>
+
+       <h3>How the Rain Gauge Works</h3>
+       <p>The physical design of the rain gauge involved a funnel attached to a PVC pipe
+         that allowed water to be collected in the PVC. At the bottom of the
+         PVC pipe was a pressure sensor used to find the pressure of the
+         rainwater, which was encased in a waterproofed container. Wires
+         from the pressure sensor were threaded through a waterproof box
+         to connect to the breadboard inside that contains the rest of the
+         electronic components. The second pressure sensor on the breadboard
+         is used to find the atmospheric pressure.</p>
+        <p>The two pressure sensors are used to find a differential pressure,
+          which can be used to to find the depth of rainwater collected in a
+          PVC tube after calibration. This pressure measurement, along with
+          the current time measured by the Real Time Clock (RTC), was logged
+          onto a micro SD card at a set interval of 15 minutes. The idea is
+          that the rain gauge can be set outside to automatically collect
+          rain data with minimal maintenance, which includes retrieving the
+          SD card to collect the data and changing the batteries.</p>
+
+       <h3>My Role within the Project</h3>
+       <p>I interfaced various electronic components with the
+         microcontroller using SPI and I2C and
+         wrote Arduino code to control the components.
+         I worked on the construction of the rain gauge and designed the
+         waterproof housing for the pressure sensors. Additionally, I played a
+         leadership role in the project by organizing meetings and
+         communicating with the facuty advisors and project sponsor on behalf of the team.</p>
+       <button class = "projRevealBtn" onclick = "revealSection('rainGaugeContent', 'rainGaugeRevealBtn')">Less <i class="fas fa-caret-up"></i></button>
+
+      </div> <!-- END content -->
+   </section> <!--END rain gauge section -->
+
+   <div class = "line"></div>
+
+   <!-- Smart Light -->
+   <section id = "smartLightProj">
+     <h1>Smart Light System <a href = "https://github.com/stephaniekyyip/smartLight"><span class="fab fa-github"></span></a></h1>
+     <h2>Final project in my Internet of Things class</h2>
+
+     <button id = "smartLightRevealBtn" class = "projRevealBtn" onclick = "revealSection('smartLightContent', 'smartLightRevealBtn')">More <i class="fas fa-caret-down"></i></button>
+
+     <div id = "smartLightContent" style = "display: none">
+
+       <!--GitHub Button -->
+       <!--<a href = "https://github.com/stephaniekyyip/smartLight" >
+         <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
+         </button></a> -->
+
+       <figure>
+         <img src = "img/projects/smartLight/smartLightSetup.jpg"  alt = "Smart Light Setup" width= 100%></img>
+         <figcaption>Smart light setup with the LED bulb in a lamp, the electronics contained in a cardboard box,
+         and a portable charger to power the Raspberry Pi.</figcaption>
+       </figure>
 
 
-           <figure>
-             <img src = "img/projects/smartLight/smartLightElectronics.jpg"  alt = "Smart Light Electronics" width= 100%></img>
-             <figcaption>Interior of the box containing the electronics, including the Raspberry Pi and the battery pack for the LED bulb.</figcaption>
-          </figure>
+       <figure>
+         <img src = "img/projects/smartLight/smartLightElectronics.jpg"  alt = "Smart Light Electronics" width= 100%></img>
+         <figcaption>Interior of the box containing the electronics, including the Raspberry Pi and the battery pack for the LED bulb.</figcaption>
+      </figure>
 
-          <figure>
-            <img src = "img/projects/smartLight/smartLightGUI.png"  alt = "Smart Light GUI" width= 100% style = "border: 1px solid #7D9AB0"></img>
-            <figcaption>Webpage user interface that allowed users to control the smart light.</figcaption>
-         </figure>
+      <figure>
+        <img src = "img/projects/smartLight/smartLightGUI.png"  alt = "Smart Light GUI" width= 100% style = "border: 1px solid #7D9AB0"></img>
+        <figcaption>Webpage user interface that allowed users to control the smart light.</figcaption>
+     </figure>
 
-           <h3>Overview</h3>
-           <p>For the final project in our Internet of Things course, my team
-             decided to create a smart light system to remotely control a LED
-             bulb. The idea behind the smart light was to conserve energy by
-             being able to remotely turn off lights and adjust the brightness
-             depending on the ambient light.</p>
+       <h3>Overview</h3>
+       <p>For the final project in our Internet of Things course, my team
+         decided to create a smart light system to remotely control a LED
+         bulb. The idea behind the smart light was to conserve energy by
+         being able to remotely turn off lights and adjust the brightness
+         depending on the ambient light.</p>
 
-           <h3>How the Smart Light Works</h3>
-           <p>We interfaced the LED bulb, along with a photoresistor and a
-             transistor, with a Raspberry Pi. The photoresistor was used to
-             determine the ambient brightness of the room in order to adjust
-             the LED brightness accordingly. The transistor used with the
-             battery pack allowed us to vary the brightness of the LED using
-             the pulse width modulation (PWM) output from the Raspberry Pi. </p>
+       <h3>How the Smart Light Works</h3>
+       <p>We interfaced the LED bulb, along with a photoresistor and a
+         transistor, with a Raspberry Pi. The photoresistor was used to
+         determine the ambient brightness of the room in order to adjust
+         the LED brightness accordingly. The transistor used with the
+         battery pack allowed us to vary the brightness of the LED using
+         the pulse width modulation (PWM) output from the Raspberry Pi. </p>
 
-           <h3>My Role within the Project</h3>
-           <p>I was responsible for the software side of the project. In order
-             to control the LED, I wrote Python scripts to adjust the LED
-             brightness by varying the PWM output. I also wrote a Python script
-             to read the input from the photoresistor to allow the option of
-             automatically adjusting the brightness depending on the ambient
-             light in the room. After setting up an Apache server on the Raspberry
-             Pi, I created the user interface using HTML for users to select
-             different LED settings and used PHP to retrieve the user input in
-             order to execute the Python scripts. </p>
-         </section> <!--END smart light section -->
+       <h3>My Role within the Project</h3>
+       <p>I was responsible for the software side of the project. In order
+         to control the LED, I wrote Python scripts to adjust the LED
+         brightness by varying the PWM output. I also wrote a Python script
+         to read the input from the photoresistor to allow the option of
+         automatically adjusting the brightness depending on the ambient
+         light in the room. After setting up an Apache server on the Raspberry
+         Pi, I created the user interface using HTML for users to select
+         different LED settings and used PHP to retrieve the user input in
+         order to execute the Python scripts. </p>
 
-         <div class = "line"></div>
-         <!-- Puppet -->
-         <section id = "puppetProj">
-           <h1>Automated Dancing Puppet</h1>
-           <h2>Third year electrical engineering lab project</h2>
+      <button class = "projRevealBtn" onclick = "closeSection('smartLightContent', 'smartLightRevealBtn')">Less <i class="fas fa-caret-up"></i></button>
+     </div>  <!-- END proj content -->
+   </section> <!--END smart light section -->
 
+   <div class = "line"></div>
 
-           <video controls width=100%
-           name="Puppet Demo" src="img/projects/puppet/puppetDemo.mov" type = "video/mov" style="margin-top:20px; border:1px solid #7D9AB0"></video>
-           <figcaption>Demo of puppet movements.</figcaption>
+   <!-- Puppet -->
+   <section id = "puppetProj">
+     <h1>Automated Dancing Puppet</h1>
+     <h2>Third year electrical engineering lab project</h2>
+     <button id = "puppetRevealBtn" class = "projRevealBtn" onclick = "revealSection('puppetContent', 'puppetRevealBtn')">More <i class="fas fa-caret-down"></i></button>
 
-           <h3>Overview</h3>
-           <p>As a part of my electrical engineering labs during junior year, I
-             worked with a lab partner to implement a marionette puppet that
-             performed a dance routine on command. The idea behind the project
-             was to become familiar with lab equipment and to develop engineering
-             troubleshooting and teamwork skills by working towards a project
-             throughout the school year. </p>
+     <div id = "puppetContent" style = "display: none">
+       <video controls width=100%
+       name="Puppet Demo" src="img/projects/puppet/puppetDemo.mov" type = "video/mov" style="margin-top:20px; border:1px solid #7D9AB0"></video>
+       <figcaption>Demo of puppet movements.</figcaption>
 
-            <h3>How the Puppet Works</h3>
-            <p>The puppet’s movements were controlled by various circuits and
-              programmed in C using a Raspberry Pi. A motor and a connected
-              optical encoder allowed for the control of the puppet’s limbs,
-              which included moving each limb up or down by a designated distance. </p>
+       <h3>Overview</h3>
+       <p>As a part of my electrical engineering labs during junior year, I
+         worked with a lab partner to implement a marionette puppet that
+         performed a dance routine on command. The idea behind the project
+         was to become familiar with lab equipment and to develop engineering
+         troubleshooting and teamwork skills by working towards a project
+         throughout the school year. </p>
 
-            <h3>My Role in the Project</h3>
-            <p>Though the lab instructors had done the final design for both the
-              hardware and software, my lab partner and I were responsible for the construction,
-              testing, and troubleshooting of the puppet. We had to read circuit
-              schematics, build and test the circuits and hardware, modify C code
-              to control the puppet’s dance moves, and integrate and troubleshoot
-              both the software and hardware. I focused mainly on the software
-              side of the project amd worked together with my partner on other areas
-              of the project, particularly the troubleshooting and testing aspects.</p>
+        <h3>How the Puppet Works</h3>
+        <p>The puppet’s movements were controlled by various circuits and
+          programmed in C using a Raspberry Pi. A motor and a connected
+          optical encoder allowed for the control of the puppet’s limbs,
+          which included moving each limb up or down by a designated distance. </p>
 
-         </section>
+        <h3>My Role in the Project</h3>
+        <p>Though the lab instructors had done the final design for both the
+          hardware and software, my lab partner and I were responsible for the construction,
+          testing, and troubleshooting of the puppet. We had to read circuit
+          schematics, build and test the circuits and hardware, modify C code
+          to control the puppet’s dance moves, and integrate and troubleshoot
+          both the software and hardware. I focused mainly on the software
+          side of the project amd worked together with my partner on other areas
+          of the project, particularly the troubleshooting and testing aspects.</p>
 
-       </div> <!-- END main content -->
-  	</div> <!-- END container  -->
-  </section>
+        <button class = "projRevealBtn" onclick = "revealSection('puppetContent', 'puppetRevealBtn')">Less <i class="fas fa-caret-up"></i></button>
+        </div> <!-- END proj content -->
+   </section>
+
+  </section> <!-- END project section -->
 
 
 	<!-- Footer -->

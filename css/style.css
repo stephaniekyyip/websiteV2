@@ -220,10 +220,9 @@ header h1{
 
 /*************** Main Content ****************/
 .mainContent {
-	margin: auto;
-	padding-top: 25px;
-	padding-bottom: 60px;
+	margin: 25px auto auto auto;
 	width: 40%;
+	padding-bottom: 60px;
 	/*overflow: auto;*/
 	box-sizing: border-box;
 }
@@ -431,7 +430,7 @@ footer a
 	line-height: 30px;
 }
 
-.downloadButton, .githubButton{
+.downloadButton, .githubButton, .projRevealBtn{
 	color: white;
 	font-size: 16px;
 	word-spacing: 2px;
@@ -540,7 +539,7 @@ footer a
 #resumeSidebar{
 	text-align: right;
 	position: fixed;
-	top: 50%;
+	top: 430px;
 	right: 2%;
 	margin-top: 5px;
 	width: 15%;
@@ -548,6 +547,10 @@ footer a
 	padding-right: 1%;
 	display: inline;
 	/*background-color: rgb(104,111,113, 0.7);*/
+}
+
+.sticky{
+	top: 20px;
 }
 
 #resumeSidebar a{
@@ -582,6 +585,41 @@ section:target{
 }
 
 /**************** Projects Page ****************/
+#projects .line{
+	margin-top: 20px;
+}
+
+
+
+.projRevealBtn{
+	display: block;
+	margin-top: 15px; /*10px*/
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background: none;
+
+	border: 2px solid var(--medium);
+	text-align: center;
+	color: var(--medium);
+	font-size: 14px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	letter-spacing: 2px;
+/*
+	padding-bottom: 3px;
+	padding-left: 0;
+	padding-right: 0;*/
+}
+
+.projRevealBtn:hover{
+	background-color: var(--medium);
+	color: white;
+	/*border-bottom: 1px solid var(--medium);*/
+}
+
 #projects h2{
 	text-align: center;
 	margin-top: 0;
@@ -590,6 +628,14 @@ section:target{
 #projects h1{
 	margin-bottom: 10px;
 	text-align: center;
+}
+
+#projects h1 a{
+	border-bottom: none;
+}
+
+#projects h1 a:hover{
+	color: var(--dark);
 }
 
 #projects h3{
@@ -612,10 +658,6 @@ section:target{
   margin-left: auto;
 	margin-right: auto;
 	display: block;
-}
-
-#projects .fa-github:hover{
-	color: white;
 }
 
 #projects figure{
