@@ -17,15 +17,19 @@
 
 		<link rel= "stylesheet" href="css/style.css"/>
 
+		<!--Sidebar scroll -->
+		<!--<script src="http://code.jquery.com/jquery-latest.js"></script> -->
+		<script src = "js/resumeSidebar.js"></script>
+
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 		<!--<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">-->
 	</head>
 
 
 <!-- Header -->
-	<body>
+	<body style = "height: auto;">
 
-		<header>
+		<header id = "myHeader">
 			<div class = "container">
 				<h1>Stephanie Yip</h1>
 
@@ -62,20 +66,21 @@
 		</section>
 
 	<!--Sidebar -->
-	<aside id = "resumeSidebar">
+	<aside id = "resumeSidebar"> <!-- style = "top:430px;"-->
 
 		<ul>
 			<!--<li>Jump to . . .</li>-->
-			<a href="#education"><li>Education</li></a>
-			<a href="#techSkills"><li>Skills</li></a>
-			<a href="#workExperience"><li>Work Experience</li></a>
-			<a href="#studentOrg"><li>Leadership Experience</li></a>
-			<a href="#projectsSection"><li>Featured Projects</li></a>
-			<a href="#resumeTitle"><li>Back to Top &uarr;</li></a>
+			<a href="#education"><li id = "nav0">Education</li></a>
+			<a href="#techSkills"><li id = "nav1">Skills</li></a>
+			<a href="#workExperience"><li id = "nav2">Work Experience</li></a>
+			<a href="#studentOrg"><li id = "nav3">Leadership Experience</li></a>
+			<a href="#projectsSection"><li id = "nav4" onclick = "highlightLastSection()">Featured Projects</li></a>
+			<a href="#"><li>Back to Top &uarr;</li></a>
 		</ul>
 
 	</aside>
 
+<!--
 	<aside id = "responsiveSidebar">
 		<a href="#education"><div class = "circle"></div></a>
 		<a href="#techSkills"><div class = "circle"></div></a>
@@ -83,7 +88,7 @@
 		<a href="#studentOrg"><div class = "circle"></div></a>
 		<a href="#projectsSection"><div class = "circle"></div></a>
 
-	</aside>
+	</aside>-->
 
 	<!-- Main Content: Resume-->
   <section id = "resume">
@@ -91,9 +96,9 @@
   	   <div class = "mainContent">
 				 <center><button class = "downloadButton">View PDF Version</button></center>
 
-				   <div class = "line"></div>
           <!-- Education -->
           <section id = "education">
+						<div class = "line"></div>
             <h1>Education</h1>
 
 						<div class = "resumeContent"><span class = "resumeHeading">Seattle University</span>
@@ -109,9 +114,9 @@
             <section>
               <h2>Academic Honors</h2>
 							<ul>
-								<li>Graduated <i>cum laude</i></li>
+								<li>Graduated <i>cum laude</i> (3.6 GPA)</li>
 								<li><a href = "https://www.tbp.org/home.cfm">Tau Beta Pi</a> (Top fifth of class among all engineering majors)</li>
-								<li><a href = "https://hkn.ieee.org/">IEEE Eta Kappa Nu</a> (Top third of electrical and computer engineering class)</li>
+								<li><a href = "https://hkn.ieee.org/">IEEE HKN (Eta Kappa Nu)</a> (Top third of electrical and computer engineering class)</li>
 							</ul>
             </section>
 
@@ -130,10 +135,9 @@
 
           </section>
 
-          <div class = "line"></div>
-
           <!-- Technical Skills  -->
 					<section id = "techSkills">
+						<div class = "line"></div>
 						<h1>Skills</h1>
 
 						<h2>Programming Languages</h2>
@@ -159,10 +163,9 @@
 
 					</section>
 
-					<div class = "line"></div>
-
           <!-- Work Experience  -->
 					<section id = "workExperience">
+						<div class = "line"></div>
 						<h1>Work Experience</h1>
 
 						<div class = "resumeContent"><span class = "resumeHeading">The Boeing Company</span>
@@ -188,10 +191,10 @@
 
 					</section>
 
-					<div class = "line"></div>
 
 					<!-- Student Organizations -->
 					<section id = "studentOrg">
+						<div class = "line"></div>
 						<h1>Leadership Experience</h1>
 
 						<h2>Society of Women Engineers (SWE)</h2>
@@ -231,10 +234,9 @@
 
 					</section>
 
-					<div class = "line"></div>
-
           <!-- Projects  -->
 					<section id = "projectsSection">
+						<div class = "line"></div>
 						<h1>Featured Projects</h1>
 
 						<div class = "projectContainer">
@@ -311,7 +313,6 @@
 			</div>
 		</div>
 		</footer>
-
 
 	</body>
 </html>
