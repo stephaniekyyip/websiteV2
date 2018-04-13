@@ -32,7 +32,7 @@ html, body {
 
 body{
 	display: flex;
-	min-height: 100%;
+	/*min-height: 100%;*/
 	flex-direction: column;
 }
 
@@ -299,7 +299,7 @@ footer a
 
 /*************** About: Bullets ****************/
 #about-bullets{
-	padding-top: 25px;
+	/*padding-top: 25px;*/
 }
 
 .bulletContainer{
@@ -549,17 +549,9 @@ footer a
 	/*background-color: rgb(104,111,113, 0.7);*/
 }
 
-.sticky{
-	top: 20px;
-}
-
 #resumeSidebar a{
 	color: var(--gray);
 	text-decoration: none;
-}
-
-#resumeSidebar a:hover{
-	text-decoration: underline;
 }
 
 #resumeSidebar li{
@@ -716,9 +708,8 @@ section:target{
 #responsiveSidebar{
 	text-align: right;
 	position: fixed;
-	top: 20%;
-	right: 5%;
-	margin-top: 20px;
+	top: 251px;
+	right: 4%;
 	display: inline;
 }
 
@@ -1035,11 +1026,11 @@ footer h1 {
 
 /*Jumbotron*/
 	.pgTitleBlock{
-		margin-top: 35px;
+		margin-top: 34px;
 		background-position: center;
 
-		padding-top: 70px;
-		padding-bottom: 70px;
+		padding-top: 90px;
+		padding-bottom: 90px;
 
 	}
 
@@ -1066,8 +1057,8 @@ footer h1 {
 
 /*About: Bullets */
 #about-bullets{
-	padding-top: 45px;
-	width: 80%;
+	padding-top: 10px;
+	width: 100%;
 	margin: auto;
 }
 
@@ -1088,7 +1079,7 @@ footer h1 {
 }
 
 #about-bullets .line{
-	width: 90%;
+	width: 100%;
 	padding-top: 0;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -1132,7 +1123,7 @@ footer h1 {
 
 	/* Contact Form*/
 	.contactText{
-		padding-top: 40px;
+		/*padding-top: 40px;*/
 		padding-bottom: 40px;
 	}
 
@@ -1242,7 +1233,6 @@ footer h1 {
 		font-size: 18px;
 		line-height: 30px;
 		padding-top: 2px;
-		padding-bottom: 20px;
 	}
 
 	#home .pgTitleBlock, #resumeTitle .pgTitleBlock, #contact .pgTitleBlock,
@@ -1261,7 +1251,6 @@ footer h1 {
 	.mainContent{
 		width: 60%;
 	}
-
 
 }
 
@@ -1341,6 +1330,15 @@ h1 in Photography jumbotron*/
 
 
 }
+
+/*Phone*/
+@media all and (max-width:450px){
+	.pgTitleBlock{
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+}
+
 
 /*Update formatting of Resume*/
 @media all and (max-width:1800px){
