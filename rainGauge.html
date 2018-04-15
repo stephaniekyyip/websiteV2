@@ -13,12 +13,12 @@
 		<meta charset = "UTF-8">
 		<meta name="viewport" content="width=device-width initial-scale=1.0" />
 
-		<title> Stephanie Yip | Projects </title>
+		<title> Stephanie Yip | Project: Rain Gauge </title>
 
 		<link rel= "stylesheet" href="css/style.css"/>
 
     <!-- To show/hide Projects sections on click-->
-    <script src = "js/projReveal.js"></script>
+    <!--<script src = "js/projReveal.js"></script>-->
 
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 		<!--<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">-->
@@ -67,61 +67,75 @@
 	<!-- Main Content: Projects -->
   <section id = "projects" class = "mainContent">
 
-   <!-- Personal Website -->
-   <section id = "website">
-     <h1>Personal Website </a></h1>
-     <h2>This engineering portfolio website</h2>
-
-     <button id = "websiteRevealBtn" class = "projRevealBtn" onclick = "revealSection('websiteContent', 'websiteRevealBtn')" >Details <i class="fas fa-angle-double-right"></i></button>
-
-     <div id = "websiteContent" style = "display: none;">
-      <!--Github button -->
-      <!--<a href = "https://github.com/stephaniekyyip/stephaniekyyip.github.io" >
-         <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
-         </button></a>-->
-
-       <h3>Overview</h3>
-       <p>I learned HTML5, CSS3, and JavaScript to create this website as my engineering
-       portfolio. Currently, it is a static website hosted using GitHub Pages.</p>
-
-       <button class = "projRevealBtn" onclick = "revealSection('websiteContent', 'websiteRevealBtn')">Close <i class='fas fa-caret-up'></i></button>
-
-     </div>
-   </section>
-
-   <div class = "line"></div>
-
    <!--Rain Gauge -->
    <section id = "rainGauge">
      <h1>Electronic Rain Gauge</a></h1>
      <h2>Senior design project sponsored by
        <a href = "http://www.glacierpeakinstitute.org/">Glacier Peak Institute</a></h2>
-		<img src = "img/projects/rainGauge/rainGauge.jpg" class = "descriptionImg" style = "object-position: 100% 98%;" alt = "rain gauge"></img>
-     <a href = "rainGauge.html"><button id = "rainGaugeRevealBtn" class = "projRevealBtn">Details <i class="fas fa-angle-double-right"></i></button></a>
+
+       <!--Github button -->
+      <a href = "https://github.com/stephaniekyyip/electronicRainGauge" >
+         <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
+         </button></a>
+
+       <figure>
+         <img src = "img/projects/rainGauge/rainGauge.jpg" alt = "Rain Gauge" width= 70%></img>
+         <figcaption>The rain gauge, which includes a PVC pipe to hold the rain water and a PVC
+					 cylindrical container to hold the waterproofed pressure sensor, which is connected to the
+					 waterproof box containing the electronics.</figcaption>
+       </figure>
+
+
+       <figure>
+         <img src = "img/projects/rainGauge/rainGaugeElectronics.jpg" alt = "Rain Gauge Electronics" width = 100%></img>
+         <figcaption>Inside of the waterproof box showing the electronics, including the microcontroller, pressure sensor,
+					 real time clock, SD card reader, LED screen, and the battery pack.
+				 </figcaption>
+       </figure>
+
+       <h3>Overview</h3>
+       <p>As a part of my year-long senior project, I worked in an
+         interdisciplinary team comprised of environmental science
+         and electrical/ computer engineering students. Our sponsor,
+         Glacier Peak Institute, tasked us with creating
+         an environmental sensor curriculum for middle school students in Darrington, WA.
+         The requirements were that the curriculum had to be low-cost,
+         fun and interesting for the kids, and involve the
+         outdoors. We decided to create an electronic rain gauge curriculum
+         due to the high levels of rainfall in Darrington and our faculty
+         advisor's prior experience in constructing a rain gauge.
+       </p>
+
+       <h3>How the Rain Gauge Works</h3>
+       <p>The physical design of the rain gauge involved a funnel attached to a PVC pipe
+         that allowed water to be collected in the PVC. At the bottom of the
+         PVC pipe was a pressure sensor used to find the pressure of the
+         rainwater, which was encased in a waterproofed container. Wires
+         from the pressure sensor were threaded through a waterproof box
+         to connect to the breadboard inside that contains the rest of the
+         electronic components. The second pressure sensor on the breadboard
+         is used to find the atmospheric pressure.</p>
+        <p>The two pressure sensors are used to find a differential pressure,
+          which can be used to to find the depth of rainwater collected in a
+          PVC tube after calibration. This pressure measurement, along with
+          the current time measured by the Real Time Clock (RTC), was logged
+          onto a micro SD card at a set interval of 15 minutes. The idea is
+          that the rain gauge can be set outside to automatically collect
+          rain data with minimal maintenance, which includes retrieving the
+          SD card to collect the data and changing the batteries.</p>
+
+       <h3>My Role within the Project</h3>
+       <p>I interfaced various electronic components with the
+         microcontroller using SPI and I2C and
+         wrote Arduino code to control the components.
+         I worked on the construction of the rain gauge and designed the
+         waterproof housing for the pressure sensors. Additionally, I played a
+         leadership role in the project by organizing meetings and
+         communicating with the facuty advisors and project sponsor on behalf of the team.</p>
+
+       <a href = "projects.html"><button class = "projRevealBtn"><i class="fas fa-angle-double-left"></i> Back to Projects</i></button></a>
 
    </section> <!--END rain gauge section -->
-
-   <div class = "line"></div>
-
-   <!-- Smart Light -->
-   <section id = "smartLightProj">
-     <h1>Smart Light System</a></h1>
-     <h2>Final project in Internet of Things class</h2>
-		 <img src = "img/projects/smartLight/smartLightSetup.jpg" class = "descriptionImg" style = "object-position: 60% 20%;" alt = "smart light"></img>
-     <a href = "smartLight.html"><button id = "smartLightRevealBtn" class = "projRevealBtn" >Details <i class="fas fa-angle-double-right"></i></button></a>
-
-   </section> <!--END smart light section -->
-
-   <div class = "line"></div>
-
-   <!-- Puppet -->
-   <section id = "puppetProj">
-     <h1>Automated Dancing Puppet</h1>
-     <h2>Third year electrical and computer engineering lab project</h2>
-		 <img src = "img/projects/puppet/PuppetProjectPuppet.jpg" class = "descriptionImg" style = "object-position: 100% 60%;" alt = "dancing puppet"></img>
-     <a href = "puppet.html"><button id = "puppetRevealBtn" class = "projRevealBtn">Details <i class="fas fa-angle-double-right"></i></button></a>
-
-   </section>
 
   </section> <!-- END project section -->
 

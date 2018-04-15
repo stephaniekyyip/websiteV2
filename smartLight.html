@@ -13,12 +13,12 @@
 		<meta charset = "UTF-8">
 		<meta name="viewport" content="width=device-width initial-scale=1.0" />
 
-		<title> Stephanie Yip | Projects </title>
+		<title> Stephanie Yip | Project: Smart Light</title>
 
 		<link rel= "stylesheet" href="css/style.css"/>
 
     <!-- To show/hide Projects sections on click-->
-    <script src = "js/projReveal.js"></script>
+    <!--<script src = "js/projReveal.js"></script>-->
 
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 		<!--<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">-->
@@ -67,61 +67,61 @@
 	<!-- Main Content: Projects -->
   <section id = "projects" class = "mainContent">
 
-   <!-- Personal Website -->
-   <section id = "website">
-     <h1>Personal Website </a></h1>
-     <h2>This engineering portfolio website</h2>
+    <section id = "smartLightProj">
+      <h1>Smart Light System</a></h1>
+      <h2>Final project in Internet of Things class</h2>
 
-     <button id = "websiteRevealBtn" class = "projRevealBtn" onclick = "revealSection('websiteContent', 'websiteRevealBtn')" >Details <i class="fas fa-angle-double-right"></i></button>
+        <!--GitHub Button -->
+        <a href = "https://github.com/stephaniekyyip/smartLight" >
+          <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
+          </button></a>
 
-     <div id = "websiteContent" style = "display: none;">
-      <!--Github button -->
-      <!--<a href = "https://github.com/stephaniekyyip/stephaniekyyip.github.io" >
-         <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
-         </button></a>-->
+        <figure>
+          <img src = "img/projects/smartLight/smartLightSetup.jpg"  alt = "Smart Light Setup" width= 100%></img>
+          <figcaption>Smart light setup with the LED bulb in a lamp, the electronics contained in a cardboard box,
+          and a portable charger to power the Raspberry Pi.</figcaption>
+        </figure>
 
-       <h3>Overview</h3>
-       <p>I learned HTML5, CSS3, and JavaScript to create this website as my engineering
-       portfolio. Currently, it is a static website hosted using GitHub Pages.</p>
 
-       <button class = "projRevealBtn" onclick = "revealSection('websiteContent', 'websiteRevealBtn')">Close <i class='fas fa-caret-up'></i></button>
+        <figure>
+          <img src = "img/projects/smartLight/smartLightElectronics.jpg"  alt = "Smart Light Electronics" width= 100%></img>
+          <figcaption>Interior of the box containing the electronics, including the Raspberry Pi and the battery pack for the LED bulb.</figcaption>
+       </figure>
 
-     </div>
-   </section>
+       <figure>
+         <img src = "img/projects/smartLight/smartLightGUI.png"  alt = "Smart Light GUI" width= 100% style = "border: 1px solid #7D9AB0"></img>
+         <figcaption>Webpage user interface that allowed users to control the smart light.</figcaption>
+      </figure>
 
-   <div class = "line"></div>
+        <h3>Overview</h3>
+        <p>For the final project in our Internet of Things course, my team
+          decided to create a smart light system to remotely control a LED
+          bulb. The idea behind the smart light was to conserve energy by
+          being able to remotely turn off lights and adjust the brightness
+          depending on the ambient light.</p>
 
-   <!--Rain Gauge -->
-   <section id = "rainGauge">
-     <h1>Electronic Rain Gauge</a></h1>
-     <h2>Senior design project sponsored by
-       <a href = "http://www.glacierpeakinstitute.org/">Glacier Peak Institute</a></h2>
-		<img src = "img/projects/rainGauge/rainGauge.jpg" class = "descriptionImg" style = "object-position: 100% 98%;" alt = "rain gauge"></img>
-     <a href = "rainGauge.html"><button id = "rainGaugeRevealBtn" class = "projRevealBtn">Details <i class="fas fa-angle-double-right"></i></button></a>
+        <h3>How the Smart Light Works</h3>
+        <p>We interfaced the LED bulb, along with a photoresistor and a
+          transistor, with a Raspberry Pi. The photoresistor was used to
+          determine the ambient brightness of the room in order to adjust
+          the LED brightness accordingly. The transistor used with the
+          battery pack allowed us to vary the brightness of the LED using
+          the pulse width modulation (PWM) output from the Raspberry Pi. </p>
 
-   </section> <!--END rain gauge section -->
+        <h3>My Role within the Project</h3>
+        <p>I was responsible for the software side of the project. In order
+          to control the LED, I wrote Python scripts to adjust the LED
+          brightness by varying the PWM output. I also wrote a Python script
+          to read the input from the photoresistor to allow the option of
+          automatically adjusting the brightness depending on the ambient
+          light in the room. After setting up an Apache server on the Raspberry
+          Pi, I created the user interface using HTML for users to select
+          different LED settings and used PHP to retrieve the user input in
+          order to execute the Python scripts. </p>
 
-   <div class = "line"></div>
+       <a href = "projects.html"><button class = "projRevealBtn"><i class="fas fa-angle-double-left"></i> Back to Projects</i></button></a>
 
-   <!-- Smart Light -->
-   <section id = "smartLightProj">
-     <h1>Smart Light System</a></h1>
-     <h2>Final project in Internet of Things class</h2>
-		 <img src = "img/projects/smartLight/smartLightSetup.jpg" class = "descriptionImg" style = "object-position: 60% 20%;" alt = "smart light"></img>
-     <a href = "smartLight.html"><button id = "smartLightRevealBtn" class = "projRevealBtn" >Details <i class="fas fa-angle-double-right"></i></button></a>
-
-   </section> <!--END smart light section -->
-
-   <div class = "line"></div>
-
-   <!-- Puppet -->
-   <section id = "puppetProj">
-     <h1>Automated Dancing Puppet</h1>
-     <h2>Third year electrical and computer engineering lab project</h2>
-		 <img src = "img/projects/puppet/PuppetProjectPuppet.jpg" class = "descriptionImg" style = "object-position: 100% 60%;" alt = "dancing puppet"></img>
-     <a href = "puppet.html"><button id = "puppetRevealBtn" class = "projRevealBtn">Details <i class="fas fa-angle-double-right"></i></button></a>
-
-   </section>
+    </section> <!--END smart light section -->
 
   </section> <!-- END project section -->
 

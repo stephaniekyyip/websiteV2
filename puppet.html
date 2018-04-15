@@ -13,12 +13,12 @@
 		<meta charset = "UTF-8">
 		<meta name="viewport" content="width=device-width initial-scale=1.0" />
 
-		<title> Stephanie Yip | Projects </title>
+		<title> Stephanie Yip | Project: Dancing Puppet</title>
 
 		<link rel= "stylesheet" href="css/style.css"/>
 
     <!-- To show/hide Projects sections on click-->
-    <script src = "js/projReveal.js"></script>
+    <!--<script src = "js/projReveal.js"></script>-->
 
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 		<!--<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">-->
@@ -67,61 +67,49 @@
 	<!-- Main Content: Projects -->
   <section id = "projects" class = "mainContent">
 
-   <!-- Personal Website -->
-   <section id = "website">
-     <h1>Personal Website </a></h1>
-     <h2>This engineering portfolio website</h2>
+    <!-- Puppet -->
+    <section id = "puppetProj">
+      <h1>Automated Dancing Puppet</h1>
+      <h2>Third year electrical and computer engineering lab project</h2>
+				<figure>
+					<img src = "img/projects/puppet/PuppetProjectPuppet.jpg" alt = "automated puppet" width = 100%></img>
+					<figcaption>Puppet chassis set-up with puppet limbs attached to the
+						motors above and the electronics on top of the chasis. <br>
+						<i>(Photo from <a href = "https://www.facebook.com/SeattleUECE/">Seattle University's ECE Department Facebook page)</a></i>
+					</figcaption>
+				</figure>
+        <video controls width=100%
+        name="Puppet Demo" src="img/projects/puppet/puppetDemo.mov" type = "video/mov" style="margin-top:20px; border:1px solid #7D9AB0"></video>
+        <figcaption>Demo of puppet movements.</figcaption>
 
-     <button id = "websiteRevealBtn" class = "projRevealBtn" onclick = "revealSection('websiteContent', 'websiteRevealBtn')" >Details <i class="fas fa-angle-double-right"></i></button>
+        <h3>Overview</h3>
+        <p>As a part of my electrical engineering labs during junior year, I
+          worked with a lab partner to implement a marionette puppet that
+          performed a dance routine on command. The idea behind the project
+          was to become familiar with lab equipment and to develop engineering
+          troubleshooting and teamwork skills by working towards a project
+          throughout the school year. </p>
 
-     <div id = "websiteContent" style = "display: none;">
-      <!--Github button -->
-      <!--<a href = "https://github.com/stephaniekyyip/stephaniekyyip.github.io" >
-         <button class = "githubButton">View on GitHub <span class="fab fa-github"></span>
-         </button></a>-->
+         <h3>How the Puppet Works</h3>
+         <p>The puppet’s movements were controlled by various circuits and
+           programmed in C using a Raspberry Pi. A motor and a connected
+           optical encoder allowed for the control of the puppet’s limbs,
+           which included moving each limb up or down by a designated distance. </p>
 
-       <h3>Overview</h3>
-       <p>I learned HTML5, CSS3, and JavaScript to create this website as my engineering
-       portfolio. Currently, it is a static website hosted using GitHub Pages.</p>
+         <h3>My Role in the Project</h3>
+         <p>Though the lab instructors had done the final design for both the
+           hardware and software, my lab partner and I were responsible for the construction,
+           testing, and troubleshooting of the puppet. We had to read circuit
+           schematics, build and test the circuits and hardware, modify C code
+           to control the puppet’s dance moves, and integrate and troubleshoot
+           both the software and hardware. I focused mainly on the software
+           side of the project amd worked together with my partner on other areas
+           of the project, particularly the troubleshooting and testing aspects.</p>
 
-       <button class = "projRevealBtn" onclick = "revealSection('websiteContent', 'websiteRevealBtn')">Close <i class='fas fa-caret-up'></i></button>
+         <a href = "projects.html"><button class = "projRevealBtn"><i class="fas fa-angle-double-left"></i> Back to Projects</i></button></a>
 
-     </div>
-   </section>
+    </section>
 
-   <div class = "line"></div>
-
-   <!--Rain Gauge -->
-   <section id = "rainGauge">
-     <h1>Electronic Rain Gauge</a></h1>
-     <h2>Senior design project sponsored by
-       <a href = "http://www.glacierpeakinstitute.org/">Glacier Peak Institute</a></h2>
-		<img src = "img/projects/rainGauge/rainGauge.jpg" class = "descriptionImg" style = "object-position: 100% 98%;" alt = "rain gauge"></img>
-     <a href = "rainGauge.html"><button id = "rainGaugeRevealBtn" class = "projRevealBtn">Details <i class="fas fa-angle-double-right"></i></button></a>
-
-   </section> <!--END rain gauge section -->
-
-   <div class = "line"></div>
-
-   <!-- Smart Light -->
-   <section id = "smartLightProj">
-     <h1>Smart Light System</a></h1>
-     <h2>Final project in Internet of Things class</h2>
-		 <img src = "img/projects/smartLight/smartLightSetup.jpg" class = "descriptionImg" style = "object-position: 60% 20%;" alt = "smart light"></img>
-     <a href = "smartLight.html"><button id = "smartLightRevealBtn" class = "projRevealBtn" >Details <i class="fas fa-angle-double-right"></i></button></a>
-
-   </section> <!--END smart light section -->
-
-   <div class = "line"></div>
-
-   <!-- Puppet -->
-   <section id = "puppetProj">
-     <h1>Automated Dancing Puppet</h1>
-     <h2>Third year electrical and computer engineering lab project</h2>
-		 <img src = "img/projects/puppet/PuppetProjectPuppet.jpg" class = "descriptionImg" style = "object-position: 100% 60%;" alt = "dancing puppet"></img>
-     <a href = "puppet.html"><button id = "puppetRevealBtn" class = "projRevealBtn">Details <i class="fas fa-angle-double-right"></i></button></a>
-
-   </section>
 
   </section> <!-- END project section -->
 
