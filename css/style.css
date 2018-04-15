@@ -263,7 +263,7 @@ header h1{
 
 /**************** Footer ****************/
 footer {
-	padding: 20px 20px 30px 20px;
+	padding: 25px 20px 25px 20px;
 	background: var(--medium);
 	left: 0;
 	bottom: 0;
@@ -439,6 +439,8 @@ footer a
 	font-weight: normal;
 
 	background-color: var(--medium);
+	/*border: 2px solid var(--medium);*/
+	border: none;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 10px;
@@ -447,7 +449,7 @@ footer a
 
 	box-sizing: border-box;
 	box-shadow: none;
-	border: none;
+
 }
 
 .downloadButton:hover, .githubButton:hover{
@@ -943,7 +945,6 @@ label:active{
 
 /*Header*/
 header{
-	position: absolute;
 	padding: 10px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -1113,7 +1114,6 @@ footer h1 {
 /*Main Content*/
 	.mainContent{
 		width: 80%;
-		padding-bottom: 25px;
 	}
 
 	.mainContent p{
@@ -1275,6 +1275,10 @@ footer h1 {
 
 	.mainContent{
 		width: 60%;
+	}
+
+	footer{
+		padding: 10px 25px 10px 25px;
 	}
 
 }
