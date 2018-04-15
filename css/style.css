@@ -793,13 +793,13 @@ input[type=submit]{
 	font-weight: normal;
 
 	background-color: var(--medium);
+	border: none;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	margin-top: 5px;
 	box-shadow: none;
-	border: none;
 }
 
 input[type=submit]:hover{
@@ -829,6 +829,21 @@ input:focus, textarea:focus{
 	box-shadow: 0 0 10px var(--medium);
 }
 
+/**************** Contact Submission Successful page ****************/
+
+.contactSubmit{
+	margin: 50px auto auto auto;
+	display: block;
+	font-size: 30px;
+	text-align: center;
+	font-weight: 600;
+	color: var(--medium);
+}
+
+.contactRedirect{
+	font-size: 20px;
+	font-weight: normal;
+}
 
 /**************** Responsive Footer: Social Media Icons ****************/
 .socicon-mail, .socicon-linkedin, .socicon-github{
