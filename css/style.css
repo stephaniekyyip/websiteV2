@@ -387,12 +387,12 @@ footer a
 	letter-spacing: 1px;*/
 }
 
-#resume a{
+#resume .links{
 	color: var(--dark);
 	border-bottom: 1px solid var(--dark);
 }
 
-#resume a:hover, #projects a:hover{
+#resume .links:hover, #projects a:hover{
 	border-bottom: none;
 }
 
@@ -1183,7 +1183,7 @@ footer h1 {
 	}
 
 	#puppet{
-		background-position: 500px -75px;
+		background-position: 600px 0px;
 	}
 
 	#sensors{
