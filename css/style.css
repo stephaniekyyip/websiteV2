@@ -423,6 +423,7 @@ footer a
 	font-weight: 600;
 }
 
+
 .resumeContent{
 	font-size: 18px;
 	color: var(--dark);
@@ -572,17 +573,37 @@ footer a
 	color: var(--gray);
 }
 
-/*So the fixed header doesn't cut off the sections when jumping to them*/
+/* Prevents the fixed header from cutting off the sections when jumping to them*/
 section:target{
 	padding-top: 36px;
 	margin-top: -36px;
+}
+
+.responsiveBackToTop{
+	display: block;
+	text-align: center;
+
+	font-size: 18px;
+	color: var(--medium);
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 600;
+	box-sizing: border-box;
+}
+
+.responsiveBackToTop .line{
+	padding-bottom: 40px;
+}
+
+.responsiveBackToTop a:hover{
+	padding-bottom: 2px;
+	border-bottom: 1px solid var(--medium);
 }
 
 /**************** Projects Page ****************/
 #projects .line{
 	margin-top: 20px;
 }
-
 
 
 .projRevealBtn{
@@ -1392,6 +1413,10 @@ h1 in Photography jumbotron*/
 
 	#responsiveSidebar{
 		display: none;
+	}
+
+	.responsiveBackToTop{
+		display:none;
 	}
 
 }

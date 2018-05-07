@@ -59,7 +59,10 @@ function highlightCurrent(){
   }
 
   // projects
-  if (ypos >= section5.offsetTop){
+  if((ypos + window.innerHeight) >= document.body.offsetHeight ){
+    document.getElementById("nav" + 4).style.opacity = "1";
+    document.getElementById("nav" + 3).style.opacity = "0.5";
+  }else if (ypos >= section5.offsetTop){
     document.getElementById("nav" + 4).style.opacity = "1";
   }else{
     document.getElementById("nav" + 4).style.opacity = "0.5";
@@ -70,12 +73,3 @@ function highlightCurrent(){
 
 window.addEventListener("scroll", highlightCurrent);
 window.addEventListener("wheel", highlightCurrent);
-
-function highlightLastSection(){
-  //projects Section
-  document.getElementById("nav4").style.opacity = "1";
-
-  //student org Section
-  document.getElementById("nav3").style.opacity = "0.5";
-
-}
