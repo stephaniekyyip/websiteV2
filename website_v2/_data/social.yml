@@ -1,0 +1,11 @@
+- name: E-mail
+  link: mailto:stephaniekyyip@gmail.com?subject=Hello%20From%20Your%20Website
+  icon: fas fa-envelope
+
+- name: GitHub
+  link: https://github.com/stephaniekyyip
+  icon: fab fa-github
+
+- name: LinkedIn
+  link: https://www.linkedin.com/in/stephaniekyyip/
+  icon: fab fa-linkedin

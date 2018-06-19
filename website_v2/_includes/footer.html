@@ -1,0 +1,25 @@
+<footer>
+
+  <!-- Mobile Version -->
+  <div class = "socialIcons">
+
+    {% for item in site.data.social %}
+    <a href = "{{ item.link }}">
+      <i class = "{{ item.icon }}" title = "{{ item.name }}"></i>
+    </a>
+    {% endfor %}
+
+    <h1>Website by Stephanie Yip 2018</h1>
+  </div>
+
+  <!-- Desktop Version  -->
+  <div class = "socialLinks">
+    <h1>Website by Stephanie Yip 2018</h1>
+    <ul>
+      {% for item in site.data.social %}
+      <li><a href = "{{ item.link }}">{{ item.name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</footer>

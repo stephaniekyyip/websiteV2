@@ -1,0 +1,7 @@
+<header>
+  <nav>
+    <ul>{% for item in site.data.nav %}
+      <li {% if page.title == item.name %} class = "active" {% endif %}><a href = "{{ site.url }}{{ item.link }}">{{ item.name }}</a></li>
+      {% endfor %}</ul>
+  </nav>
+</header>
