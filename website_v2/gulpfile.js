@@ -41,7 +41,7 @@ gulp.task('browser-sync', function(){
 
 // SASS
 gulp.task('sass', function(){
-  gulp.src("./_sass/**/*.scss")
+  gulp.src("_sass/*.scss")
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
