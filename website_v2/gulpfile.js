@@ -41,22 +41,27 @@ gulp.task('browser-sync', function(){
 
 // SASS
 gulp.task('sass', function(){
-  gulp.src("_sass/*.scss")
-  .pipe(sass().on('error', sass.logError))
+  return gulp.src('_sass/main.scss')
+  .pipe(sass({
+    includePaths:['scss'],
+    onError: browserSync.notify
+  }))
   .pipe(autoprefixer({
     browsers: ['last 2 versions'],
     cascade: false
   }))
   .pipe(cssnano())
-  .pipe(gulp.dest('./assets/css/'))
+  .pipe(gulp.dest('_site/assets/css'))
+  .pipe(browserSync.reload({stream:true}))
+  .pipe(gulp.dest('assets/css'));
 });
 
 // Minify JS
 gulp.task ('minify-js', function(cb){
   pump([
-    gulp.src('./_scripts/*'),
+    gulp.src('/_scripts/*'),
     uglify(),
-    gulp.dest('./assets/js')
+    gulp.dest('_site/assets/js')
   ],
   cb
   );
@@ -64,7 +69,7 @@ gulp.task ('minify-js', function(cb){
 
 // Compress images
 gulp.task('compress-img', function(){
-  gulp.src("assets/img/*")
+  gulp.src("assets/img/**/*.jpg")
     .pipe(imagemin())
     .pipe(gulp.dest('_site/assets/img'))
 });
@@ -72,14 +77,14 @@ gulp.task('compress-img', function(){
 //Watch these files
 gulp.task('watch', function(){
   //SASS
-  gulp.watch('./_sass/**/*.scss', ['sass']);
+  gulp.watch('_sass/**/*.scss', ['sass', 'jekyll-rebuild']);
   // HTML files
-  gulp.watch(['./_pages/*', './_layouts/*', './*.html'], ['jekyll-rebuild']);
+  gulp.watch(['_pages/*', '_layouts/*', '*.html'], ['jekyll-rebuild']);
   // JS
   // gulp.watch(['./_scripts/*'], ['minify-js']);
   // images
-  gulp.watch(['/assets/img'],['compress-img']);
+  gulp.watch(['assets/img/**/*.jpg'],['compress-img']);
 });
 
 // Default
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch', 'sass', 'jekyll-build', 'compress-img']);
