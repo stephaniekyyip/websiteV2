@@ -1,0 +1,54 @@
+.jumbotron{
+  margin-top: 45px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  display: block;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: relative;
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 70px;
+    letter-spacing: 20px;
+  	word-spacing: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 3px 3px $medium;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.darkenOverlay{
+  top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.5;
+	position: absolute;
+}
+
+#jumbotron-home {
+  background-image: url('../img/jumbotron/homeJumbotron.jpg');
+}
+
+#jumbotron-resume {
+  background-image: url('../img/jumbotron/resumeJumbotron.jpg');
+}
+
+#jumbotron-projects {
+  background-image: url('../img/jumbotron/projectsJumbotron.jpg');
+}
+
+// #jumbotron-photography {
+//   background-image: url('../img/jumbotron/resumeJumbotron.jpg');
+// }
+
+#jumbotron-contact {
+  background-image: url('../img/jumbotron/contactJumbotron.jpg');
+}

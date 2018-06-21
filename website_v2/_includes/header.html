@@ -1,7 +1,21 @@
 <header>
+  <h1>Stephanie Yip</h1>
   <nav>
-    <ul>{% for item in site.data.nav %}
-      <li {% if page.title == item.name %} class = "active" {% endif %}><a href = "{{ item.link }}">{{ item.name }}</a></li>
-      {% endfor %}</ul>
+
+    <div class = "iconNav">
+      <i class="fas fa-bars" id = "menuIcon"></i>
+    </div>
+
+    <div class = "textNav">
+      <ul>{% for item in site.data.nav %}
+        <li><a href = "{{ item.link }}" {% if item.name == page.title %} class = "active" {% endif %}>{{ item.name }}</a></li>
+        {% endfor %}</ul>
+    </div>
   </nav>
+
+  <div id = "navLinks">
+    <ul>{% for item in site.data.nav %}
+      <li><a href = "{{ item.link }}" {% if item.name == page.title %} class = "active" {% endif %}>{{ item.name }}</a></li>
+      {% endfor %}</ul>
+  </div>
 </header>

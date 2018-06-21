@@ -19,7 +19,7 @@ title: Stephanie Yip
 description: >- # this means to ignore newlines until "baseurl:"
   Website for Stephanie Yip, a computer/ software engineer.
 baseurl: ""
-url: "http://localhost:4000"
+url: "http://localhost:3000"
 
 email: stephaniekyyip@gmail.com
 

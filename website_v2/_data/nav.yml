@@ -1,14 +1,19 @@
 - name: Home
   link: /
+  icon: fas fa-home
 
 - name: Résumé
   link: /resume
+  icon: fas fa-file-alt #fas fa-briefcase
 
 - name: Projects
   link: /projects
+  icon: fas fa-code
 
 - name: Photography
   link: /photography
+  icon: fas fa-camera
 
 - name: Contact
   link: /contact
+  icon: fas fa-comment-dots

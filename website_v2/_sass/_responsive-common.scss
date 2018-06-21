@@ -1,0 +1,130 @@
+// Center nav bar
+@media all and (max-width:810px){
+
+  header {
+    text-align: center;
+    padding-top: 15px;
+
+    h1 {
+    float: none;
+    padding: 15px 0 0 0;
+    }
+  }
+
+  nav {
+    ul {
+      float: none;
+    }
+  }
+
+}
+
+// Center footer
+@media all and (max-width: 685px){
+
+  .container {
+    width: 80%;
+  }
+
+  footer{
+    text-align: center;
+
+    h1 {
+      float: none;
+      padding-right: 0;
+    }
+
+    ul {
+      float: none;
+      padding-top: 15px;
+    }
+  }
+
+}
+
+// Update footer to icons + update nav bar to hamburger menu
+@media all and (max-width: 615px){
+
+  // Footer
+  .socialIcons {
+    display: block;
+  }
+
+  .socialLinks{
+    display: none;
+  }
+
+  footer ul {
+    padding-top: 0;
+    padding-bottom: 15px;
+
+    li a {
+      font-size: 20px;
+      line-height: 14px;
+    }
+  }
+
+  // Header
+  .textNav {
+    display: none;
+  }
+
+  .iconNav{
+    display: inline-block;
+    float: right;
+    color: white;
+  }
+
+  #menuIcon{
+    float: right;
+  }
+
+  #navLinks{
+    display: block;
+  }
+
+  header {
+    padding: 15px 20px 15px 20px;
+    text-align: left;
+    display: inline;
+    position: fixed;
+
+    h1 {
+      float: left;
+      padding-top: 0;
+    }
+
+    // nav {
+    //   float: right;
+    //
+    //   ul{
+    //     margin: 31px 0 0 0;
+    //     padding: 0;
+    //   }
+    //
+    //   li {
+    //     display: block;
+    //     text-align: right;
+    //     padding: 10px 0 0 0;
+    //   }
+    //
+    // }
+
+  }
+
+}
+
+// Change size of jumbotron + text
+@media all and (max-width: 560px ){
+
+  .jumbotron{
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    h1 {
+      font-size: 50px;
+    }
+  }
+
+
+}

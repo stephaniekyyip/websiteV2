@@ -25,7 +25,7 @@ gulp.task('jekyll-dev', function(done){
 });
 
 // Jekyll rebuild + browser reload
-gulp.task('jekyll-rebuild', ['jekyll-build'], function(){
+gulp.task('jekyll-rebuild', ['jekyll-dev'], function(){
   browserSync.reload();
 });
 
@@ -41,7 +41,7 @@ gulp.task('browser-sync', function(){
 
 // SASS
 gulp.task('sass', function(){
-  return gulp.src('_sass/main.scss')
+  return gulp.src('_sass/**/*.scss')
   .pipe(sass({
     includePaths:['scss'],
     onError: browserSync.notify
@@ -69,22 +69,18 @@ gulp.task ('minify-js', function(cb){
 
 // Compress images
 gulp.task('compress-img', function(){
-  gulp.src("assets/img/**/*.jpg")
-    .pipe(imagemin())
+  return gulp.src('assets/img/**/*')
+    .pipe(imagemin({ optimizationLevel: 5 }))
     .pipe(gulp.dest('_site/assets/img'))
 });
 
-//Watch these files
+// Watch
 gulp.task('watch', function(){
-  //SASS
   gulp.watch('_sass/**/*.scss', ['sass', 'jekyll-rebuild']);
-  // HTML files
-  gulp.watch(['_pages/*', '_layouts/*', '*.html'], ['jekyll-rebuild']);
-  // JS
+  gulp.watch(['_pages/**/*', '_layouts/*', '_includes/**/*', '*.html', '_data/**/*'], ['jekyll-rebuild']);
+  gulp.watch(['assets/img/**/*'],['compress-img']);
   // gulp.watch(['./_scripts/*'], ['minify-js']);
-  // images
-  gulp.watch(['assets/img/**/*.jpg'],['compress-img']);
 });
 
 // Default
-gulp.task('default', ['browser-sync', 'watch', 'sass', 'jekyll-build', 'compress-img']);
+gulp.task('default', [ 'jekyll-dev', 'browser-sync', 'watch', 'sass']);

@@ -1,23 +1,65 @@
-// Variables
+// Colors
 $gray: #686F71;
+$lightGray: #858585;
+$grayOpacity: rgba(133,133,133, 0.3);
 $medium: #7D9AB0;
+$mediumOpacity: rgba(125,154,176, 0.9);
 $dark: #253542;
-$accent: #BE6E46; //#DF9A57
+$accent: #edc59e; //#CC8B86; //#DF9A57;
+$darkAccent: #e4ab74;
 
-// Navigation Bar
-nav .li .active{
+$titleSize: 20px;
+$copySize: 16px;
+$main-fonts: 'Raleway', Helvetica, Arial, sans-serif;
 
+html, body {
+  font-family: $main-fonts;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: white;
 }
 
-// Jumbotron
-.jumbotron{
-
+body {
+  display: flex;
+  flex-direction: column;
 }
 
-.darkenOverlay{
-
+::selection {
+  color: $dark;
+  background: $accent;
 }
 
-// Main Content
+.container{
+  box-sizing: border-box;
+  width: 60%;
+  margin: 40px auto auto auto;
+  padding-bottom: 40px;
+  line-height: 22px;
 
-// Footer
+  h1 {
+    margin-bottom: 15px;
+    color: $darkAccent;
+    font-size: $titleSize;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    color: $dark;
+    font-size: $copySize
+  }
+}
+
+.line {
+  border-top: 1px solid $grayOpacity;
+}
+
+.highlight {
+  font-weight: 700;
+}
