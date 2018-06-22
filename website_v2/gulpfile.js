@@ -30,7 +30,6 @@ gulp.task('jekyll-rebuild', ['jekyll-dev'], function(){
   browserSync.reload();
 });
 
-
 // Browser sync
 gulp.task('browser-sync', function(){
   browserSync.init({
@@ -69,9 +68,9 @@ gulp.task('scripts', function(){
 
 // Compress images
 gulp.task('compress-img', function(){
-  return gulp.src('assets/img/**/*')
+  return gulp.src('assets/img/**/*.jpg')
     .pipe(imagemin([
-      imagemin.jpegtrans({progressive:true})
+      imagemin.jpegtran({progressive:true})
     ]))
     .pipe(gulp.dest('_site/assets/img'))
 });
