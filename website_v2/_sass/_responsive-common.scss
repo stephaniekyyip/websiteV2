@@ -1,4 +1,6 @@
+// ----------------------------------------------------------------------------
 // Center text in header
+// ----------------------------------------------------------------------------
 @media all and (max-width:810px){
 
   header {
@@ -24,7 +26,21 @@
 
 }
 
+// ----------------------------------------------------------------------------
+// Update Photography page jumbotron text size to fit
+// ----------------------------------------------------------------------------
+@media all and (max-width: 735px){
+  #jumbotron-photography h1 {
+    font-size: 50px;
+    letter-spacing: 10px;
+    line-height: 40px;
+    text-shadow: 2px 2px white;
+  }
+}
+
+// ----------------------------------------------------------------------------
 // Center text in footer
+// ----------------------------------------------------------------------------
 @media all and (max-width: 685px){
 
   footer{
@@ -48,7 +64,9 @@
 
 }
 
+// ----------------------------------------------------------------------------
 // Update footer to icons + update nav bar to hamburger menu
+// ----------------------------------------------------------------------------
 @media all and (max-width: 615px){
 
   // Footer
@@ -105,7 +123,9 @@
 
 }
 
-// Change size of jumbotron + text
+// ----------------------------------------------------------------------------
+// Change size of jumbotron + jumbotron text
+// ----------------------------------------------------------------------------
 @media all and (max-width: 560px ){
 
   .jumbotron{
@@ -115,8 +135,8 @@
     h1 {
       font-size: 40px;
       letter-spacing: 15px;
+      text-shadow: 2px 2px white;
     }
-
   }
 
   // Update Photography page jumbotron text size to fit

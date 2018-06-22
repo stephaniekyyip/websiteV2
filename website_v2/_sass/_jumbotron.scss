@@ -8,13 +8,13 @@
   h1 {
     margin: 0 auto;
     text-align: center;
-    color: white;
+    color: $darkAccent;
+    text-shadow: 3px 3px white;
     font-size: 70px;
     letter-spacing: 20px;
   	word-spacing: 20px;
     font-weight: 700;
     text-transform: uppercase;
-    text-shadow: 3px 3px $medium;
     position: relative;
     z-index: 1;
   }
