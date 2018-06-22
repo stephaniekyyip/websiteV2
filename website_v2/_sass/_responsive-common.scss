@@ -17,6 +17,7 @@
     }
   }
 
+  // Update top + bottom padding of container
   .container {
     padding: 40px 0 40px 0;
   }
@@ -25,10 +26,6 @@
 
 // Center text in footer
 @media all and (max-width: 685px){
-
-  .container {
-    width: 80%;
-  }
 
   footer{
     text-align: center;
@@ -44,17 +41,22 @@
     }
   }
 
+  // Update width of container
+  .container {
+    width: 80%;
+  }
+
 }
 
 // Update footer to icons + update nav bar to hamburger menu
 @media all and (max-width: 615px){
 
   // Footer
-  .socialIcons {
+  .social-icons {
     display: block;
   }
 
-  .socialLinks{
+  .social-links{
     display: none;
   }
 
@@ -69,7 +71,20 @@
   }
 
   // Header
-  .textNav {
+  header {
+    padding: 15px 20px 15px 20px;
+    text-align: left;
+    display: inline;
+    position: fixed;
+
+    h1 {
+      float: left;
+      padding-top: 0;
+    }
+  }
+
+  // Nav bar
+  .text-nav {
     display: none;
   }
 
@@ -88,19 +103,6 @@
     float: right;
   }
 
-  header {
-    padding: 15px 20px 15px 20px;
-    text-align: left;
-    display: inline;
-    position: fixed;
-
-    h1 {
-      float: left;
-      padding-top: 0;
-    }
-
-  }
-
 }
 
 // Change size of jumbotron + text
@@ -117,6 +119,7 @@
 
   }
 
+  // Update Photography page jumbotron text size to fit
   #jumbotron-photography h1 {
     font-size: 30px;
     letter-spacing: 10px;

@@ -3,10 +3,10 @@
   <nav>
 
     <div class = "icon-nav">
-      <i class="fas fa-bars" id = "menuIcon"></i>
+      <i class="fas fa-bars" id = "menu-icon"></i>
     </div>
 
-    <div class = "textNav">
+    <div class = "text-nav">
       <ul>{% for item in site.data.nav %}
         <li><a href = "{{ item.link }}" {% if item.name == page.title %} class = "active" {% endif %}>{{ item.name }}</a></li>
         {% endfor %}</ul>
