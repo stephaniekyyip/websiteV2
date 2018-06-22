@@ -1,4 +1,4 @@
-// Center nav bar
+// Center text in header
 @media all and (max-width:810px){
 
   header {
@@ -17,9 +17,13 @@
     }
   }
 
+  .container {
+    padding: 40px 0 40px 0;
+  }
+
 }
 
-// Center footer
+// Center text in footer
 @media all and (max-width: 685px){
 
   .container {
@@ -69,18 +73,19 @@
     display: none;
   }
 
-  .iconNav{
+  .icon-nav{
     display: inline-block;
     float: right;
     color: white;
   }
 
-  #menuIcon{
-    float: right;
+  .icon-nav-active {
+    color: $accent;
+    text-shadow: 0 3px $lightGray;
   }
 
-  #navLinks{
-    display: block;
+  #menuIcon{
+    float: right;
   }
 
   header {
@@ -94,22 +99,6 @@
       padding-top: 0;
     }
 
-    // nav {
-    //   float: right;
-    //
-    //   ul{
-    //     margin: 31px 0 0 0;
-    //     padding: 0;
-    //   }
-    //
-    //   li {
-    //     display: block;
-    //     text-align: right;
-    //     padding: 10px 0 0 0;
-    //   }
-    //
-    // }
-
   }
 
 }
@@ -122,9 +111,16 @@
     padding-bottom: 80px;
 
     h1 {
-      font-size: 50px;
+      font-size: 40px;
+      letter-spacing: 15px;
     }
+
   }
 
+  #jumbotron-photography h1 {
+    font-size: 30px;
+    letter-spacing: 10px;
+    line-height: 40px;
+  }
 
 }

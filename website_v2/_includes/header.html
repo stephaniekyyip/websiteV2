@@ -2,7 +2,7 @@
   <h1>Stephanie Yip</h1>
   <nav>
 
-    <div class = "iconNav">
+    <div class = "icon-nav">
       <i class="fas fa-bars" id = "menuIcon"></i>
     </div>
 
@@ -13,9 +13,10 @@
     </div>
   </nav>
 
-  <div id = "navLinks">
+  <div id = "icon-nav-links">
     <ul>{% for item in site.data.nav %}
       <li><a href = "{{ item.link }}" {% if item.name == page.title %} class = "active" {% endif %}>{{ item.name }}</a></li>
       {% endfor %}</ul>
   </div>
+
 </header>

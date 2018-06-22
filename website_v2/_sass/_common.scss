@@ -9,11 +9,11 @@
 
 %link-hover {
   color: $accent;
-  text-shadow: 0 2px $lightGray;
+  text-shadow: 0 3px $lightGray;
 }
 
 // Header
-.iconNav{
+.icon-nav{
   display: none;
 }
 
@@ -36,7 +36,6 @@ header {
 }
 
 nav {
-
   ul {
     padding: 15px 20px 15px 15px;
     float: right;
@@ -68,28 +67,36 @@ nav {
 
 }
 
-#navLinks {
-  border-top: 1px solid rgba(255,255,255, 0.5);
-  @extend %outer-text;
-  text-align: right;
-  margin-top: 31px;
-  z-index: 3;
-  display: none;
-  position: absolute;
-  background-color: $mediumOpacity;
-  right: 0;
-  box-shadow: 0 2px 5px $grayOpacity;
+#menuIcon:hover {
+  cursor: pointer;
+}
 
+#icon-nav-links {
+  @extend %outer-text;
+  border-top: 1px solid $accent;
+  box-shadow: 0 2px 5px $grayOpacity;
+  background-color: $mediumOpacity;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  top: 46px;
+  text-align: center;
+  width: 100%;
+  display: none;
 
   ul {
     padding: 15px 20px 15px 20px;
   }
 
   li {
-    padding: 10px 0 0 0;
+    padding: 30px 0 0 0;
 
-    &:first-child{
-      padding: 0;
+    &:first-child {
+      padding: 20px 0 0 0;
+    }
+
+    &:last-child {
+      padding: 30px 0 20px 0;
     }
   }
 

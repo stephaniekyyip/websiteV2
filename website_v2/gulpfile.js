@@ -8,6 +8,7 @@ var uglify = require('gulp-uglify');
 var pump = require('pump'); //to use with uglify
 var browserSync = require('browser-sync').create();
 var imagemin = require("gulp-imagemin");
+var concat = require("gulp-concat");
 
 var cp = require('child_process');
 var jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -57,30 +58,31 @@ gulp.task('sass', function(){
 });
 
 // Minify JS
-gulp.task ('minify-js', function(cb){
-  pump([
-    gulp.src('/_scripts/*'),
-    uglify(),
-    gulp.dest('_site/assets/js')
-  ],
-  cb
-  );
+gulp.task('scripts', function(){
+  return gulp.src('_scripts/*.js')
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('_site/assets/js'))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(gulp.dest('assets/js'));
 });
 
 // Compress images
 gulp.task('compress-img', function(){
   return gulp.src('assets/img/**/*')
-    .pipe(imagemin({ optimizationLevel: 5 }))
+    .pipe(imagemin([
+      imagemin.jpegtrans({progressive:true})
+    ]))
     .pipe(gulp.dest('_site/assets/img'))
 });
 
 // Watch
 gulp.task('watch', function(){
-  gulp.watch('_sass/**/*.scss', ['sass', 'jekyll-rebuild']);
+  gulp.watch('_sass/**/*.scss', ['sass']);
   gulp.watch(['_pages/**/*', '_layouts/*', '_includes/**/*', '*.html', '_data/**/*'], ['jekyll-rebuild']);
   gulp.watch(['assets/img/**/*'],['compress-img']);
-  // gulp.watch(['./_scripts/*'], ['minify-js']);
+  gulp.watch(['_scripts/*.js'], ['scripts']);
 });
 
 // Default
-gulp.task('default', [ 'jekyll-dev', 'browser-sync', 'watch', 'sass']);
+gulp.task('default', [ 'jekyll-dev', 'browser-sync', 'watch', 'sass', 'scripts']);
