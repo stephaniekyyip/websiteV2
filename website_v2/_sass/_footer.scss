@@ -1,0 +1,40 @@
+.social-icons{
+  display: none;
+}
+
+footer {
+  padding: 15px 20px 15px 20px;
+  background: $medium;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  h1 {
+    @extend %outer-text;
+    font-weight: 100;
+    float: left;
+    padding-right: 15px;
+  }
+
+  ul {
+    float: right;
+  }
+
+  li {
+    display: inline;
+    padding-left: 20px;
+    font-size: 14px;
+
+    &:first-child{
+      padding-left: 0;
+    }
+
+    a {
+      @extend %outer-text;
+
+      &:hover{
+        @extend %link-hover;
+      }
+    }
+  }
+}

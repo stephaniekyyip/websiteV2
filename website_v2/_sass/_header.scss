@@ -1,18 +1,3 @@
-%outer-text {
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 14px;
-  display: inline;
-}
-
-%link-hover {
-  color: $accent;
-  text-shadow: 0 3px $lightGray;
-}
-
-// Header
 .icon-nav{
   display: none;
 }
@@ -35,6 +20,7 @@ header {
   }
 }
 
+// Nav Bar
 nav {
   ul {
     padding: 15px 20px 15px 15px;
@@ -56,18 +42,16 @@ nav {
       &:hover {
         @extend %link-hover;
       }
-
     }
-
   }
 
   .active {
     color: $accent;
   }
-
 }
 
-#menuIcon:hover {
+// Responsive Nav Bar
+#menu-icon:hover {
   cursor: pointer;
 }
 
@@ -107,48 +91,6 @@ nav {
 
     &:hover {
       @extend %link-hover;
-    }
-  }
-}
-
-// Footer
-.socialIcons{
-  display: none;
-}
-
-footer {
-  padding: 15px 20px 15px 20px;
-  background: $medium;
-  left: 0;
-  bottom: 0;
-  right: 0;
-
-  h1 {
-    @extend %outer-text;
-    font-weight: 100;
-    float: left;
-    padding-right: 15px;
-  }
-
-  ul {
-    float: right;
-  }
-
-  li {
-    display: inline;
-    padding-left: 20px;
-    font-size: 14px;
-
-    &:first-child{
-      padding-left: 0;
-    }
-
-    a {
-      @extend %outer-text;
-
-      &:hover{
-        @extend %link-hover;
-      }
     }
   }
 }
