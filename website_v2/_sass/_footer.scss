@@ -3,6 +3,9 @@
 }
 
 footer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
   padding: 15px 20px 15px 20px;
   background: $medium;
   left: 0;
@@ -12,12 +15,10 @@ footer {
   h1 {
     @extend %outer-text;
     font-weight: 100;
-    float: left;
     padding-right: 15px;
-  }
-
-  ul {
-    float: right;
+    text-align: left;
+    grid-row: 1;
+    grid-column: 1;
   }
 
   li {
@@ -37,4 +38,10 @@ footer {
       }
     }
   }
+}
+
+.social-links {
+  text-align: right;
+  grid-row: 1;
+  grid-column: 2;
 }

@@ -1,4 +1,6 @@
+// ----------------------------------------------------------------------------
 // Colors
+// ----------------------------------------------------------------------------
 $gray: #686F71;
 $lightGray: #858585;
 $grayOpacity: rgba(133,133,133, 0.3);
@@ -8,11 +10,32 @@ $dark: #253542;
 $accent: #edc59e;
 $darkAccent: #e4ab74;
 
+// ----------------------------------------------------------------------------
 // Fonts
+// ----------------------------------------------------------------------------
 $titleSize: 20px;
 $copySize: 16px;
 $main-fonts: 'Raleway', Helvetica, Arial, sans-serif;
 
+// ----------------------------------------------------------------------------
+// Mix-ins
+// ----------------------------------------------------------------------------
+%link-hover {
+  color: $accent;
+  text-shadow: 0 3px $lightGray;
+}
+
+// Text in header + footer
+%outer-text {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 14px;
+  display: inline;
+}
+
+// ----------------------------------------------------------------------------
 html, body {
   font-family: $main-fonts;
   font-weight: 400;
@@ -55,6 +78,20 @@ body {
     color: $dark;
     font-size: $copySize
   }
+
+  a {
+    color: $medium;
+    text-decoration: none;
+    font-weight: 700;
+    padding-bottom: 2px;
+
+    &:hover{
+      color: $darkAccent;
+      border-bottom: 1px dotted $darkAccent;
+      padding-bottom: 1px;
+    }
+  }
+
 }
 
 .line {
@@ -63,19 +100,4 @@ body {
 
 .highlight {
   font-weight: 700;
-}
-
-%link-hover {
-  color: $accent;
-  text-shadow: 0 3px $lightGray;
-}
-
-// Text in header + footer
-%outer-text {
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 14px;
-  display: inline;
 }
