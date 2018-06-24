@@ -101,3 +101,21 @@ body {
 .highlight {
   font-weight: 700;
 }
+
+.large-centered {
+  color: $darkAccent;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: 5px;
+  word-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 55px;
+}
+
+.reg-centered {
+  margin-top: 15px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+}
