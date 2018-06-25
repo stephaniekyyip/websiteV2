@@ -1,0 +1,19 @@
+- label: bookTracker
+  title: Book Tracker
+  subtitle: Web app that keeps track of all the books you read
+  img: bookTracker/bookTrackerHomepage.png
+
+- label: rainGauge
+  title: Electronic Rain Gauge
+  subtitle: Senior design project sponsored by Glaicer Peak Institute
+  img: rainGauge/rainGauge.jpg
+
+- label: smartLight
+  title: Smart Light
+  subtitle: Final project for an Internet of Things class
+  img: smartLight/smartLightSetup.jpg
+
+- label: puppet
+  title: Automated Dancing Puppet
+  subtitle: Electrical and computer engineering lab project
+  img: puppet/puppetProjectPuppet.jpg

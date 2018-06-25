@@ -1,13 +1,22 @@
 ---
-layout: default
+layout: no_jumbotron
 ---
 
-<h1>{{ page.title }}</h1>
-<h2>{{ page.description }}</h2>
+{% for item in site.data.projects %}
+  {% if item.label == page.label %}
+  <div class = "proj-title">{{ item.title }}</div>
+  <div class = "proj-subtitle">{{ item.subtitle }}</div>
+  {% endif %}
+{% endfor %}
 
 <!-- GitHub repo button  -->
 {% if page.github %}
-<a href = "{{ page.github }}"></a>
+<a href = "{{ page.github }}" class = "proj-btn github-btn">See on GitHub
+<i class="fab fa-github"></i></a>
 {% endif %}
 
 {{ content }}
+
+<!-- Return back to projects page -->
+<a href = "{{ site.url }}/projects" class = "proj-btn">
+<i class="fas fa-arrow-left"></i> Go Back</a>

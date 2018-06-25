@@ -2,6 +2,84 @@
 title: Rain Gauge
 permalink: /projects/rainGauge
 layout: projects_page
-description: Senior design project sponsored by <a href = "http://www.glacierpeakinstitute.org/">Glacier Peak Institute</a>
-jumbotron:
+label: rainGauge
+github: https://github.com/stephaniekyyip/electronicRainGauge
 ---
+
+<figure>
+  <img src = "{{ site.url }}/assets/img/projects/rainGauge/rainGauge.jpg"
+  class = "proj-pg-img" alt = "Rain Gauge Set-up"></img>
+  <figcaption class = "caption">
+    <span class = "highlight">Rain gauge set-up.</span><br>
+    Includes a PVC pipe to hold the rainwater, a cylindrical PVC container that
+    contains the waterproofed pressure sensor, wiring that connects the waterproofed
+    sensor to the rest of the electronics, and a waterproof box that holds those
+    electronics.
+  </figcaption>
+</figure>
+
+<figure>
+  <img src = "{{ site.url }}/assets/img/projects/rainGauge/rainGaugeElectronics.jpg"
+  class = "proj-pg-img" alt = "Rain Gauge Electronics"></img>
+  <figcaption class = "caption">
+    <span class = "highlight">Inside of the waterproof box containing the electronics.</span><br>
+    Includes the ESP8266 microcontroller, atmospheric pressure sensor, real time
+    clock, SD card reader, LCD screen, and battery pack.
+  </figcaption>
+</figure>
+
+<h1>Overview</h1>
+<p>
+  For my senior design project, I worked in an interdisciplinary team comprised
+  of both environmental science students and electrical and computer
+  engineering students, including myself. The project's sponsor,
+  <a href = "http://www.glacierpeakinstitute.org/">Glacier Peak Institute</a>
+  tasked our team with creating an environmental sensor curriculum for middle
+  school students in Darrington, WA.
+</p>
+<p>
+  The project's requirements were that the curriculum had to be low-cost, fun
+  and interesting for the kids, relevant to the local environment of Darrington, and allowed
+  the kids to enjoy the outdoors. As a result, our team decided to create an electronic rain
+  gauge curriculum.
+</p>
+
+<h1>How the Rain Gauge Works</h1>
+<p>
+  The physical design of the rain gauge involves a funnel attached to a PVC pipe
+  with a pressure sensor attached to the bottom. The rainwater would be collected
+  in the PVC pipe, where the pressure sensor can measure the pressue due
+  to both the atmosphere and rainwater.
+</p>
+<p>
+  A second pressure sensor is used to measure the atmospheric pressure. Together,
+  the two pressure sensors can find the differential pressure, as
+  in the pressure due to only the rainwater. This differential pressure can be used
+  to find the depth of the rainwater contained in the PVC pipe.
+</p>
+<p>
+  The electronics are connected to an ESP8266 microcontroller that is programmed
+  using the Arduino IDE. The code used for the rain gauge logs the differential
+  pressure reading and the current time measured by the real time clock (RTC) onto
+  a micro SD card every 15 minutes.
+</p>
+<p>
+  The idea is that the rain gauge can be set
+  outside to automatically collect rain data with minimal maintenance, which includes
+  retrieving the SD card to collect the data and changing the batteries.
+</p>
+
+<h1>What I Did</h1>
+<p>
+  I interfaced the electronic components with the ESP8266 microcontroller using
+  SPI and I2C. Using the Arduino IDE, I wrote code to control and get data from
+  the components. I also worked on the construction of the rain gauge, including
+  the wiring of the components on the breadboard and the design of the waterproof housing
+  for pressure sensor.
+</p>
+
+<p>
+  In addition to working on the hardware and software, I had a leadership role
+  in the project, in which I led team meetings and faciliated communication between
+  our faculty advisors and project sponsor on behalf of our team.
+</p>

@@ -17,9 +17,14 @@
 // }
 
 // ----------------------------------------------------------------------------
-// Center text in header
+// Tablet: Center text in header
 // ----------------------------------------------------------------------------
 @media all and (max-width:810px){
+
+  // Update margin between container and header
+  .proj-container {
+    margin: 80px auto auto auto;
+  }
 
   header {
     text-align: center;
@@ -57,7 +62,7 @@
 }
 
 // ----------------------------------------------------------------------------
-// Center text in footer
+// Tablet+: Center text in footer
 // ----------------------------------------------------------------------------
 @media all and (max-width: 685px){
 
@@ -87,9 +92,14 @@
 }
 
 // ----------------------------------------------------------------------------
-// Update footer to icons + update nav bar to hamburger menu
+// Mobile: Update footer to icons + update nav bar to hamburger menu
 // ----------------------------------------------------------------------------
 @media all and (max-width: 615px){
+
+  // Update margin between header and container
+  .proj-container {
+    margin: 50px auto auto auto;
+  }
 
   // Footer
   .social-icons {

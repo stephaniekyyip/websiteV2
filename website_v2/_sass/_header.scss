@@ -46,7 +46,7 @@ nav {
   }
 
   .active {
-    color: $accent;
+    @extend %link-hover;
   }
 }
 

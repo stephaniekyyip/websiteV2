@@ -1,0 +1,87 @@
+.proj-title {
+  @extend %title-text;
+  color: $darkAccent;
+  font-size: $titleSize;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.proj-subtitle {
+  color: $dark;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.proj-img {
+  margin: auto auto 20px auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+  height: 300px;
+  object-fit: cover;
+  border: 2px dotted $medium;
+  box-sizing: border-box;
+}
+
+.proj-pg-img {
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 80%;
+  object-fit: cover;
+  border: 2px dotted $medium;
+  box-sizing: border-box;
+}
+
+.proj-btn {
+  @extend %btn;
+  @extend %title-text;
+  color: white !important;
+  padding: 10px !important;
+  text-transform: uppercase;
+  display: block;
+  margin: auto;
+  width: 150px;
+  text-align: center;
+
+  &:hover {
+    @extend %btn-hover;
+  }
+}
+
+.github-btn {
+  width: 200px;
+  margin: auto auto 40px auto;
+}
+
+.caption {
+  font-size: 14px;
+  color: $dark;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.proj-btn + .line {
+  margin-top: 30px;
+}
+
+.line + .proj-title {
+  margin-top: 30px;
+}
+
+.proj-pg-img + .caption {
+  margin-top: 10px;
+}
+
+p + .proj-btn {
+  margin-top: 40px;
+}
+
+#proj-rainGauge {
+  object-position: 100% 85%;
+}
+
+#proj-puppet {
+  object-position: 70% 50%;
+}

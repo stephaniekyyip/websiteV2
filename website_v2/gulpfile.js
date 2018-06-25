@@ -68,9 +68,10 @@ gulp.task('scripts', function(){
 
 // Compress images
 gulp.task('compress-img', function(){
-  return gulp.src('assets/img/**/*.jpg')
+  return gulp.src('assets/img/**/*')
     .pipe(imagemin([
-      imagemin.jpegtran({progressive:true})
+      imagemin.jpegtran({progressive:true}),
+      imagemin.optipng({optimizationlevel:5})
     ]))
     .pipe(gulp.dest('_site/assets/img'))
 });
