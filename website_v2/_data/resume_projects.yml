@@ -1,0 +1,42 @@
+- title: Book Tracker Web App
+  dates: May - June 2018
+  link: bookTracker
+  class: Side Project
+  description:
+    - item: >
+        Created a CRUD web app using Apache, PHP, MySQL, and jQuery to keep
+        track of all the books the user has read
+    - item: >
+        Implemented a data analytics page to display visualizations of the
+        user's reading habits using JavaScript libraries (C3.js/ D3.js)
+    - item: >
+        Added additional features such as search, sort, and upload a CSV file
+        to add multiple entries at once.
+
+- title: Smart Light System
+  dates: Feb - Mar 2018
+  link: smartLight
+  class: Final Project for Internet of Things Class
+  description:
+    - item: Worked in a team to remotely control an LED bulb using a Raspberry Pi
+    - item: >
+        Wrote Python code for the Raspberry Pi to change the LED brightness
+        depending on the ambient light in the room as measured by a photo-resistor
+    - item: >
+        Used PHP with an Apache server in order to remotely connect to the
+        Raspberry Pi in order to control the LED bulb
+
+- title: Electronic Rain Gauge
+  dates: Sept 2017 - June 2018
+  link: rainGauge
+  class: Senior Design Project Sponsored by Glacier Peak Institute
+  description:
+    - item: >
+        Collaborated with environmental science students to design a middle school
+        rain gauge curriculum
+    - item: >
+        Interfaced electronic components with an ESP8266 micro-controller and
+        wrote Arduino code to control the components
+    - item: >
+        Organized team meetings and facilitated communication between project sponsor
+        and faculty advisors.

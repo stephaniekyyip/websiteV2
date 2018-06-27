@@ -1,0 +1,137 @@
+.resume-container {
+  box-sizing: border-box;
+  width: 80%;
+  margin: 60px 60px 60px auto;
+  line-height: 22px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-gap: 50px;
+
+  .line {
+    margin: 20px 0 20px 0;
+  }
+}
+
+.resume-content {
+  grid-column: 1;
+
+  a {
+    color: $dark;
+    text-decoration: none;
+    font-weight: 700;
+    padding-bottom: 1px;
+
+    &:hover {
+      color: $darkAccent;
+      border-bottom: 1px dotted $darkAccent;
+      padding-bottom: 1px;
+    }
+  }
+}
+
+.resume-sidebar {
+  grid-column: 2;
+  padding-right: 10px;
+
+  li {
+    line-height: 25px;
+    padding-bottom: 5px;
+  }
+
+  li a {
+    color: $gray;
+    opacity: 0.6;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.resume-section-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 0;
+}
+
+.resume-section-title {
+  // grid-row: 1;
+  grid-column: 1 / span 2;
+  color: $darkAccent;
+  font-weight: 700;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-size: $titleSize;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.resume-org {
+  font-size: $copySize;
+  // grid-row: 2;
+  grid-column: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $medium;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  margin-bottom: 3px;
+}
+
+.resume-dates {
+  font-size: $copySize;
+  grid-column: 2;
+  color: $medium;
+  text-align: right;
+}
+
+.resume-role {
+  font-size: $copySize;
+  grid-column: 1 / span 2;
+  font-style: italic;
+}
+
+.resume-list {
+  font-size: $copySize;
+  grid-column: 1;
+  margin-bottom: 13px;
+  line-height: 30px;
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    line-height: 25px;
+    padding-bottom: 5px;
+    list-style-type: disc;
+
+    li {
+      list-style-type: circle;
+    }
+  }
+
+}
+
+.resume-list-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  margin-bottom: 2px;
+  grid-column: 1;
+}
+
+.resume-role + .resume-list-title {
+  margin-top: 13px;
+}
+
+.resume-list:last-child {
+  margin-bottom: 0;
+}
+
+.resume-role + .resume-list {
+  margin-top: 5px;
+}

@@ -86,6 +86,10 @@ body {
   background: $accent;
 }
 
+i {
+  font-style: italic;
+}
+
 .container {
   box-sizing: border-box;
   width: 60%;
@@ -117,7 +121,7 @@ body {
     color: $medium;
     text-decoration: none;
     font-weight: 700;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
 
     &:hover{
       color: $darkAccent;

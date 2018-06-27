@@ -1,6 +1,30 @@
 ---
 title: Résumé
 permalink: /resume/
-layout: default
+layout: resume_page
 jumbotron: jumbotron-resume
 ---
+
+<!-- Main Content -->
+<div class = "resume-content">
+  {% include resume_education.html %}
+  <div class = "line"></div>
+  {% include resume_skills.html %}
+  <div class = "line"></div>
+  {% include resume_work.html %}
+  <div class = "line"></div>
+  {% include resume_projects.html %}
+  <div class = "line"></div>
+  {% include resume_student_involvement.html %}
+</div>
+
+<!-- Sidebar Navigation -->
+<div class = "resume-sidebar">
+  <ul>
+    <li><a href = "#education">Education</a></li>
+    <li><a href = "#skills">Skills</a></li>
+    <li><a href = "#work">Work Experience</a></li>
+    <li><a href = "#projects">Projects</a></li>
+    <li><a href = "#student-involvement">Student Involvement</a></li>
+  </ul>
+</div>

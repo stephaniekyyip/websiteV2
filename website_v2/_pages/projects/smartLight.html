@@ -44,19 +44,19 @@ github: https://github.com/stephaniekyyip/smartLight
   adjusting the brightness of the LED depending on the ambient light in the room.
 </p>
 
-<h1>How the Smart Light Works</h1>
+<h1>Hardware</h1>
 <p>
-  We interfaced the LED bulb, along with a photo-resistor and a transistor, with
-  a Raspberry Pi. The photo-resistor was used to determine the ambient brightness
-  in the room to allow us to adjust the brightness of the LED accordingly. The
-  transistor was used with the battery pack to allow us to vary the brightness
+  We interfaced the LED bulb, as well as a photo-resistor and a transistor, with a Raspberry Pi.
+  The photo-resistor was used to determine the ambient brightness
+  in the room in order to adjust the brightness of the LED accordingly. The
+  transistor was used with the battery pack to vary the brightness
   of the LED using the pulse width modulation (PWM) output from the Raspberry Pi.
 </p>
 
-<h1>What I Did</h1>
+<h1>Software</h1>
 <p>
-  In order to control the LED, I wrote Python scripts to adjust the LED brightness
-  by varying the PWM output. I also wrote a Python script to read the input from the photoresistor
+  To control the LED, I wrote Python scripts to adjust the LED brightness
+  by varying the PWM output. I also wrote a Python script to read the input from the photo-resistor
   to allow the option of automatically adjusting the brightness of the LED according
   to the ambient brightness.
 </p>
@@ -64,5 +64,5 @@ github: https://github.com/stephaniekyyip/smartLight
 <p>
   In addition to using Python, I used PHP with the Apache server on the Raspberry
   Pi to retrieve the user's input from the webpage and execute the appropriate Python
-  scripts.
+  script.
 </p>

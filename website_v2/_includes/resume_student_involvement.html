@@ -1,0 +1,18 @@
+<div class = "resume-section-container" id = "student-involvement">
+  <div class = "resume-section-title">Student Involvement</div>
+
+  {% for involvement in site.data.resume_sections.studentInvolvement %}
+  <div class = "resume-org">{{ involvement.org }}</div>
+  <div class = "resume-dates">{{ involvement.dates }}</div>
+  <div class = "resume-role">{{ involvement.role }}</div>
+
+  <div class = "resume-list">
+    <ul>
+      {% for entry in involvement.description %}
+      <li>{{ entry.item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+
+</div>

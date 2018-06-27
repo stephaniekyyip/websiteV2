@@ -1,0 +1,30 @@
+- title: Languages / Libraries / Frameworks
+  bullets:
+    - item: C++
+    - item: C
+    - item: HTML
+    - item: CSS / SCSS
+    - item: JavaScript
+    - item: jQuery
+    - item: PHP
+    - item: Python
+    - item: SQL
+
+- title: Tools/ Software
+  bullets:
+    - item: Visual Studio
+    - item: Git
+    - item: Gulp
+    - item: MySQL
+    - item: Chrome DevTools
+    - item: Adobe Photoshop
+
+- title: Hardware/ Lab Experience
+  bullets:
+    - item: Soldering
+    - item: Reading Schematics
+    - item: Prototyping Circuits
+    - item: Digital Multi-meters
+    - item: Oscllioscopes
+    - item: Raspberry Pi
+    - item: Arduino
