@@ -15,6 +15,19 @@
   .proj-img {
     width: 100%;
   }
+
+  .proj-btn-link-container {
+    grid-template-columns: auto;
+  }
+
+  .github-btn-left {
+    margin: auto;
+  }
+
+  .demo-btn-right {
+    grid-column: 1;
+    margin: auto auto 30px auto;
+  }
 }
 
 // Mobile
