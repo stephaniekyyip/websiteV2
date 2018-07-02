@@ -30,25 +30,35 @@
 }
 
 .resume-sidebar {
+  position: fixed;
   grid-column: 2;
-  padding-right: 10px;
+  right: 0;
+  top: 416px; // height of jumbotron + header
+  margin-top: 20px;
+  margin-right: 2%;
 
   li {
     line-height: 25px;
-    padding-bottom: 5px;
-  }
+    padding-bottom: 10px;
 
-  li a {
-    color: $gray;
-    opacity: 0.6;
-    text-decoration: none;
+    &:last-child {
+      padding-bottom: 0;
+    }
 
-    &:hover {
-      opacity: 1;
+    a {
+      color: $gray;
+      opacity: 0.6;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
+  
 }
 
+// Each section of the resume
 .resume-section-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -57,7 +67,6 @@
 }
 
 .resume-section-title {
-  // grid-row: 1;
   grid-column: 1 / span 2;
   color: $darkAccent;
   font-weight: 700;
@@ -69,9 +78,8 @@
 }
 
 .resume-org {
-  font-size: $copySize;
-  // grid-row: 2;
   grid-column: 1;
+  font-size: $copySize;
   font-weight: 700;
   text-transform: uppercase;
   color: $medium;
@@ -81,21 +89,21 @@
 }
 
 .resume-dates {
-  font-size: $copySize;
   grid-column: 2;
+  font-size: $copySize;
   color: $medium;
   text-align: right;
 }
 
 .resume-role {
-  font-size: $copySize;
   grid-column: 1 / span 2;
+  font-size: $copySize;
   font-style: italic;
 }
 
 .resume-list {
-  font-size: $copySize;
   grid-column: 1;
+  font-size: $copySize;
   margin-bottom: 13px;
   line-height: 30px;
 
@@ -116,12 +124,12 @@
 }
 
 .resume-list-title {
+  grid-column: 1;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 1px;
   margin-bottom: 2px;
-  grid-column: 1;
 }
 
 .resume-role + .resume-list-title {

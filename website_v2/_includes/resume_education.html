@@ -1,9 +1,9 @@
-<div class = "resume-section-container" id = "education">
+<section class = "resume-section-container" id = "education">
 
-  <div class = "resume-section-title">Education</div>
+  <h1 class = "resume-section-title">Education</h1>
 
   <!-- Education -->
-  {% for item in site.data.resume_sections.education %}
+  {% for item in site.data.resume_education.education %}
     <div class = "resume-org">{{ item.org }}</div>
     <div class = "resume-dates">{{ item.dates }}</div>
     <div class = "resume-role">{{ item.role }}</div>
@@ -34,7 +34,7 @@
   </div>
 
   <!-- Coursework -->
-  {% for list in site.data.resume_education_lists %}
+  {% for list in site.data.resume_education.lists %}
     <div class = "resume-list-title">{{ list.name }}</div>
     <div class = "resume-list">
       {% for entry in list.bullets %}
@@ -43,4 +43,4 @@
     </div>
   {% endfor %}
 
-</div>
+</section>

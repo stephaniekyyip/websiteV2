@@ -5,8 +5,10 @@ layout: resume_page
 jumbotron: jumbotron-resume
 ---
 
-<!-- Main Content -->
-<div class = "resume-content">
+<!-- Resume PDF button  -->
+
+<!-- Main Resume Content -->
+<main class = "resume-content">
   {% include resume_education.html %}
   <div class = "line"></div>
   {% include resume_skills.html %}
@@ -16,15 +18,16 @@ jumbotron: jumbotron-resume
   {% include resume_projects.html %}
   <div class = "line"></div>
   {% include resume_student_involvement.html %}
-</div>
+</main>
 
 <!-- Sidebar Navigation -->
-<div class = "resume-sidebar">
+<aside class = "resume-sidebar">
   <ul>
-    <li><a href = "#education">Education</a></li>
-    <li><a href = "#skills">Skills</a></li>
-    <li><a href = "#work">Work Experience</a></li>
-    <li><a href = "#projects">Projects</a></li>
-    <li><a href = "#student-involvement">Student Involvement</a></li>
+    <li><a href = "#education" id = "nav-edu">Education</a></li>
+    <li><a href = "#skills" id = "nav-skills">Skills</a></li>
+    <li><a href = "#work" id = "nav-work">Work Experience</a></li>
+    <li><a href = "#projects" id = "nav-proj">Featured Projects</a></li>
+    <li><a href = "#student-involvement" id = 'nav-involvement'>Student Involvement</a></li>
+    <li><a href = "header">Back to Top <i class="fas fa-arrow-up"></i></a></li>
   </ul>
-</div>
+</aside>

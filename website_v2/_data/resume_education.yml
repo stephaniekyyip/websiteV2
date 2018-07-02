@@ -1,0 +1,22 @@
+education:
+  - org: Seattle University
+    dates: Sept 2013 - June 2017
+    role: B.S. in Electrical Engineering, Computer Engineer Specialization
+
+lists:
+  - name: Computer Science Coursework
+    bullets:
+    - item: Data structures
+    - item: Design and Analysis of Algorithms
+    - item: Computer Systems
+    - item: Discrete Math
+
+  - name: Electrical and Computer Engineering Coursework
+    bullets:
+    - item: Embedded Systems
+    - item: Microprocessor Design
+    - item: Internet of Things
+    - item: Machine Learning
+    - item: Electrical Circuits
+    - item: Semiconductor Devices/ Circuits
+    - item: Signals and Systems
