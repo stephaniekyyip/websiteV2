@@ -3,7 +3,7 @@
   role: Software Engineer
   description:
     - item: Performed regression and unit testing for Windows, Linux, and VxWOrks platforms
-    - item: Worked under Agile/ Scrum development methodlogy
+    - item: Worked under Agile/ Scrum development methodology
 
 - org: Crane Aerospace and Electronics
   dates: June - Sept. 2016
@@ -12,5 +12,5 @@
     - item: Contributed to the development of a proximity sensor using a new ARM micro-controller
     - item: Tested and verified signal processing results using MATLAB and an oscilloscope
     - item: >
-        Modified embedded software in C to operate the analog to digital and 
+        Modified embedded software in C to operate the analog to digital and
         digital to analog converters on the micro-controller

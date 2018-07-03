@@ -10,4 +10,8 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-<script src = "{{ site.url }}/assets/js/app.js"></script>
+<script src = "{{ site.url }}/assets/js/responsiveMenu.js"></script>
+
+{% if page.title == "Résumé" %}
+  <script src = "{{ site.url }}/assets/js/resumeSidebar.js"></script>
+{% endif %}

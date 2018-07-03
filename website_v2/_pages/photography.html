@@ -4,3 +4,24 @@ permalink: /photography/
 layout: default
 jumbotron: jumbotron-photography
 ---
+
+<section class = "photo-intro">
+  <h1></h1>
+  <p>
+    I have been an avid photographer since taking a high school photography class.
+    During college, I enjoyed wandering Seattle with
+    my camera in tow and taking pictures of whatever caught my eye. I fell
+    in love with the Pacific Northwest through photography.
+  </p>
+</section>
+
+<div class = "photo-container">
+
+{% for item in site.data.photography%}
+<div class = "photo-item">
+  <!-- <img src = "{{ site.url }}/assets/img/photography/{{ item.img }}"></img> -->
+  <img src = "{{ site.url }}/assets/img/photography/{{ item.img }}"></img>
+</div>
+{% endfor %}
+
+</div>

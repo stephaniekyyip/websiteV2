@@ -10,7 +10,7 @@
         Implemented a data analytics page to display visualizations of the
         user's reading habits using JavaScript libraries (C3.js/ D3.js)
     - item: >
-        Added additional features such as search, sort, and upload a CSV file
+        Added additional features such as the abilities to search, sort, and upload a CSV file
         to add multiple entries at once.
 
 - title: Smart Light System
@@ -23,7 +23,7 @@
         Wrote Python code for the Raspberry Pi to change the LED brightness
         depending on the ambient light in the room as measured by a photo-resistor
     - item: >
-        Used PHP with an Apache server in order to remotely connect to the
+        Used PHP with an Apache server to remotely connect to the
         Raspberry Pi in order to control the LED bulb
 
 - title: Electronic Rain Gauge

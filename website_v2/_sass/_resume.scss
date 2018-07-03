@@ -1,7 +1,31 @@
+.resume-btn {
+  @extend %btn;
+  @extend %title-text;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 200px;
+  margin: 60px auto 30px auto;
+
+  &:hover {
+    @extend %btn-hover;
+  }
+}
+
+.resume-line {
+  width: 90%;
+  margin: auto;
+}
+
+#resume-back-to-top {
+  display: none;
+  margin: 30px auto 60px auto;
+}
+
 .resume-container {
   box-sizing: border-box;
   width: 80%;
-  margin: 60px 60px 60px auto;
+  margin: 30px 60px 60px auto;
   line-height: 22px;
   display: grid;
   grid-template-columns: 80% 20%;
@@ -33,7 +57,7 @@
   position: fixed;
   grid-column: 2;
   right: 0;
-  top: 416px; // height of jumbotron + header
+  top: 416px + 126px; // height of jumbotron + header + btn
   margin-top: 20px;
   margin-right: 2%;
 
@@ -55,7 +79,7 @@
       }
     }
   }
-  
+
 }
 
 // Each section of the resume

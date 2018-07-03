@@ -8,10 +8,48 @@
 }
 
 // ----------------------------------------------------------------------------
-// Projects
+// Resume
 // ----------------------------------------------------------------------------
 // Tablet
-@media all and (max-width:810px){
+@media all and (max-width:$tablet-width){
+  .resume-sidebar {
+    display: none;
+  }
+
+  .resume-content {
+    grid-column: 1 / span 2;
+  }
+
+
+  .resume-container{
+    grid-gap: 0;
+    grid-template-columns: 100%;
+    margin: 30px auto 30px auto;
+  }
+
+  .resume-dates {
+    text-align: left;
+  }
+
+  #resume-back-to-top {
+    display: block;
+  }
+}
+
+// Mobile
+@media all and (max-width: $mobile-width){
+  .resume-list {
+    grid-column: 1 / span 2;
+  }
+
+}
+
+// ----------------------------------------------------------------------------
+// Projects
+// ----------------------------------------------------------------------------
+
+// Tablet
+@media all and (max-width:$tablet-width){
   .proj-img {
     width: 100%;
   }
@@ -31,15 +69,15 @@
 }
 
 // Mobile
-@media all and (max-width: 615px){
-  .proj-img {
-    height: 200px;
-  }
-}
+// @media all and (max-width: $mobile-width){
+//   .proj-img {
+//     height: 200px;
+//   }
+// }
 // ----------------------------------------------------------------------------
 // Contact
 // ----------------------------------------------------------------------------
-@media all and (max-width: 615px){
+@media all and (max-width: $mobile-width){
   .form-grid-container {
     grid-template-rows: auto auto auto auto;
   }
@@ -65,7 +103,7 @@
 // ----------------------------------------------------------------------------
 // Contact Form Submit Successful
 // ----------------------------------------------------------------------------
-@media all and (max-width: 615px){
+@media all and (max-width: $mobile-width){
   .large-centered {
     font-size: 30px;
     letter-spacing: 2px;

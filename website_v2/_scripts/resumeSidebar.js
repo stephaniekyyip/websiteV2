@@ -5,13 +5,14 @@ function stickySidebar(){
   var sidebar = document.querySelector('.resume-sidebar');
   var jumbotronHeight = document.querySelector('.jumbotron').scrollHeight;
   var headerHeight = document.querySelector('header').scrollHeight;
+  var btnHeight = document.querySelector('.resume-btn').scrollHeight;
   var yPos = document.body.scrollTop;
-  var marginTop = 33;
+  var marginTop = 33 + 60;
 
   if(yPos > jumbotronHeight){
     sidebar.style.top = headerHeight + "px";
   }else {
-    sidebar.style.top = jumbotronHeight + headerHeight - yPos + marginTop + "px";
+    sidebar.style.top = jumbotronHeight + headerHeight + btnHeight - yPos + marginTop + "px";
   }
 
   highlightCurrent();
@@ -40,6 +41,7 @@ $(function(){
   }
 
   $('aside li a').on('click', scrollToSection);
+  $('#resume-back-to-top').on('click', scrollToSection);
 
 });
 

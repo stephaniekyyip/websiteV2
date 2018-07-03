@@ -1,0 +1,1 @@
+var icon=document.getElementById("menu-icon"),menu=document.getElementById("icon-nav-links");icon.addEventListener("click",function(){$("#icon-nav-links").slideToggle(),icon.classList.toggle("fa-times"),icon.classList.toggle("fa-bars"),icon.classList.toggle("icon-nav-active")});

@@ -59,7 +59,7 @@ gulp.task('sass', function(){
 // Minify JS
 gulp.task('scripts', function(){
   return gulp.src('_scripts/*.js')
-    .pipe(concat('app.js'))
+    //.pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(gulp.dest('_site/assets/js'))
     .pipe(browserSync.reload({stream:true}))
