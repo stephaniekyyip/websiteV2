@@ -19,7 +19,7 @@
 // ----------------------------------------------------------------------------
 // Tablet: Center text in header
 // ----------------------------------------------------------------------------
-@media all and (max-width:810px){
+@media all and (max-width: $tablet-width){
 
   // Update margin between container and header
   .proj-container {
@@ -94,7 +94,7 @@
 // ----------------------------------------------------------------------------
 // Mobile: Update footer to icons + update nav bar to hamburger menu
 // ----------------------------------------------------------------------------
-@media all and (max-width: 615px){
+@media all and (max-width: $mobile-width){
 
   // Update margin between header and container
   .proj-container {

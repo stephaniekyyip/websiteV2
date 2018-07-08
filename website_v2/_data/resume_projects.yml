@@ -18,7 +18,9 @@
   link: smartLight
   class: Final Project for Internet of Things Class
   description:
-    - item: Worked in a team to remotely control an LED bulb using a Raspberry Pi
+    - item: >
+        Worked in a team to create an Internet of Things system that allows the
+        user to remotely control a LED bulb using a Raspberry Pi
     - item: >
         Wrote Python code for the Raspberry Pi to change the LED brightness
         depending on the ambient light in the room as measured by a photo-resistor
