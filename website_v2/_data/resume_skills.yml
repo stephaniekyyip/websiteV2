@@ -9,6 +9,7 @@
     - item: PHP
     - item: Python
     - item: SQL
+    - item: Node
 
 - title: Tools/ Software
   bullets:
@@ -18,6 +19,7 @@
     - item: MySQL
     - item: Chrome DevTools
     - item: Adobe Photoshop
+    - item: Agile/ Scrum Development
 
 - title: Hardware/ Lab Experience
   bullets:
