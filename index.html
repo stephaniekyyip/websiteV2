@@ -1,187 +1,36 @@
-<!DOCTYPE html>
-<!--
-	Website by Stephanie Yip, 2018
+---
+title: Home
+permalink: /
+layout: default
+jumbotron: jumbotron-home
+---
 
-	Icons from Font Awesome, https://fontawesome.com
-	Contact form powered by Formspree, https://formspree.io/
+<div class = "about-bullets">
+  {% for item in site.data.about %}
+  <div class = "beginText">{{ item.begin }}</div>
+  <div class = "endText">{{ item.end}}</div>
+  {% endfor %}
 
--->
-<html>
+  <div class = "line"></div>
+</div>
 
-	<head>
-		<meta charset = "UTF-8">
-		<meta name="viewport" content="width=device-width initial-scale=1.0" />
-		<meta name="description" content="Portfolio website of a computer engineer, Stephanie Yip">
+<div class = "about-writing">
+  <h1>Introduction</h1>
+  <p>
+  I graduated in 2017 with a B.S. in Computer Engineering from Seattle University.
+  So far, my work experience has mainly been in the aerospace industry as a software engineer.
+  I am currently teaching myself full stack web development, and I am eagar to learn more!
+  </p>
 
-		<title> Stephanie Yip | Home </title>
+  <p>
+  The area that fascinates me the most is the integration
+  of hardware and software. I'm especially interested in projects that involve software
+  interacting with the physical world, such as in embedded devices and the internet of things. 
+  </p>
 
-		<link rel= "stylesheet" href="css/style.css"/>
+  <p>
+  That being said, I enjoy all things software and tech-related. In the end, I am interested in
+  working on meaningful projects and software that do good in the world.
+  </p>
 
-		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-		<!--<link rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?u8vidh">-->
-	</head>
-
-
-<!-- Header -->
-	<body>
-
-		<header>
-			<div class = "container">
-				<h1>Stephanie Yip</h1>
-
-				<!-- Navigation Bar -->
-				<nav>
-						<label for = "responsiveMenu"> &#9776;</label>
-						<input type = "checkbox" id="responsiveMenu"/>
-						<div class = "menu">
-						 <!--<div class = "menuDivider"></div>-->
-						<ul>
-							<li class = "active"><a href = "index.html">Home</a></li>
-							<li><a href = "resume.html">Résumé</a></li>
-							<li><a href = "projects.html" >Projects</a></li>
-							<li><a href = "photography.html">Photography</a></li>
-							<li><a href = "contact.html">Contact</a></li>
-						</ul>
-					</div>
-
-				</nav>
-			</div>
-		</header>
-
-	<!-- Page Title Block -->
-		<section id = "home">
-
-			<div class = "container">
-				<section class = "pgTitleBlock">
-
-				<div class = "darkenOverlay"></div>
-					<h1>Hello</h1>
-				</section>
-			</div>
-
-		</section>
-
-	<!-- About: Bulletpoints -->
-	<div class = "mainContent">
-		<section id = "about-bullets">
-
-	<!--
-			<div class = "bulletContainer">
-				<div class = "leftContainer leftText">
-					<div class = "left1">I am</div>
-					<div class = "left2">I studied</div>
-					<div class = "left3">I like</div>
-					<div class = "left4">Long story short</div>
-				</div>
-
-				<div class = "rightContainer rightText">
-					<div class = "right1">Stephanie Yip</div>
-					<div class = "right2">Electrical and Computer Engineering</div>
-					<div class = "right3">Integrating Hardware and Software, Embedded Devices, Internet of Things </div>
-					<div class = "right4">I am a recent college grad trying to learn new things.</div>
-				</div>
-	-->
-
-				<div class = "bulletContainer">
-					<div class = "titleText">I am</div>
-					<div class = "subtitleText">Stephanie Yip</div>
-
-					<div class = "titleText">I studied</div>
-					<div class = "subtitleText">Electrical and Computer Engineering</div>
-
-					<div class = "titleText">I like</div>
-					<div class = "subtitleText">Hardware and Software Integration,
-						Embedded Devices, and Internet of Things </div>
-
-					<div class = "titleText">Long story short</div>
-					<div class = "subtitleText">I am a recent college grad who enjoys learning new things.</div>
-
-				</div>
-
-			</section>
-
-			<!-- Line divider -->
-			<div class = "line"></div>
-		  <!-- About: Writing -->
-			<section id = "about-writing">
-				<div class = "container">
-						<h1>About</h1>
-						<p>I graduated from Seattle University in 2017 with a B.S. in Electrical
-							and Computer Engineering. The area that fascinates me the most is the
-							integration of hardware and software. I enjoy working on projects that
-							involve both electrical engineering and computer science and seeing
-							how the two fields interact with one another. Lately, I have also been interested
-							in learning more about software engineering and web applications.
-						 </p>
-						<p>This website serves as a portfolio of both my engineering experiences and personal interests.</p>
-
-						 <!--
-						<h1>About This Website</h1>
-						<p>I have spent the past decade trying to learn HTML
-					 and CSS to create my own themes on various websites, starting with Neopets
-					 in elementary school. Now that I have more free time and experience in
-					 computer science, I decided to buckle down and finally understand how this
-					 all works. </p>
-
-						<p>This website serves as a portfolio of my engineering projects and
-							experiences. In my free time, I dabble in photography and have
-							included that here as well.</p>-->
-
-				</div>
-			</section>
-
-</div> <!--End of main content-->
-
-	<!-- Footer -->
-		<footer>
-			<div class = "container">
-				<div class = "socialMediaIcons">
-					<!--
-					<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website"><span class = "socicon-mail"></span></a>
-					<a href = "https://www.linkedin.com/in/stephaniekyyip/"><span class = "socicon-linkedin"></span></a>
-					<a href = "https://github.com/stephaniekyyip"><span class = "socicon-github"></span></a>
-				-->
-				<a href = "mailto:stephaniekyyip@gmail.com?subject=E-mailing%20From%20Your%20Website">
-					<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="envelope">
-						<span class="fas fa-envelope"></span>
-				  </div>
-				</a>
-
-				<a href = "https://www.linkedin.com/in/stephaniekyyip/">
-					<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="linkedin logo">
-						<span class="fab fa-linkedin"></span>
-					</div>
-				</a>
-
-				<a href = "https://github.com/stephaniekyyip">
-					<div style="font-size: 18px; color: white; padding-right: 20px; padding-left: 20px; padding-top:20px; display: inline" alt="github logo">
-						<span class="fab fa-github"></span>
-					</div>
-				</a>
-
-					<!--<h1>Design by Stephanie Yip. Icons from <a href="http://socicon.com">Socicon</a>.</h1>-->
-					<h1>Website by Stephanie Yip 2018</h1>
-				</div>
-
-				<div class = "socialLinks">
-					<h1>Website by Stephanie Yip 2018</h1>
-					<ul>
-						<li><script>
-							var username = "stephaniekyyip";
-							var hostname = "gmail.com";
-							var subject = "E-mailing%20From%20Your%20Website";
-							document.write("<a href = '" + "mail" + "to:" + username + "@" + hostname
-							+ "?subject=" + subject + "'>" + "E-mail" + "</a> ");
-						</script></li>
-
-					<li><a href = "https://www.linkedin.com/in/stephaniekyyip/">LinkedIn</a></li>
-
-					<li><a href = "https://github.com/stephaniekyyip">GitHub</a></li>
-				</ul>
-			</div>
-		</div>
-		</footer>
-
-
-	</body>
-</html>
+</div>
