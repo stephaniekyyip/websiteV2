@@ -4,7 +4,7 @@
   class: Side Project
   description:
     - item: >
-        Created a CRUD web app using Apache, PHP, MySQL, and jQuery to keep
+        Created a CRUD web app using Apache, PHP, MySQL, and jQuery/ JavaScript to keep
         track of all the books the user has read
     - item: >
         Implemented a data analytics page to display visualizations of the
@@ -40,5 +40,5 @@
         Interfaced electronic components with an ESP8266 micro-controller and
         wrote Arduino code to control the components
     - item: >
-        Organized team meetings and facilitated communication between project sponsor
+        Led team meetings and facilitated communication between project sponsor
         and faculty advisors.

@@ -17,7 +17,7 @@
     - item: Git
     - item: Gulp
     - item: MySQL
-    - item: Chrome DevTools
+    # - item: Chrome DevTools
     - item: Adobe Photoshop
     - item: Agile/ Scrum Development
 
