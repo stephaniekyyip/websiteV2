@@ -6,7 +6,7 @@
   <div class = "social-icons">
     <ul>
       {% for item in site.data.social %}
-      <li><a href = "{{ item.link }}" target = "_blank">
+      <li><a href = "{{ item.link }}" target = "_blank" rel="noopener">
         <i class = "{{ item.icon }}" title = "{{ item.name }}"></i>
       </a></li>
       {% endfor %}
@@ -17,7 +17,7 @@
   <div class = "social-links">
     <ul>
       {% for item in site.data.social %}
-      <li><a href = "{{ item.link }}" target = "_blank">{{ item.name }}</a></li>
+      <li><a href = "{{ item.link }}" target = "_blank" rel="noopener">{{ item.name }}</a></li>
       {% endfor %}
     </ul>
   </div>
