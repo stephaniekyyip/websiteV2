@@ -1,14 +1,15 @@
 .photo-intro {
-
+  margin-bottom: 40px;
 }
 
 .photo-container {
   display: grid;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
 }
 
-.photo-item img {
+.photo-item {
   height: 250px;
-  width: 500px;
+  width: 100%;
+  object-fit: cover;
 }
