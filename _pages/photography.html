@@ -6,7 +6,7 @@ jumbotron: jumbotron-photography
 ---
 
 <section class = "photo-intro">
-  <h1>Snapshots</h1>
+  <h1>Snapshots From Seattle</h1>
   <p>
     I have been an avid photographer since taking a high school photography class.
     During college, I enjoyed wandering Seattle with
@@ -18,8 +18,7 @@ jumbotron: jumbotron-photography
 <div class = "photo-container">
 
 {% for item in site.data.photography%}
-<img class = "photo-item" src = "{{ site.url }}/assets/img/photography/{{ item.img }}.jpg"></img>
-<!-- <img src = "{{ site.url }}/assets/img/photography/{{ item.img }}"></img> -->
+<a href = "{{ site.url }}/assets/img/photography/{{ item.img }}.jpg" target = "_blank"><img class = "photo-item" src = "{{ site.url }}/assets/img/photography/{{ item.img }}.jpg" alt = "{{ item.alt }}"></img></a>
 {% endfor %}
 
 </div>
