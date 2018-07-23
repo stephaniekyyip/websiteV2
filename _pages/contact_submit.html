@@ -3,12 +3,16 @@ title: Message sent!
 permalink: /contact/success
 layout: no_jumbotron
 ---
-
 <div class = "large-centered">
   Message sent!
 </div>
 
 <div class = "reg-centered">
   I'll get back to you as soon as possible. <br>
-  Thank you!
+  Thank you! <br><br>
+  <a href = "{{site.url}}/contact">Click here to return to the contact form</a>
 </div>
+
+<script>
+setTimeout(function(){location.href="{{site.url}}/contact"}, 3000);
+</script>
