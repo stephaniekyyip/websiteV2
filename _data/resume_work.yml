@@ -2,14 +2,16 @@
   dates: Aug 2017 - Present
   role: Software Engineer
   description:
-    - item: Performed regression and unit testing for Windows, Linux, and VxWorks platforms
+    - item: Performed regression and unit tests for C and C++ code used on various platforms
     # - item: Worked under Agile/ Scrum development methodology
 
 - org: Crane Aerospace and Electronics
   dates: June - Sept. 2016
   role: Software Engineer Intern
   description:
-    - item: Contributed to the development of a proximity sensor using a new ARM micro-controller
+    - item: >
+        Independently contributed to the development of a proximity sensor using a new
+        ARM micro-controller that no one else at the company had used before
     - item: Tested and verified signal processing results using MATLAB and an oscilloscope
     - item: >
         Modified embedded software in C to configure the micro-controller for signal processing

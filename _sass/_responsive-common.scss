@@ -1,14 +1,14 @@
 // ---------------------------------------------------------------------------
 // Change size of container for wider screens
 // ----------------------------------------------------------------------------
-@media all and (min-width: 1400px){
+@media all and (min-width: 1400px){xc
   .container {
     width: 40%;
   }
 }
 
 // ---------------------------------------------------------------------------
-// Change position of jumbotron img
+// Change position of jumbotron img for wider screns
 // ----------------------------------------------------------------------------
 @media all and (min-width: 1100px){
   .jumbotron {
@@ -19,16 +19,6 @@
     background-position: 0px -350px;
   }
 }
-
-
-// ---------------------------------------------------------------------------
-// Change margins of container for taller screens
-// ----------------------------------------------------------------------------
-// @media all and (min-height: 1400px){
-//   .container {
-//     margin: 40px auto 40px auto
-//   }
-// }
 
 // ----------------------------------------------------------------------------
 // Tablet: Center text in header
@@ -74,7 +64,6 @@
     text-shadow: 2px 2px white;
   }
 }
-
 // ----------------------------------------------------------------------------
 // Tablet+: Center text in footer
 // ----------------------------------------------------------------------------
@@ -89,6 +78,7 @@
       grid-row: 2;
       padding-top: 15px;
       text-align: center;
+      line-height: 18px;
     }
   }
 
@@ -203,4 +193,11 @@
     line-height: 40px;
   }
 
+}
+
+@media all and (max-width: 340px){
+  #jumbotron-photography h1 {
+    font-size: 28px;
+    letter-spacing: 8px
+  }
 }

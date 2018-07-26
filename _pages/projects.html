@@ -14,7 +14,7 @@ jumbotron: jumbotron-projects
   <img src = "{{ site.url }}/assets/img/projects/{{ item.img }}" class = "proj-img" id = "proj-{{ item.label }}" alt = "{{ item.title }}"></img>
   {% endif %}
   
-  <a href = "{{ site.url }}/projects/{{ item.label }}.html" class = "proj-btn" role = "button">See Details <i class="fas fa-arrow-right"></i></a>
+  <a href = "{{ site.url }}/projects/{{ item.label }}" class = "proj-btn" role = "button">See Details <i class="fas fa-arrow-right"></i></a>
 
   {% if forloop.last == false %}
   <div class = "line"></div>

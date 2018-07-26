@@ -3,7 +3,7 @@
     - item: C++
     - item: C
     - item: HTML
-    - item: CSS / SCSS
+    - item: CSS / Sass
     - item: JavaScript
     - item: jQuery
     - item: PHP
@@ -18,8 +18,8 @@
     - item: Gulp
     - item: MySQL
     # - item: Chrome DevTools
-    - item: Adobe Photoshop
     - item: Agile/ Scrum Development
+    - item: Adobe Photoshop
 
 - title: Hardware/ Lab Experience
   bullets:

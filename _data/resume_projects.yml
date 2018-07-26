@@ -6,12 +6,12 @@
     - item: >
         Created a CRUD web app using Apache, PHP, MySQL, and jQuery/ JavaScript to keep
         track of all the books the user has read
-    - item: >
-        Implemented a data analytics page to display visualizations of the
-        user's reading habits using JavaScript libraries (C3.js/ D3.js)
-    - item: >
-        Added additional features such as the abilities to search, sort, and upload a CSV file
-        to add multiple entries at once.
+    # - item: >
+    #     Implemented a data analytics page to display visualizations of the
+    #     user's reading habits using JavaScript libraries (C3.js/ D3.js)
+    # - item: >
+    #     Added additional features such as the abilities to search, sort, and upload a CSV file
+    #     to add multiple entries at once.
 
 - title: Smart Light System
   dates: Feb - Mar 2017
@@ -21,12 +21,15 @@
     - item: >
         Worked in a team to create an Internet of Things system that allows the
         user to remotely control a LED bulb using a Raspberry Pi
-    - item: >
-        Wrote Python code for the Raspberry Pi to change the LED brightness
-        depending on the ambient light in the room as measured by a photo-resistor
-    - item: >
-        Used PHP with an Apache server to remotely connect to the
-        Raspberry Pi in order to control the LED bulb
+    # - item: >
+    #     Wrote Python code for the Raspberry Pi to change the LED brightness
+    #     depending on the ambient light in the room as measured by a photo-resistor
+    # - item: >
+    #     Programmed in PHP for an Apache server on the Raspberry Pi in order to use a 
+    #     webpage interface to control the LED
+    # - item: >
+    #     Selected as a team to present the project in front of VIP industry professionals 
+    #     as part of a fundraising reception for Seattle University
 
 - title: Electronic Rain Gauge
   dates: Sept 2016 - June 2017
@@ -36,9 +39,9 @@
     - item: >
         Collaborated with environmental science students to design a middle school
         rain gauge curriculum
-    - item: >
-        Interfaced electronic components with an ESP8266 micro-controller and
-        wrote Arduino code to control the components
-    - item: >
-        Led team meetings and facilitated communication between project sponsor
-        and faculty advisors.
+    # - item: >
+    #     Interfaced electronic components with an ESP8266 micro-controller and
+    #     wrote Arduino code to control the components
+    # - item: >
+    #     Led team meetings and facilitated communication between project sponsor
+    #     and faculty advisors.

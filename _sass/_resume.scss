@@ -125,11 +125,20 @@
   font-style: italic;
 }
 
+.resume-list-title {
+  grid-column: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  margin-bottom: 2px;
+}
+
 .resume-list {
   grid-column: 1;
   font-size: $copySize;
-  margin-bottom: 13px;
-  line-height: 30px;
+  // margin-bottom: 13px;
+  line-height: 25px;
 
   ul {
     padding-left: 20px;
@@ -147,13 +156,14 @@
 
 }
 
-.resume-list-title {
-  grid-column: 1;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 1px;
-  margin-bottom: 2px;
+.resume-proj-link {
+  grid-column: 1/ span 2;
+  // text-align: right;
+  display: block;
+}
+
+a.resume-proj-link:hover{
+  border-bottom: none !important;
 }
 
 .resume-role + .resume-list-title {
@@ -166,4 +176,16 @@
 
 .resume-role + .resume-list {
   margin-top: 5px;
+}
+
+.resume-list + .resume-list-title {
+  margin-top: 10px;
+}
+
+.resume-proj-link + .resume-org {
+  margin-top: 13px;
+}
+
+.resume-list + .resume-org {
+  margin-top: 8px;
 }

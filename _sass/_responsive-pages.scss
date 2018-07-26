@@ -20,20 +20,25 @@
     grid-column: 1 / span 2;
   }
 
-
-  .resume-container{
+  .resume-container {
     grid-gap: 0;
     grid-template-columns: 100%;
     margin: 30px auto 30px auto;
   }
 
-  .resume-dates {
-    text-align: left;
-  }
-
   #resume-back-to-top {
     display: block;
   }
+
+  .resume-org {
+    margin-bottom: 0px;
+  }
+
+  .resume-dates {
+    text-align: left;
+    grid-column: 1;
+  }
+
 }
 
 // Mobile
@@ -77,6 +82,15 @@
   }
   .photo-item {
     height: 300px;
+  }
+}
+
+@media all and (max-width: $mobile-width){
+  .photo-container {
+    grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
+  }
+  .photo-item {
+    height: 200px;
   }
 }
 
