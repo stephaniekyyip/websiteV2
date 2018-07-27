@@ -6,7 +6,7 @@ function stickySidebar(){
   var jumbotronHeight = document.querySelector('.jumbotron').scrollHeight;
   var headerHeight = document.querySelector('header').scrollHeight;
   var btnHeight = document.querySelector('.resume-btn').scrollHeight;
-  var yPos = document.body.scrollTop;
+  var yPos = document.body.scrollTop || document.documentElement.scrollTop || document.scrollingElement.scrollTop;
   var marginTop = 33 + 60;
 
   if(yPos > jumbotronHeight){
