@@ -49,7 +49,7 @@ $(function(){
 // Highlight current link in sidebar
 // ----------------------------------------------------------------------------
 function highlightCurrent(){
-  var yPos = document.body.scrollTop;
+  var yPos = document.body.scrollTop || document.documentElement.scrollTop || document.scrollingElement.scrollTop;
   var headerHeight = document.querySelector('header').scrollHeight;
   var marginTop = 20;
   var subtract = headerHeight + marginTop;
