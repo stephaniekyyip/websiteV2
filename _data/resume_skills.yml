@@ -9,7 +9,7 @@
     - item: PHP
     - item: Python
     - item: SQL
-    - item: Node
+    # - item: Node
 
 - title: Tools/ Software
   bullets:
