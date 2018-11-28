@@ -18,8 +18,8 @@ name: Stephanie Yip
 title: Stephanie Yip
 description: >- # this means to ignore newlines until "baseurl:"
   Website for Stephanie Yip, a computer/ software engineer.
-baseurl: "/website_v2" # the subpath of your site, e.g. /blog
-url: "https://stephaniekyyip.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://stephaniekyyip.com" # the base hostname & protocol for your site, e.g. http://example.com
 email: stephaniekyyip@gmail.com
 
 # Build settings
