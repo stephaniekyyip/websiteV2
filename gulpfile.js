@@ -13,38 +13,37 @@ const del = require("del");
 const cp = require('child_process');
 const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-// Clean files
-function clean(done) {
-  del(['./_site']);
-  done();
-}
-
 // Jekyll build
-function jekyllBuild(done) {
+function jekyllBuild() {
   return cp.spawn("bundle", ["exec", "jekyll", "build"], {stdio: 'inherit'})
-  .on('close', done);
 }
 
 // Jekyll Dev build with _config_dev.yml
-function jekyllDev(done){
+function jekyllDev(){
   return cp.spawn("bundle", ["exec", "jekyll", "build", "--config", "_config.yml,_config_dev.yml"], {stdio: 'inherit'})
-  .on('close', done);
 }
 
 // Browser sync initialization
 function browserSync(done) {
   browsersync.init({
     server:{
-      baseDir: "./_site"
-    }
+      baseDir: "./_site/"
+    },
+    port: 3000,
+    open: false
   });
   done();
 }
 
 // Browser sync reload
-function browserSyncReload(done){
+function browserSyncReload(done) {
   browsersync.reload();
   done();
+}
+
+// Clean files
+function clean() {
+  return del(['./_site/assets/']);
 }
 
 // SASS
@@ -61,8 +60,8 @@ function css(){
   }))
   .pipe(cssnano())
   .pipe(gulp.dest('./_site/assets/css'))
-  .pipe(browsersync.reload({stream:true}))
-  .pipe(gulp.dest('./assets/css'));
+  .pipe(gulp.dest('./assets/css'))
+  .pipe(browsersync.stream());
 }
 
 // Minify JS
@@ -71,26 +70,26 @@ function scripts() {
     //.pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./_site/assets/js'))
-    .pipe(browsersync.stream())
-    .pipe(gulp.dest('assets/js'));
+    .pipe(gulp.dest('./assets/js'))
+    .pipe(browsersync.stream());
 }
 
 // Compress images
 function images() {
-  return gulp.src('assets/img/**/*')
+  return gulp.src('./assets/img/**/*')
     .pipe(imagemin([
       imagemin.jpegtran({progressive:true}),
       imagemin.optipng({optimizationlevel:5})
     ]))
-    .pipe(gulp.dest('./_site/assets/img'));
+    .pipe(gulp.dest('./_site/assets/img'))
 }
 
 // Watch
 function watchFiles() {
-  gulp.watch('./_sass/**/*.scss', gulp.series(css, browserSyncReload));
+  gulp.watch('./_sass/**/*.scss', css);
   gulp.watch(['./_pages/**/*', './_layouts/*', './_includes/**/*', './*.html', './_data/**/*'], gulp.series(jekyllDev, browserSyncReload));
-  gulp.watch(['./assets/img/**/*'], gulp.series(images, browserSyncReload));
-  gulp.watch(['./_scripts/*.js'], gulp.series(scripts, browserSyncReload));
+  gulp.watch('./assets/img/**/*', images);
+  gulp.watch('./_scripts/*.js', scripts);
 }
 
 // Tasks
@@ -99,18 +98,16 @@ gulp.task("css", css);
 gulp.task("scripts", scripts);
 gulp.task("jekyllBuild", jekyllBuild);
 gulp.task("jekyllDev", jekyllDev);
+gulp.task("clean", clean);
 
 // Build
 gulp.task(
   "build",
-  gulp.series(clean, css, images, scripts,jekyllBuild)
+  gulp.series(clean, gulp.parallel(css, images, scripts, jekyllBuild))
 );
-// const build = gulp.series(clean, css, images, scripts,jekyllBuild, watchFiles);
-
 
 // Development
 gulp.task(
   "dev",
-  gulp.series(clean, css, images, scripts, jekyllDev, browserSync, watchFiles)
+  gulp.series(css, images, scripts, jekyllDev, gulp.parallel(watchFiles, browserSync))
 );
-// const dev = gulp.series(clean, css, images, scripts, jekyllDev, browserSync, watchFiles);
