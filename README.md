@@ -1,4 +1,4 @@
-# My Website (Latest Version, v2)
+# My Website (Latest Version, v3)
 The second version of my website that aims to modularize the code and make the website easier to read and maintain.
 
 ## Dependancies
@@ -12,7 +12,7 @@ The second version of my website that aims to modularize the code and make the w
   - CSS grid issues with text in footer + resume page
 
 ## Set-Up
-- Install: `gem install && npm install`
+- Install: `bundle install && npm install`
 - Update: `bundle update && npm update`
 - Development: `gulp dev`
 - Production: `gulp build`
