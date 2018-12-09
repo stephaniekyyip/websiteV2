@@ -1,14 +1,17 @@
-- name: Home
-  link: /
+# - name: Home
+#   link: /
+
+- name: About
+  link: /#about
 
 - name: Résumé
-  link: /resume
+  link: /#resume
 
 - name: Projects
-  link: /projects
+  link: /#projects
 
-- name: Photography
-  link: /photography
+# - name: Photography
+#   link: /photography
 
 - name: Contact
   link: /contact

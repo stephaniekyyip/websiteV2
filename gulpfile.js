@@ -4,7 +4,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cssnano = require('gulp-cssnano');
 const autoprefixer = require('gulp-autoprefixer');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const browsersync = require('browser-sync').create();
 const imagemin = require("gulp-imagemin");
 const concat = require("gulp-concat");
@@ -15,12 +15,12 @@ const jekyll = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
 // Jekyll build
 function jekyllBuild() {
-  return cp.spawn("bundle", ["exec", "jekyll", "build"], {stdio: 'inherit'})
+  return cp.spawn("bundle", ["exec", jekyll, "build"], {stdio: 'inherit'})
 }
 
 // Jekyll Dev build with _config_dev.yml
 function jekyllDev(){
-  return cp.spawn("bundle", ["exec", "jekyll", "build", "--config", "_config.yml,_config_dev.yml"], {stdio: 'inherit'})
+  return cp.spawn("bundle", ["exec", jekyll, "build", "--config", "_config.yml,_config_dev.yml"], {stdio: 'inherit'})
 }
 
 // Browser sync initialization
@@ -29,8 +29,9 @@ function browserSync(done) {
     server:{
       baseDir: "./_site/"
     },
-    port: 3000,
-    open: false
+    port: 4000,
+    open: false,
+    reloadOnRestart: true,
   });
   done();
 }
@@ -86,10 +87,10 @@ function images() {
 
 // Watch
 function watchFiles() {
-  gulp.watch('./_sass/**/*.scss', css);
+  gulp.watch('./_sass/**/*.scss', gulp.series(css, browserSyncReload));
   gulp.watch(['./_pages/**/*', './_layouts/*', './_includes/**/*', './*.html', './_data/**/*'], gulp.series(jekyllDev, browserSyncReload));
-  gulp.watch('./assets/img/**/*', images);
-  gulp.watch('./_scripts/*.js', scripts);
+  gulp.watch('./assets/img/**/*', gulp.series(images, browserSyncReload));
+  gulp.watch('./_scripts/*.js', gulp.series(scripts, browserSyncReload));
 }
 
 // Tasks

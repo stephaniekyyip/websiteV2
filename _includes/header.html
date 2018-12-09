@@ -1,5 +1,5 @@
 <header>
-  <h1>Stephanie Yip</h1>
+  <h1 class = "hide-name">Stephanie Yip</h1>
   <nav>
 
     <div class = "icon-nav">
@@ -13,7 +13,7 @@
     </div>
   </nav>
 
-  <div id = "icon-nav-links">
+  <div class = "icon-nav-links">
     <ul>{% for item in site.data.nav %}
       <li><a href = "{{ item.link }}" {% if item.name == page.title %} class = "active" {% endif %}>{{ item.name }}</a></li>
       {% endfor %}</ul>

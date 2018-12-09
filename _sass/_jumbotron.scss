@@ -1,6 +1,6 @@
 .jumbotron{
-  margin-top: 45px;
   padding: 150px 0 150px 0;
+  background-image: url('../img/jumbotron/homeJumbotron.jpg');
   background-size: 100% auto;
   background-repeat: no-repeat;
   position: relative;
@@ -9,7 +9,7 @@
     margin: 0 auto;
     text-align: center;
     color: $darkAccent;
-    text-shadow: 3px 3px white;
+    // text-shadow: 3px 0px white;
     font-size: 70px;
     letter-spacing: 20px;
   	word-spacing: 20px;
@@ -17,6 +17,22 @@
     text-transform: uppercase;
     position: relative;
     z-index: 1;
+  }
+
+  h2 {
+    margin: 30px auto 0 auto;
+    text-align: center;
+    color: white;
+    // text-shadow: 1px 1px $darkAccent;
+    font-size: 20px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 25px;
+    font-weight: 600;
+    // text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+
   }
 }
 
@@ -28,26 +44,26 @@
 	width: 100%;
 	height: 100%;
 	background: black;
-	opacity: 0.5;
+	opacity: 0.8;
 	position: absolute;
 }
 
-#jumbotron-home {
-  background-image: url('../img/jumbotron/homeJumbotron.jpg');
-}
+// #jumbotron-home {
+//   background-image: url('../img/jumbotron/homeJumbotron.jpg');
+// }
 
-#jumbotron-resume {
-  background-image: url('../img/jumbotron/resumeJumbotron.jpg');
-}
+// #jumbotron-resume {
+//   background-image: url('../img/jumbotron/resumeJumbotron.jpg');
+// }
 
-#jumbotron-projects {
-  background-image: url('../img/jumbotron/projectsJumbotron.jpg');
-}
+// #jumbotron-projects {
+//   background-image: url('../img/jumbotron/projectsJumbotron.jpg');
+// }
 
-#jumbotron-photography {
-  background-image: url('../img/jumbotron/photographyJumbotron.jpg');
-}
+// #jumbotron-photography {
+//   background-image: url('../img/jumbotron/photographyJumbotron.jpg');
+// }
 
-#jumbotron-contact {
-  background-image: url('../img/jumbotron/contactJumbotron.jpg');
-}
+// #jumbotron-contact {
+//   background-image: url('../img/jumbotron/contactJumbotron.jpg');
+// }

@@ -19,7 +19,7 @@ title: Stephanie Yip
 description: >- # this means to ignore newlines until "baseurl:"
   Website for Stephanie Yip, a computer/ software engineer.
 baseurl: ""
-url: "http://localhost:3000"
+url: "http://localhost:4000"
 
 email: stephaniekyyip@gmail.com
 
@@ -40,6 +40,8 @@ exclude:
  - Gemfile.lock
  - node_modules
  - package.json
+ - _pages/old_stuff/*
+ - _includes/old_stuff/*
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/

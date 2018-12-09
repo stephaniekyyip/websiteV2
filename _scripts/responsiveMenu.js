@@ -2,12 +2,20 @@
 // Dropdown menu in responsive version
 // ----------------------------------------------------------------------------
 
-var icon = document.getElementById('menu-icon');
-var menu = document.getElementById('icon-nav-links');
+const icon = document.getElementById('menu-icon');
+const menu = document.querySelector('.icon-nav-links');
+const navBar = document.querySelector('header');
 
 icon.addEventListener("click", function(){
+  const ypos = document.body.scrollTop || document.documentElement.scrollTop || document.scrollingElement.scrollTop;
+
   // Toggle dropdown menu
-  $('#icon-nav-links').slideToggle();
+  menu.classList.toggle('display-icon-menu');
+
+  // Make nav bar opaque (if not already)
+  if(ypos === 0){
+    navBar.classList.toggle('opaque');
+  }
 
   // Toggle menu icon from hamburger to X
   icon.classList.toggle('fa-times');

@@ -15,15 +15,32 @@
     background-position: 0px -250px;
   }
 
-  #jumbotron-photography {
-    background-position: 0px -350px;
-  }
+  // #jumbotron-photography {
+  //   background-position: 0px -350px;
+  // }
 }
 
 // ----------------------------------------------------------------------------
 // Tablet: Center text in header
 // ----------------------------------------------------------------------------
 @media all and (max-width: $tablet-width){
+
+  // Update jumbotron padding + text sizing
+  .jumbotron{
+
+    padding: 150px 0 100px 0;
+
+    h1 {
+      font-size: 45px;
+      word-spacing: 1px;
+      letter-spacing: 15px;
+      padding: 0 10px;
+    }
+
+    h2 {
+      padding: 0 20px;
+    }
+  }
 
   // Update margin between container and header
   .proj-container {
@@ -56,14 +73,14 @@
 // ----------------------------------------------------------------------------
 // Update Photography page jumbotron text size to fit
 // ----------------------------------------------------------------------------
-@media all and (max-width: 735px){
-  #jumbotron-photography h1 {
-    font-size: 50px;
-    letter-spacing: 10px;
-    line-height: 40px;
-    text-shadow: 2px 2px white;
-  }
-}
+// @media all and (max-width: 735px){
+//   #jumbotron-photography h1 {
+//     font-size: 50px;
+//     letter-spacing: 10px;
+//     line-height: 40px;
+//     text-shadow: 2px 2px white;
+//   }
+// }
 // ----------------------------------------------------------------------------
 // Tablet+: Center text in footer
 // ----------------------------------------------------------------------------
@@ -161,10 +178,11 @@
 
   .icon-nav-active {
     color: $accent;
-    text-shadow: 0 3px $lightGray;
+    // text-shadow: 0 3px $lightGray;
   }
 
   #menuIcon{
+    // transition: display 1s;
     float: right;
   }
 
@@ -176,28 +194,37 @@
 @media all and (max-width: 560px ){
 
   .jumbotron{
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 60px 0 50px 0;
 
     h1 {
-      font-size: 40px;
-      letter-spacing: 15px;
-      text-shadow: 2px 2px white;
+      // padding-top: 80px;
+      font-size: 30px;
+      letter-spacing: 5px;
+      word-spacing: 5px;
+      line-height: 30px;
+      // text-shadow: 2px 2px white;
     }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: 400;
+    }
+
   }
 
-  // Update Photography page jumbotron text size to fit
-  #jumbotron-photography h1 {
-    font-size: 30px;
-    letter-spacing: 10px;
-    line-height: 40px;
-  }
+  // // Update Photography page jumbotron text size to fit
+  // #jumbotron-photography h1 {
+  //   font-size: 30px;
+  //   letter-spacing: 10px;
+  //   line-height: 40px;
+  // }
 
 }
 
-@media all and (max-width: 340px){
-  #jumbotron-photography h1 {
-    font-size: 28px;
-    letter-spacing: 8px
-  }
-}
+// @media all and (max-width: 340px){
+//   #jumbotron-photography h1 {
+//     font-size: 28px;
+//     letter-spacing: 8px
+//   }
+// }

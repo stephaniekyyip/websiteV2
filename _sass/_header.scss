@@ -8,16 +8,32 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: $medium;
-  box-shadow: 0 2px 5px $grayOpacity;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 
   h1 {
     @extend %outer-text;
-    font-weight: 700;
+    // font-weight: 700;
     word-spacing: 5px;
     float: left;
     padding: 15px 15px 15px 20px;
+    
   }
+}
+
+.opaque {
+  background-color: $medium;
+  box-shadow: 0 1px 10px $grayOpacity;
+  transition: background-color 0.5s;
+}
+
+.hover-shadow {
+  text-shadow: 0 3px $lightGray;
+}
+
+.hide-name {
+  visibility: hidden;
+  // transition: visibility 0.5s;
 }
 
 // Nav Bar
@@ -47,18 +63,21 @@ nav {
 
   .active {
     @extend %link-hover;
+    font-weight: 700;
   }
 }
 
 // Responsive Nav Bar
+
 #menu-icon:hover {
   cursor: pointer;
 }
 
-#icon-nav-links {
+.icon-nav-links {
   @extend %outer-text;
+  transition: all 0.3s;
   border-top: 1px solid $accent;
-  box-shadow: 0 2px 5px $grayOpacity;
+  // box-shadow: 0 2px 5px $grayOpacity;
   background-color: $mediumOpacity;
   position: absolute;
   right: 0;
@@ -66,8 +85,9 @@ nav {
   top: 46px;
   text-align: center;
   width: 100%;
-  display: none;
-
+  height: 0;
+  opacity: 0;
+  
   ul {
     padding: 15px 20px 15px 20px;
   }
@@ -87,10 +107,15 @@ nav {
   a {
     color: white;
     text-decoration: none;
-    text-shadow: 0 2px $lightGray;
+    // text-shadow: 0 2px $lightGray;
 
     &:hover {
       @extend %link-hover;
     }
   }
+}
+
+.display-icon-menu {
+  opacity: 1;
+  height: 470%;
 }
