@@ -3,7 +3,7 @@ layout: no_jumbotron
 ---
 
 {% for item in site.data.projects %}
-  {% if item.label == page.label %}
+  {% if item.link == page.label %}
   <div class = "proj-title">{{ item.title }}</div>
   <div class = "proj-subtitle">{{ item.subtitle }}</div>
   {% endif %}
@@ -11,21 +11,21 @@ layout: no_jumbotron
 
 {% if page.github and page.demo %}
   <div class = "proj-btn-link-container">
-    <a href = "{{ page.github }}" target = "_blank" class = "proj-btn github-btn-left">See on GitHub
+    <a href = "{{ page.github }}" target = "_blank" class = "btn github-btn-left">See on GitHub
     <i class="fab fa-github"></i></a>
 
-    <a href = "{{ page.demo }}" target = "_blank" class = "proj-btn demo-btn-right">See Live Demo
+    <a href = "{{ page.demo }}" target = "_blank" class = "btn demo-btn-right">See Live Demo
     <i class="fas fa-desktop"></i></a>
   </div>
 
 <!-- GitHub repo button  -->
 {% elsif page.github %}
-  <a href = "{{ page.github }}" target = "_blank" class = "proj-btn github-btn">See on GitHub
+  <a href = "{{ page.github }}" target = "_blank" class = "btn github-btn">See on GitHub
   <i class="fab fa-github"></i></a>
 
 <!-- Live demo button -->
 {% elsif page.demo %}
-  <a href = "{{ page.demo }}" target = "_blank" class = "proj-btn github-btn">See Live Demo
+  <a href = "{{ page.demo }}" target = "_blank" class = "btn github-btn">See Live Demo
   <i class="fas fa-desktop"></i></a>
 
 {% endif %}
@@ -33,5 +33,5 @@ layout: no_jumbotron
 {{ content }}
 
 <!-- Return back to projects page -->
-<a href = "{{ site.url }}/projects" class = "proj-btn">
-<i class="fas fa-arrow-left"></i> Back to Projects</a>
+<a href = "{{ site.url }}" class = "btn proj-pg-btn">
+<i class="fas fa-arrow-left"></i> Back</a>

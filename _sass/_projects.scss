@@ -1,9 +1,35 @@
+.proj-container {
+  box-sizing: border-box;
+  // width: 100%;
+  // margin: auto;
+  // line-height: 22px;
+  // color: $dark;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  // grid-auto-rows: auto;
+}
+
+.proj-block {
+  border: 2px solid $accent;
+  box-sizing: border-box;
+  // background-color: $accent;
+
+  .btn {
+    margin: auto auto 20px auto;
+    width: 40%;
+  }
+}
+
 .proj-title {
-  @extend %title-text;
-  color: $darkAccent;
-  font-size: $titleSize;
+  font-weight: 700;
+  color: $medium;
+  font-size: $copySize;
   text-align: center;
-  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  margin: 15px auto;
 }
 
 .proj-subtitle {
@@ -11,47 +37,77 @@
   font-size: 18px;
   text-align: center;
   margin-bottom: 20px;
+  padding: 0 10px;
 }
 
 .proj-img {
-  margin: auto auto 20px auto;
+  margin: 15px auto;
   display: block;
   width: 80%;
   text-align: center;
   height: 300px;
   object-fit: cover;
-  border: 2px dotted $medium;
-  box-sizing: border-box;
+  // border: 2px dotted $medium;
+  // box-sizing: border-box;
 }
 
-.proj-pg-img {
-  display: block;
-  width: 100%;
+.proj-tech {
+  color: $medium;
+  font-size: 18px;
   text-align: center;
-  height: 80%;
-  object-fit: cover;
-  border: 2px dotted $medium;
-  box-sizing: border-box;
+  margin-bottom: 20px;
+  // padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
-.proj-btn {
-  @extend %btn;
-  @extend %title-text;
-  color: white !important;
-  padding: 10px !important;
-  text-transform: uppercase;
-  display: block;
+.proj-tech-single {
+  // background: $darkAccent;
+  border: 1px solid $darkAccent;
+  // border-radius: 10px;
+  padding: 7px;
+  margin: 3px 3px;
+  box-sizing: border-box;
+
+}
+
+// ---------------------------------------------------------------------------
+// Project Pages
+// ---------------------------------------------------------------------------
+.proj-pg-container {
+  margin: 100px auto;
+}
+
+.proj-pg-header {
+  transition: none;
+  background-color: $medium;
+}
+
+.proj-pg-home-link {
+  text-decoration: none;
+  color: white;
+}
+
+.proj-pg-btn {
+  width: 50%;
   margin: auto;
-  width: 250px;
-  text-align: center;
-
-  &:hover {
-    @extend %btn-hover;
-  }
 }
+  
+// .proj-pg-img {
+//   display: block;
+//   width: 100%;
+//   text-align: center;
+//   height: 80%;
+//   object-fit: cover;
+//   border: 2px dotted $medium;
+//   box-sizing: border-box;
+// }
 
 .github-btn {
-  width: 200px;
+  width: 50%;
   margin: auto auto 20px auto;
 }
 
@@ -63,47 +119,48 @@
 }
 
 .github-btn-left {
-  width: 200px;
+  width: 70%;
   margin: 0 0 40px auto;
   grid-column: 1;
   display: inline-block;
 }
 
 .demo-btn-right{
-  width: 200px;
+  width: 70%;
   margin: 0 0 40px 0;
   grid-column: 2;
   display: inline-block;
-
 }
 
-.caption {
-  font-size: 14px;
-  color: $dark;
-  text-align: center;
-  margin-bottom: 40px;
-}
 
-.proj-btn + .line {
-  margin-top: 30px;
-}
 
-.line + .proj-title {
-  margin-top: 30px;
-}
+// .caption {
+//   font-size: 14px;
+//   color: $dark;
+//   text-align: center;
+//   margin-bottom: 40px;
+// }
 
-.proj-pg-img + .caption {
-  margin-top: 10px;
-}
+// .proj-btn + .line {
+//   margin-top: 30px;
+// }
 
-p + .proj-btn {
-  margin-top: 40px;
-}
+// .line + .proj-title {
+//   margin-top: 30px;
+// }
 
-#proj-rainGauge {
-  object-position: 100% 85%;
-}
+// .proj-pg-img + .caption {
+//   margin-top: 10px;
+// }
 
-#proj-puppet {
-  object-position: 70% 50%;
-}
+// p + .proj-btn {
+//   margin-top: 40px;
+// }
+
+// #proj-rainGauge {
+//   object-position: 100% 85%;
+// }
+
+// #proj-puppet {
+//   object-position: 70% 50%;
+// }

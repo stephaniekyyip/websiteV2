@@ -1,5 +1,5 @@
 - name: E-mail
-  link: mailto:stephaniekyyip@gmail.com?subject=Hello%20From%20Your%20Website
+  link: mailto:stephaniekyyip@gmail.com
   icon: fas fa-envelope
 
 - name: GitHub
@@ -9,3 +9,7 @@
 - name: LinkedIn
   link: https://www.linkedin.com/in/stephaniekyyip/
   icon: fab fa-linkedin
+
+- name: Dev.to
+  link: https://dev.to/stephaniekyyip
+  icon: fab fa-dev

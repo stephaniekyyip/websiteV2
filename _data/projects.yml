@@ -1,19 +1,42 @@
-- label: bookTracker
+- link: bookTracker
   title: Book Tracker
-  subtitle: Web app that keeps track of all the books you read
+  subtitle: Web app to keep track of the books you read
   img: bookTracker/bookTrackerHomeHalf.png
+  alt: book tracker web app
+  tech:
+    - item: PHP
+    - item: MySQL
+    - item: jQuery
+    - item: HTML
+    - item: CSS
+    - item: C3.js / D3.js
 
-- label: rainGauge
-  title: Electronic Rain Gauge
-  subtitle: Senior design project sponsored by Glaicer Peak Institute
-  img: rainGauge/rainGauge.jpg
-
-- label: smartLight
+- link: smartLight
   title: Smart Light
-  subtitle: Final project for an Internet of Things class
+  subtitle: Internet of Things final project to remotely control a LED bulb
   img: smartLight/smartLightSetup.jpg
+  alt: smart light set-up
+  tech:
+    - item: Python
+    - item: PHP
+    - item: HTML
+    - item: Raspberry Pi
 
-- label: puppet
+- link: rainGauge
+  title: Electronic Rain Gauge
+  subtitle: Senior design project to create a STEM curriculum for middle school students
+  img: rainGauge/rainGauge.jpg
+  alt: rain gauge set-up
+  tech:
+    - item: C/ C++
+    - item: Arduino IDE
+    - item: ESP8266 Microcontroller
+
+- link: puppet
   title: Automated Dancing Puppet
-  subtitle: Electrical and computer engineering lab project
+  subtitle: Engineering lab project using hardware and software to control a puppet
   img: puppet/PuppetProjectPuppet.jpg
+  alt: puppet set-up
+  tech:
+    - item: C
+    - item: Raspberry Pi

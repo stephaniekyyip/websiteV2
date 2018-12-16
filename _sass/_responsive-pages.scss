@@ -69,9 +69,13 @@
 
 // Tablet
 @media all and (max-width:$tablet-width){
-  .proj-img {
-    width: 100%;
-  }
+  // .proj-container {
+  //   grid-template-columns: repeat(1, 1fr);
+  // }
+
+  // .proj-img {
+  //   width: 100%;
+  // }
 
   .proj-btn-link-container {
     grid-template-columns: auto;
@@ -84,6 +88,10 @@
   .demo-btn-right {
     grid-column: 1;
     margin: auto auto 30px auto;
+  }
+
+  .proj-pg-btn {
+    width: 70%;
   }
 }
 

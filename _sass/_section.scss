@@ -1,4 +1,17 @@
+section {
+  padding-top: 100px;
+}
 
-section + section {
-  margin-top: 60px;
+.contact-icons {
+  display: grid;
+  font-size: 30px;//$titleSize;
+  margin: 0 auto 25px auto;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  // grid-gap: 30px;
+
+  a:hover {
+    border: none;
+  }
+
 }

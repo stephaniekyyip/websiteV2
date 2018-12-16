@@ -1,25 +1,10 @@
 <footer>
 
-  <h1>Website by Stephanie Yip 2018</h1>
-
-  <!-- Mobile Version -->
-  <div class = "social-icons">
-    <ul>
-      {% for item in site.data.social %}
-      <li><a href = "{{ item.link }}" target = "_blank" rel="noopener">
-        <i class = "{{ item.icon }}" title = "{{ item.name }}"></i>
-      </a></li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <!-- Desktop Version  -->
-  <div class = "social-links">
-    <ul>
-      {% for item in site.data.social %}
-      <li><a href = "{{ item.link }}" target = "_blank" rel="noopener">{{ item.name }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
+  <h1>
+    Website by Stephanie Yip 
+    <script type="text/javascript">
+      document.write(new Date().getFullYear());
+    </script>
+  </h1>
 
 </footer>

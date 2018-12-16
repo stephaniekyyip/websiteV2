@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------------
-// Dropdown menu in responsive version
+// Dropdown menu in mobile version
 // ----------------------------------------------------------------------------
 
 const icon = document.getElementById('menu-icon');
@@ -13,7 +13,7 @@ icon.addEventListener("click", function(){
   menu.classList.toggle('display-icon-menu');
 
   // Make nav bar opaque (if not already)
-  if(ypos === 0){
+  if(ypos == 0){
     navBar.classList.toggle('opaque');
   }
 

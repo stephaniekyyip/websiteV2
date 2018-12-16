@@ -2,13 +2,13 @@
 // Colors
 // ----------------------------------------------------------------------------
 $gray: #686F71;
-$lightGray: #858585;
+$lightGray: #818080;
 $grayOpacity: rgba(48, 48, 48, 0.3);
 $medium: #283a5f; //#7D9AB0;
 $mediumOpacity: rgba(40,58,95, 0.95); //rgba(125,154,176, 0.9);
-$mediumLine: rgba(228,171,116, 0.6);
-$dark: #253542;
-$accent: #edc59e;
+$mediumLine: rgba(228,171,116, 0.5);
+$dark: #3a3939; //#253542;
+$accent: #ebbf94;
 $darkAccent: #e4ab74;
 
 // ----------------------------------------------------------------------------
@@ -30,6 +30,7 @@ $mobile-width: 615px;
 %link-hover {
   color: $accent;
   // text-shadow: 0 3px $lightGray;
+  transition: color 0.2s;
 }
 
 // Text in header + footer
@@ -47,22 +48,6 @@ $mobile-width: 615px;
   letter-spacing: 2px;
   word-spacing: 2px;
   font-weight: 700;
-}
-
-%btn {
-  color: white;
-  text-shadow: 0 3px $grayOpacity;
-  background: $medium;
-  border: none;
-  padding: 10px;
-  box-shadow: 0 3px $grayOpacity;
-}
-
-%btn-hover {
-  text-shadow: none;
-  box-shadow: inset 0 0 5px $grayOpacity;
-  background: $darkAccent;
-  border: none;
 }
 
 // ----------------------------------------------------------------------------
@@ -95,8 +80,9 @@ i {
 .container {
   box-sizing: border-box;
   width: 60%;
-  margin: auto;
-  padding: 60px 0 60px 0;
+  margin: 0 auto 100px auto;
+  padding: 0;
+  // padding: 60px 0 60px 0;
   line-height: 22px;
   flex: 1 0 auto;
 
@@ -104,7 +90,7 @@ i {
     letter-spacing: 1px;
     word-spacing: 1px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     color: $medium;
     font-size: $titleSize;
     line-height: 30px;
@@ -127,11 +113,31 @@ i {
     text-decoration: none;
     font-weight: 700;
     padding-bottom: 1px;
+    transition: color 0.2s;
 
     &:hover{
       color: $darkAccent;
-      border-bottom: 1px dotted $darkAccent;
+      border-bottom: 1px solid $darkAccent;
       padding-bottom: 1px;
+    }
+  }
+
+  .btn {
+    @extend %title-text;
+    color: white !important;
+    background: $medium;
+    border: none;
+    padding: 10px 20px !important;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    display: block;
+  
+    &:hover {
+      background: $darkAccent;
+      border: none;
+      border-bottom: none !important;
     }
   }
 }
