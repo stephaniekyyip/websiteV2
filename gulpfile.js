@@ -68,7 +68,7 @@ function css(){
 // Minify JS
 function scripts() {
   return gulp.src('./_scripts/*.js')
-    //.pipe(concat('app.js'))
+    .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./_site/assets/js'))
     .pipe(gulp.dest('./assets/js'))

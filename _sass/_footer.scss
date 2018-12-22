@@ -1,5 +1,4 @@
-footer {
-  display: grid;
+ footer {
   padding: 15px 20px 15px 20px;
   background: $medium;
   left: 0;
@@ -10,5 +9,6 @@ footer {
   h1 {
     @extend %outer-text;
     text-align: center;
+    display: block;
   }
 }

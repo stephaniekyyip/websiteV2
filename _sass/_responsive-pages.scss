@@ -1,47 +1,19 @@
 // ----------------------------------------------------------------------------
-// Home
-// ----------------------------------------------------------------------------
-@media all and (max-width: 560px ){
-  .beginText{
-    font-size: 22px;
-  }
-}
-
-// ----------------------------------------------------------------------------
 // Resume
 // ----------------------------------------------------------------------------
 @media all and (min-width: 1400px){
   .resume-container {
     margin: 30px 100px 60px auto;
   }
-
-  .resume-sidebar {
-    margin-right: 10%;
-  }
 }
 
 // Tablet
 @media all and (max-width:$tablet-width){
-  .resume-sidebar {
-    display: none;
-  }
-
-  .resume-content {
-    grid-column: 1;
-  }
 
   .resume-container {
     grid-gap: 0;
     grid-template-columns: 100%;
     margin: 30px auto 30px auto;
-  }
-
-  .resume-section-container {
-    grid-template-columns: 1fr;
-  }
-
-  #resume-back-to-top {
-    display: block;
   }
 
   .resume-org {
@@ -69,92 +41,43 @@
 
 // Tablet
 @media all and (max-width:$tablet-width){
-  // .proj-container {
-  //   grid-template-columns: repeat(1, 1fr);
-  // }
-
-  // .proj-img {
-  //   width: 100%;
-  // }
+  .proj-pg-container {
+    margin: 80px auto;
+  }
 
   .proj-btn-link-container {
     grid-template-columns: auto;
   }
 
-  .github-btn-left {
+  .proj-pg-btn-left {
     margin: auto;
   }
 
-  .demo-btn-right {
+  .proj-pg-btn-right {
     grid-column: 1;
     margin: auto auto 30px auto;
   }
 
-  .proj-pg-btn {
+  .proj-pg-back-btn, .proj-pg-btn-center {
     width: 70%;
   }
+
 }
 
-// ----------------------------------------------------------------------------
-// Photography
-// ----------------------------------------------------------------------------
-@media all and (max-width: $tablet-width){
-  .photo-container {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  }
-  .photo-item {
-    height: 300px;
-  }
-}
-
+// Mobile
 @media all and (max-width: $mobile-width){
-  .photo-container {
-    grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
-  }
-  .photo-item {
-    height: 250px;
+  .proj-pg-container {
+    margin: 60px auto;
   }
 }
 
 // ----------------------------------------------------------------------------
-// Contact
+// 404 page
 // ----------------------------------------------------------------------------
-@media all and (max-width: $mobile-width){
-  .form-grid-container {
-    grid-template-rows: auto auto auto auto;
-  }
 
-  .form-name {
-    grid-column: 1 / span 2;
-  }
-
-  .form-email {
-    grid-row: 2;
-    grid-column: 1 / span 2;
-  }
-
-  .form-msg {
-    grid-row: 3;
-  }
-
-  .form-submit {
-    grid-row: 4;
-  }
-}
-
-// ----------------------------------------------------------------------------
-// Contact Form Submit Successful
-// ----------------------------------------------------------------------------
 @media all and (max-width: $mobile-width){
   .large-centered {
+    margin-top: 30px;
     font-size: 30px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    line-height: 35px;
-  }
-
-  .reg-centered {
-    font-size: 18px;
-    line-height: 25px;
   }
 }

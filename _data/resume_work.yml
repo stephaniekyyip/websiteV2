@@ -11,7 +11,7 @@
   description:
     - item: >
         Initiated development on the latest generation of a proximity sensor using a new
-        ARM micro-controller
+        ARM microcontroller
     #- item: Tested and verified signal processing results using MATLAB and an oscilloscope
     - item: >
-        Modified embedded software in C to configure the micro-controller for signal processing
+        Modified embedded software in C to configure the microcontroller for signal processing

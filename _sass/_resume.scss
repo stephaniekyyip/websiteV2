@@ -1,17 +1,3 @@
-// .resume-btn {
-//   @extend %btn;
-//   @extend %title-text;
-//   text-align: center;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   // margin: 30px 0;
-
-//   &:hover {
-//     @extend %btn-hover;
-//     // border-bottom: none !important;
-//   }
-// }
-
 .resume-container {
   box-sizing: border-box;
   width: 100%;
@@ -25,29 +11,9 @@
 
   .btn {
     margin: 30px auto auto auto;
-    // width: 40%;
   }
   
 }
-
-// .resume-section-container {
-//   color: $dark;
-//   display: grid;
-//   grid-template-columns: 3fr 1fr;
-//   grid-auto-rows: auto;
-//   grid-gap: 0;
-// }
-
-// .resume-section-title {
-//   grid-column: 1 / span 2;
-//   color: $darkAccent;
-//   font-weight: 700;
-//   letter-spacing: 1px;
-//   word-spacing: 1px;
-//   font-size: $titleSize;
-//   margin-bottom: 15px;
-//   text-align: center;
-// }
 
 .resume-org {
   grid-column: 1;
@@ -73,19 +39,9 @@
   font-style: italic;
 }
 
-.resume-list-title {
-  grid-column: 1;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  word-spacing: 1px;
-  margin-bottom: 2px;
-}
-
 .resume-list {
   grid-column: 1;
   font-size: $copySize;
-  // margin-bottom: 13px;
   line-height: 25px;
 
   ul {
@@ -104,24 +60,9 @@
 
 }
 
-.resume-proj-link {
-  grid-column: 1/ span 2;
-  // text-align: right;
-  display: block;
-}
-
-a.resume-proj-link:hover{
-  border-bottom: none !important;
-}
-
-.resume-center {
-  // padding: 30px 0 15px 0;
+.resume-btn-center {
   grid-column: 1/ span 2;
   justify-self: center;
-}
-
-.resume-role + .resume-list-title {
-  margin-top: 13px;
 }
 
 .resume-list:last-child {
@@ -130,14 +71,6 @@ a.resume-proj-link:hover{
 
 .resume-role + .resume-list {
   margin-top: 5px;
-}
-
-.resume-list + .resume-list-title {
-  margin-top: 10px;
-}
-
-.resume-proj-link + .resume-org {
-  margin-top: 13px;
 }
 
 .resume-list + .resume-org {

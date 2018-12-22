@@ -8,13 +8,13 @@
 
     <div class = "text-nav">
       <ul>{% for item in site.data.nav %}
-        <li><a href = "{{ item.link }}">{{ item.name }}</a></li>
+        <li><a href = "{{ item.link }}" id = "text-nav-{{ item.name }}">{{ item.name }}</a></li>
         {% endfor %}</ul>
     </div>
 
     <div class = "icon-nav-links">
       <ul>{% for item in site.data.nav %}
-        <li><a href = "{{ item.link }}">{{ item.name }}</a></li>
+        <li><a href = "{{ item.link }}" id = "nav-{{ item.name }}">{{ item.name }}</a></li>
         {% endfor %}</ul>
     </div>
   </nav>

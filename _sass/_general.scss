@@ -4,10 +4,10 @@
 $gray: #686F71;
 $lightGray: #818080;
 $grayOpacity: rgba(48, 48, 48, 0.3);
-$medium: #283a5f; //#7D9AB0;
-$mediumOpacity: rgba(40,58,95, 0.95); //rgba(125,154,176, 0.9);
+$medium: #283a5f;
+$mediumOpacity: rgba(40,58,95, 0.95);
 $mediumLine: rgba(228,171,116, 0.5);
-$dark: #3a3939; //#253542;
+$dark: #3a3939;
 $accent: #ebbf94;
 $darkAccent: #e4ab74;
 
@@ -29,7 +29,6 @@ $mobile-width: 615px;
 // ----------------------------------------------------------------------------
 %link-hover {
   color: $accent;
-  // text-shadow: 0 3px $lightGray;
   transition: color 0.2s;
 }
 
@@ -40,7 +39,6 @@ $mobile-width: 615px;
   text-transform: uppercase;
   letter-spacing: 4px;
   font-size: 14px;
-  display: inline;
 }
 
 // Used for titles
@@ -77,12 +75,19 @@ i {
   font-style: italic;
 }
 
+section {
+  padding-top: 100px;
+}
+
+section:last-of-type {
+  padding-bottom: 100px;
+}
+
 .container {
   box-sizing: border-box;
   width: 60%;
-  margin: 0 auto 100px auto;
+  margin: 0 auto;
   padding: 0;
-  // padding: 60px 0 60px 0;
   line-height: 22px;
   flex: 1 0 auto;
 
@@ -94,7 +99,6 @@ i {
     color: $medium;
     font-size: $titleSize;
     line-height: 30px;
-    // border-bottom: 3px soild $grayOpacity;
     background-image: linear-gradient(transparent 70%, $mediumLine 30%);
   }
 
@@ -113,12 +117,13 @@ i {
     text-decoration: none;
     font-weight: 700;
     padding-bottom: 1px;
-    transition: color 0.2s;
+    transition: color 0.2s, border-bottom 0.2s;
 
     &:hover{
       color: $darkAccent;
       border-bottom: 1px solid $darkAccent;
-      padding-bottom: 1px;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-bottom 0.2s;
     }
   }
 
@@ -138,36 +143,54 @@ i {
       background: $darkAccent;
       border: none;
       border-bottom: none !important;
+      transition: background-color 0.2s;
     }
   }
-}
-
-.proj-container {
-  margin: 40px auto auto auto;
 }
 
 .line {
   border-top: 1px solid $grayOpacity;
 }
 
+// Bold
 .highlight {
   font-weight: 700;
 }
 
-// .large-centered {
-//   color: $darkAccent;
-//   font-weight: 700;
-//   font-size: 50px;
-//   letter-spacing: 5px;
-//   word-spacing: 5px;
-//   text-transform: uppercase;
-//   text-align: center;
-//   line-height: 55px;
-// }
+// ----------------------------------------------------------------------------
+// Contact section
+// ----------------------------------------------------------------------------
+.contact-icons {
+  display: grid;
+  font-size: 30px;
+  margin: 0 auto 25px auto;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 
-// .reg-centered {
-//   margin-top: 15px;
-//   font-size: 20px;
-//   text-align: center;
-//   line-height: 30px;
-// }
+  a:hover {
+    border: none;
+    padding: 0;
+  }
+
+}
+
+// ----------------------------------------------------------------------------
+// 404 page
+// ----------------------------------------------------------------------------
+.large-centered {
+  color: $medium;
+  font-weight: 700;
+  font-size: 50px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  text-align: center;
+  line-height: 55px;
+  background-image: linear-gradient(transparent 70%, $mediumLine 30%);
+}
+
+.reg-centered {
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+}

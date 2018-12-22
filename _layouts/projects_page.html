@@ -11,21 +11,21 @@ layout: no_jumbotron
 
 {% if page.github and page.demo %}
   <div class = "proj-btn-link-container">
-    <a href = "{{ page.github }}" target = "_blank" class = "btn github-btn-left">See on GitHub
+    <a href = "{{ page.github }}" target = "_blank" class = "btn proj-pg-btn-left">See on GitHub
     <i class="fab fa-github"></i></a>
 
-    <a href = "{{ page.demo }}" target = "_blank" class = "btn demo-btn-right">See Live Demo
+    <a href = "{{ page.demo }}" target = "_blank" class = "btn proj-pg-btn-right">See Live Demo
     <i class="fas fa-desktop"></i></a>
   </div>
 
 <!-- GitHub repo button  -->
 {% elsif page.github %}
-  <a href = "{{ page.github }}" target = "_blank" class = "btn github-btn">See on GitHub
+  <a href = "{{ page.github }}" target = "_blank" class = "btn proj-pg-btn-center">See on GitHub
   <i class="fab fa-github"></i></a>
 
 <!-- Live demo button -->
 {% elsif page.demo %}
-  <a href = "{{ page.demo }}" target = "_blank" class = "btn github-btn">See Live Demo
+  <a href = "{{ page.demo }}" target = "_blank" class = "btn proj-pg-btn-center">See Live Demo
   <i class="fas fa-desktop"></i></a>
 
 {% endif %}
@@ -33,5 +33,5 @@ layout: no_jumbotron
 {{ content }}
 
 <!-- Return back to projects page -->
-<a href = "{{ site.url }}" class = "btn proj-pg-btn">
+<a href = "{{ site.url }}" class = "btn proj-pg-back-btn">
 <i class="fas fa-arrow-left"></i> Back</a>

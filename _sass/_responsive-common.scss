@@ -14,7 +14,6 @@
   .jumbotron {
     background-position: 0px -250px;
   }
-
 }
 
 // ----------------------------------------------------------------------------
@@ -39,25 +38,20 @@
     }
   }
 
-  // Update margin between container and header
-  .proj-container {
-    margin: 80px auto auto auto;
-  }
-
   header {
     text-align: center;
     padding-top: 15px;
 
     h1 {
     float: none;
-    padding: 15px 0 0 0;
+    padding: 0;
     }
   }
 
   // Prevent header text from centering in the project pages
   .proj-pg-header {
     text-align: left;
-    padding: 15px 15px 15px 20px;
+    padding: 15px 15px 15px 20px; 
   }
 
   nav {
@@ -68,22 +62,19 @@
 
   // Update top + bottom padding of container
   .container {
-    padding: 40px 0 40px 0;
+    padding: 0;
+  }
+
+  section {
+    padding-top: 90px;
   }
 
 }
 
 // ----------------------------------------------------------------------------
-// Tablet+: Center text in footer
+// Tablet+: Update width of container
 // ----------------------------------------------------------------------------
 @media all and (max-width: 685px){
-
-  footer{
-    h1 {
-      line-height: 18px;
-    }
-  }
-
 
   // Update width of container
   .container {
@@ -93,23 +84,9 @@
 }
 
 // ----------------------------------------------------------------------------
-// Mobile: Update footer to icons + update nav bar to hamburger menu
+// Mobile: Update nav bar to hamburger menu
 // ----------------------------------------------------------------------------
 @media all and (max-width: $mobile-width){
-
-  // Update margin between header and container
-  .proj-container {
-    margin: 50px auto auto auto;
-  }
-
-  // Footer
-  footer {
-
-    h1 {
-      padding-top: 0;
-    }
-
-  }
 
   // Header
   header {
@@ -129,6 +106,7 @@
 
     h1 {
       float: none;
+      padding: 0 0 0 20px;
     }
   }
 
@@ -143,15 +121,15 @@
     color: white;
   }
 
-  .icon-nav-active {
-    color: $accent;
-    // text-shadow: 0 3px $lightGray;
-  }
-
   #menuIcon{
-    // transition: display 1s;
     float: right;
   }
+
+  section {
+    padding-top: 60px;
+  }
+
+
 
 }
 
@@ -164,12 +142,10 @@
     padding: 60px 0 50px 0;
 
     h1 {
-      // padding-top: 80px;
       font-size: 30px;
       letter-spacing: 5px;
       word-spacing: 5px;
       line-height: 30px;
-      // text-shadow: 2px 2px white;
     }
 
     h2 {
@@ -179,6 +155,5 @@
     }
 
   }
-
 
 }
