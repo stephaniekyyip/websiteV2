@@ -1,14 +1,14 @@
 - name: Home
-  link: /
+  link: {site.baseurl}}/
 
 - name: Résumé
-  link: /resume
+  link: {{site.baseurl}}/resume
 
 - name: Projects
-  link: /projects
+  link: {site.baseurl}}//projects
 
 - name: Photography
-  link: /photography
+  link: {site.baseurl}}//photography
 
 - name: Contact
-  link: /contact
+  link: {site.baseurl}}//contact
